@@ -67,6 +67,8 @@ class GDELT:
             response = requests.get("https://api.gdeltproject.org/api/v2/doc/doc", params={
                 "query": query, "mode": "artlist", "format": "json", "maxrecords": limit},
                 timeout=15, headers={"User-Agent": "ResearchRadar-MAS/0.1 (academic demo)"})
+            if response.status_code == 429:
+                raise SourceError("GDELT: HTTP 429 rate limited")
             response.raise_for_status()
             rows = response.json().get("articles", [])
             if not isinstance(rows, list):

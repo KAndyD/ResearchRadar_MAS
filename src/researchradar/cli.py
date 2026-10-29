@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import sys
 from pathlib import Path
 
 from .engine import research
@@ -10,6 +11,8 @@ from .sources import FixtureSource, GDELT, OpenAlex
 
 
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser(description="ResearchRadar MAS laboratory 1")
     parser.add_argument("question", help="Research topic; English works best with live APIs")
     parser.add_argument("--mode", choices=("demo", "live"), default="demo")

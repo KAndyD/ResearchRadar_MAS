@@ -7,4 +7,5 @@ __pycache__/
 run_output/
 tmp/
 guide-*.png
+*.egg-info/
 
