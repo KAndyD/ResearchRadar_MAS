@@ -58,7 +58,7 @@ class BudgetedOpenRouter:
         if max_tokens < 1 or max_tokens > 512 or len(prompt) > 4000:
             raise ValueError("prompt or output limit exceeds smoke-test bounds")
         # Conservative character-to-token bound, then reserve before sending.
-        estimated = (len(prompt) * input_rate_per_million +
+        estimated = (len(prompt.encode("utf-8")) * input_rate_per_million +
                      max_tokens * output_rate_per_million) / 1_000_000
         if estimated > self.per_call_usd or self.spent_or_reserved + estimated > self.budget_usd:
             raise RuntimeError("local LLM budget exceeded before request")
@@ -78,17 +78,17 @@ class BudgetedOpenRouter:
                          "Content-Type": "application/json"})
             response.raise_for_status()
             body = response.json()
-            content = body["choices"][0]["message"]["content"]
-            if not isinstance(content, str) or not content.strip():
-                raise ValueError("empty or malformed LLM response")
             stats = body.get("usage") or {}
             usage.prompt_tokens = int(stats.get("prompt_tokens") or 0)
             usage.completion_tokens = int(stats.get("completion_tokens") or 0)
             cost = stats.get("cost")
             usage.cost_usd = float(cost) if cost is not None else None
-            usage.success = True
             if usage.cost_usd is not None:
                 self.spent_or_reserved += usage.cost_usd - estimated
+            content = body["choices"][0]["message"]["content"]
+            if not isinstance(content, str) or not content.strip():
+                raise ValueError("empty or malformed LLM response")
+            usage.success = True
             return content
         except (requests.RequestException, ValueError, KeyError, IndexError, TypeError) as exc:
             raise RuntimeError(f"OpenRouter request failed: {type(exc).__name__}") from None
