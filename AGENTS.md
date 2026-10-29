@@ -1,0 +1,3 @@
+# ResearchRadar MAS handoff rules
+
+Проект ЛР №1 по «Теории многоагентных систем». Нормативный источник — `project_guide/Лабораторные-МАС.pdf`; лекции вспомогательные. Прочитать `docs/architecture.md`, `docs/decisions.md`, `docs/progress.md`, `docs/handoff.md` перед продолжением. Проверки: `py -3.14 -m unittest discover -s tests -v`; демонстрация: `py -3.14 -m researchradar.cli "multi agent systems" --mode demo`. Не выдавать синтетические fixture за реальные результаты. Не начинать ЛР №2–4 без отдельного поручения. Ключ OpenRouter находится вне Git: `%LOCALAPPDATA%/ResearchRadar_MAS/.env`; не читать его значение в вывод команд и не коммитить. Проверять Git-статус и секреты перед публикацией. После изменений обновлять решения, прогресс, тестовый статус и handoff.

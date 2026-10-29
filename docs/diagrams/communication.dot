@@ -1,0 +1,14 @@
+digraph Communication {
+  graph [rankdir=LR, fontname="Arial", label="Разрешённые сообщения"];
+  node [shape=box, style=rounded, fontname="Arial"];
+  coord [label="coordinator"];
+  sci [label="scientist"];
+  news [label="journalist"];
+  syn [label="synthesizer"];
+  coord -> sci [label="task"];
+  sci -> coord [label="result / error"];
+  coord -> news [label="task"];
+  news -> coord [label="result / error"];
+  coord -> syn [label="task"];
+  syn -> coord [label="result"];
+}
