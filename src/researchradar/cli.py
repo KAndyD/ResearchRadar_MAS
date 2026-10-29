@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 from .engine import research
-from .sources import FixtureSource, GDELT, OpenAlex
+from .sources import FixtureSource, GDELT, OpenAlex, GoogleNewsRSS
 
 
 def main() -> None:
@@ -16,10 +16,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="ResearchRadar MAS laboratory 1")
     parser.add_argument("question", help="Research topic; English works best with live APIs")
     parser.add_argument("--mode", choices=("demo", "live"), default="demo")
+    parser.add_argument("--news-source", choices=("gdelt", "rss"), default="gdelt",
+                        help="LIVE news source; RSS is an explicit alternative")
     parser.add_argument("--output", type=Path, default=Path("run_output/result.json"))
     args = parser.parse_args()
     science, news = ((FixtureSource("scientific"), FixtureSource("news"))
-                     if args.mode == "demo" else (OpenAlex(), GDELT()))
+                     if args.mode == "demo" else
+                     (OpenAlex(), GDELT() if args.news_source == "gdelt" else GoogleNewsRSS()))
     result = asyncio.run(research(args.question, science, news))
     result["mode"] = args.mode
     args.output.parent.mkdir(parents=True, exist_ok=True)

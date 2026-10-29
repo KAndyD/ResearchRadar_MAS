@@ -8,4 +8,8 @@ run_output/
 tmp/
 guide-*.png
 *.egg-info/
+*.sqlite3
+*.sqlite3-*
+*.db
+~$*.docx
 

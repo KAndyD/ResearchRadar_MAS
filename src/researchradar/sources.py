@@ -1,6 +1,16 @@
 from __future__ import annotations
 
 from typing import Protocol
+from pathlib import Path
+import hashlib
+import json
+import os
+import random
+import time
+from dataclasses import asdict
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
+from xml.etree import ElementTree
 import requests
 
 from .model import Material
@@ -62,21 +72,99 @@ class OpenAlex:
 
 
 class GDELT:
+    def __init__(self, cache_dir: Path | None = None, retries: int = 1,
+                 sleeper=time.sleep, ttl_seconds: int = 900):
+        root = os.getenv("LOCALAPPDATA")
+        self.cache_dir = cache_dir if cache_dir is not None else (
+            Path(root) / "ResearchRadar_MAS" / "gdelt-cache" if root else None)
+        self.retries = retries
+        self.sleeper = sleeper
+        self.ttl_seconds = ttl_seconds
+
+    def _cache_file(self, query: str, limit: int) -> Path | None:
+        if self.cache_dir is None:
+            return None
+        key = hashlib.sha256(f"{query}\0{limit}".encode("utf-8")).hexdigest()
+        return self.cache_dir / f"{key}.json"
+
+    def search(self, query: str, limit: int = 3) -> list[Material]:
+        cache_file = self._cache_file(query, limit)
+        if cache_file and cache_file.exists() and time.time() - cache_file.stat().st_mtime < self.ttl_seconds:
+            try:
+                rows = json.loads(cache_file.read_text(encoding="utf-8"))
+                return [Material(**(row | {"provenance": "cache_gdelt"})) for row in rows]
+            except (ValueError, TypeError):
+                pass
+        params = {"query": query, "mode": "artlist", "format": "json",
+                  "maxrecords": min(max(limit, 1), 250), "timespan": "3months"}
+        for attempt in range(self.retries + 1):
+            try:
+                response = requests.get("https://api.gdeltproject.org/api/v2/doc/doc",
+                                        params=params, timeout=15)
+                if response.status_code == 429:
+                    if attempt < self.retries:
+                        delay = _retry_delay(response.headers.get("Retry-After"), attempt)
+                        if delay is None:
+                            raise SourceError("GDELT: HTTP 429; Retry-After exceeds local wait limit")
+                        self.sleeper(delay)
+                        continue
+                    raise SourceError("GDELT: HTTP 429 rate limited")
+                response.raise_for_status()
+                body = response.json()
+                if not isinstance(body, dict):
+                    raise SourceError("GDELT: invalid response format")
+                rows = body.get("articles", [])
+                if not isinstance(rows, list):
+                    raise SourceError("GDELT: invalid articles format")
+                items = [item for row in rows if isinstance(row, dict)
+                         if (item := normalize_gdelt(row))]
+                if cache_file:
+                    cache_file.parent.mkdir(parents=True, exist_ok=True)
+                    cache_file.write_text(json.dumps([asdict(x) for x in items]), encoding="utf-8")
+                return items
+            except (requests.RequestException, ValueError, TypeError) as exc:
+                raise SourceError(f"GDELT: {type(exc).__name__}") from exc
+        raise AssertionError("unreachable")
+
+
+def _retry_delay(header: str | None, attempt: int) -> float | None:
+    if header:
+        try:
+            seconds = max(0.0, float(header))
+        except ValueError:
+            try:
+                seconds = max(0.0, (parsedate_to_datetime(header) -
+                                    datetime.now(timezone.utc)).total_seconds())
+            except (ValueError, TypeError):
+                seconds = None
+        if seconds is not None:
+            return seconds if seconds <= 30 else None
+    return min(10.0, 2 ** attempt + random.uniform(0, 0.25))
+
+
+class GoogleNewsRSS:
+    """Public search feed; stores only title, link and publication date."""
+
     def search(self, query: str, limit: int = 3) -> list[Material]:
         try:
-            response = requests.get("https://api.gdeltproject.org/api/v2/doc/doc", params={
-                "query": query, "mode": "artlist", "format": "json", "maxrecords": limit},
-                timeout=15, headers={"User-Agent": "ResearchRadar-MAS/0.1 (academic demo)"})
-            if response.status_code == 429:
-                raise SourceError("GDELT: HTTP 429 rate limited")
+            response = requests.get("https://news.google.com/rss/search", params={
+                "q": query, "hl": "en-US", "gl": "US", "ceid": "US:en"}, timeout=15)
             response.raise_for_status()
-            rows = response.json().get("articles", [])
-            if not isinstance(rows, list):
-                raise ValueError("articles is not a list")
-            return [item for row in rows if isinstance(row, dict)
-                    if (item := normalize_gdelt(row))]
-        except (requests.RequestException, ValueError, KeyError, TypeError) as exc:
-            raise SourceError(f"GDELT: {type(exc).__name__}") from exc
+            root = ElementTree.fromstring(response.content)
+            items = []
+            for node in root.findall("./channel/item"):
+                title = _text(node.findtext("title"))
+                url = _text(node.findtext("link"))
+                if not title or not url:
+                    continue
+                items.append(Material("news", "Google News RSS", url, title, url,
+                                      _text(node.findtext("pubDate")) or None,
+                                      None, None, "headline", "live_rss"))
+                if len(items) >= limit:
+                    break
+            return items
+        except (requests.RequestException, ElementTree.ParseError) as exc:
+            raise SourceError(f"Google News RSS: {type(exc).__name__}") from exc
 
 
 class FixtureSource:

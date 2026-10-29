@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="570" viewBox="0 0 1100 570">
+<defs><style>
+text{font-family:Arial,DejaVu Sans,sans-serif;fill:#17202a}.heading{font-size:22px;font-weight:700}.label{font-size:17px}.small{font-size:15px;fill:#46525e}.box{fill:#fff;stroke:#273746;stroke-width:2}.task{fill:none;stroke:#273746;stroke-width:2.5}.reply{fill:none;stroke:#526778;stroke-width:2.5}
+</style></defs>
+<rect width="1100" height="570" fill="white"/>
+<text x="550" y="35" text-anchor="middle" class="heading">Направленный граф сообщений</text>
+<rect x="420" y="65" width="260" height="70" rx="8" class="box"/>
+<text x="550" y="107" text-anchor="middle" class="heading">coordinator</text>
+<rect x="40" y="435" width="250" height="70" rx="8" class="box"/>
+<text x="165" y="477" text-anchor="middle" class="heading">scientist</text>
+<rect x="425" y="435" width="250" height="70" rx="8" class="box"/>
+<text x="550" y="477" text-anchor="middle" class="heading">journalist</text>
+<rect x="810" y="435" width="250" height="70" rx="8" class="box"/>
+<text x="935" y="477" text-anchor="middle" class="heading">synthesizer</text>
+<path d="M455 135 C455 270 115 270 115 435" class="task"/>
+<path d="M215 435 C215 290 495 275 495 135" class="reply"/>
+<text x="215" y="219" class="label">task</text><text x="275" y="328" class="label">result / error</text>
+<path d="M525 135 V435" class="task"/>
+<path d="M575 435 V135" class="reply"/>
+<text x="470" y="297" class="label">task</text><text x="588" y="297" class="label">result / error</text>
+<path d="M605 135 C605 270 885 285 885 435" class="task"/>
+<path d="M985 435 C985 270 645 270 645 135" class="reply"/>
+<path d="M108 423 L122 423 L115 435 Z M518 423 L532 423 L525 435 Z M878 423 L892 423 L885 435 Z" fill="#273746"/>
+<path d="M488 147 L502 147 L495 135 Z M568 147 L582 147 L575 135 Z M638 147 L652 147 L645 135 Z" fill="#526778"/>
+<text x="790" y="225" class="label">task</text><text x="800" y="340" class="label">result</text>
+<text x="550" y="547" text-anchor="middle" class="small">Каждая стрелка соответствует разрешённому направлению в Router; поисковые агенты друг другу не пишут.</text>
+</svg>

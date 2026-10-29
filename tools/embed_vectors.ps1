@@ -1,0 +1,35 @@
+param(
+    [string]$DocumentPath = "deliverables/ResearchRadar_MAS_Architecture.docx"
+)
+$ErrorActionPreference = 'Stop'
+$root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+$docx = (Resolve-Path (Join-Path $root $DocumentPath)).Path
+$word = New-Object -ComObject Word.Application
+$word.Visible = $false
+try {
+    $document = $word.Documents.Open($docx)
+    try {
+        $figures = @(
+            @{ Anchor = 'FIGURE_ROLES'; File = 'docs/diagrams/roles.svg'; Width = 440 },
+            @{ Anchor = 'FIGURE_COMMUNICATION'; File = 'docs/diagrams/communication.svg'; Width = 440 }
+        )
+        foreach ($figure in $figures) {
+            $range = $document.Content
+            if (-not $range.Find.Execute($figure.Anchor)) {
+                throw "Missing figure anchor: $($figure.Anchor)"
+            }
+            $range.Text = ''
+            $svg = (Resolve-Path (Join-Path $root $figure.File)).Path
+            $shape = $document.InlineShapes.AddPicture($svg, $false, $true, $range)
+            $shape.Width = $figure.Width
+        }
+        $document.Save()
+    }
+    finally {
+        $document.Close($false)
+    }
+}
+finally {
+    $word.Quit()
+}
+Write-Output $docx

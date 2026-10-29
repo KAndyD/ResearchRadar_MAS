@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480">
+<defs><style>
+text{font-family:Arial,DejaVu Sans,sans-serif;fill:#17202a} .heading{font-size:20px;font-weight:700}.detail{font-size:16px}.small{font-size:14px;fill:#46525e}.box{fill:#fff;stroke:#273746;stroke-width:2}.edge{fill:none;stroke:#273746;stroke-width:2}
+</style></defs>
+<rect width="1000" height="480" fill="white"/>
+<text x="500" y="35" text-anchor="middle" class="heading">Роли и зона ответственности</text>
+<rect x="370" y="65" width="260" height="70" rx="8" class="box"/>
+<text x="500" y="94" text-anchor="middle" class="heading">Исследователь</text>
+<text x="500" y="118" text-anchor="middle" class="detail">формулирует тему</text>
+<path d="M500 135 V170" class="edge"/>
+<rect x="355" y="170" width="290" height="86" rx="8" class="box"/>
+<text x="500" y="202" text-anchor="middle" class="heading">Координатор</text>
+<text x="500" y="228" text-anchor="middle" class="detail">создаёт и назначает задачи</text>
+<path d="M500 256 V292 H165 V320 M500 292 V320 M500 292 H835 V320" class="edge"/>
+<rect x="40" y="320" width="250" height="105" rx="8" class="box"/>
+<text x="165" y="350" text-anchor="middle" class="heading">Научный агент</text>
+<text x="165" y="377" text-anchor="middle" class="detail">поиск в OpenAlex</text>
+<text x="165" y="402" text-anchor="middle" class="small">публикации и аннотации</text>
+<rect x="375" y="320" width="250" height="105" rx="8" class="box"/>
+<text x="500" y="350" text-anchor="middle" class="heading">Новостной агент</text>
+<text x="500" y="377" text-anchor="middle" class="detail">GDELT или RSS</text>
+<text x="500" y="402" text-anchor="middle" class="small">заголовки и метаданные</text>
+<rect x="710" y="320" width="250" height="105" rx="8" class="box"/>
+<text x="835" y="350" text-anchor="middle" class="heading">Синтезатор</text>
+<text x="835" y="377" text-anchor="middle" class="detail">сводка результатов</text>
+<text x="835" y="402" text-anchor="middle" class="small">без вывода по полному тексту</text>
+<text x="500" y="462" text-anchor="middle" class="small">Линии показывают организационное подчинение задач координатору, а не прямые каналы сообщений.</text>
+</svg>

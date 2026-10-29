@@ -1,10 +1,21 @@
 import asyncio
+import json
+import subprocess
+import sys
 import unittest
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
 
 from researchradar.engine import Router, research
 from researchradar.llm import BudgetedOpenRouter
 from researchradar.model import AgentState, Message, Phase, ResearchRequest
 from researchradar.sources import FixtureSource, normalize_openalex, normalize_gdelt
+
+
+class BrokenSource:
+    def search(self, query, limit):
+        raise RuntimeError("source unavailable")
 
 
 class FoundationTests(unittest.TestCase):
@@ -52,13 +63,40 @@ class FoundationTests(unittest.TestCase):
         self.assertTrue(all(m["provenance"] == "synthetic_fixture"
                             for rows in result["materials"].values() for m in rows))
 
+    def test_one_source_failure_preserves_partial_result(self):
+        result = asyncio.run(research("multi-agent systems",
+                                      FixtureSource("scientific"), BrokenSource()))
+        self.assertEqual(len(result["materials"]["scientific"]), 1)
+        self.assertEqual(result["materials"]["news"], [])
+        self.assertIn("news", result["errors"])
+        self.assertEqual(result["agents"]["journalist"]["phase"], "failed")
+
+    def test_overlapping_candidate_can_be_registered(self):
+        result = asyncio.run(research("multi-agent systems",
+                                      FixtureSource("scientific"), FixtureSource("news"),
+                                      {"backup": ("scientific", BrokenSource())}))
+        self.assertEqual(result["agents"]["scientist"]["phase"], "done")
+        self.assertNotIn("backup", result["agents"])
+
+    def test_cli_demo_writes_structured_result_without_api(self):
+        with TemporaryDirectory() as directory:
+            output = Path(directory) / "demo.json"
+            run = subprocess.run([sys.executable, "-m", "researchradar.cli",
+                                  "multi-agent systems", "--mode", "demo",
+                                  "--output", str(output)], capture_output=True, text=True)
+            self.assertEqual(run.returncode, 0, run.stderr)
+            data = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(data["mode"], "demo")
+            self.assertEqual(len(data["trace"]), 6)
+
     def test_budget_prevents_paid_call(self):
-        client = BudgetedOpenRouter(budget_usd=0)
-        with self.assertRaisesRegex(RuntimeError, "budget"):
-            client.complete(request_id="r", agent="coordinator", purpose="smoke",
-                            prompt="hello", input_rate_per_million=1,
-                            output_rate_per_million=1)
-        self.assertEqual(client.ledger, [])
+        with TemporaryDirectory() as directory, patch("researchradar.llm.local_key", return_value="dummy"):
+            client = BudgetedOpenRouter(budget_usd=0, ledger_path=Path(directory) / "usage.db")
+            with self.assertRaisesRegex(RuntimeError, "budget"):
+                client.complete(request_id="r", agent="coordinator", purpose="smoke",
+                                prompt="hello", input_rate_per_million=1,
+                                output_rate_per_million=1)
+            self.assertEqual(client.records(), [])
 
 
 if __name__ == "__main__":
