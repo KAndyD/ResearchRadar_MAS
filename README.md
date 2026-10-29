@@ -14,3 +14,5 @@ py -3.14 -m researchradar.cli "multi agent systems" --mode live
 Выход `run_output/result.json` содержит список источников, состояния агентов и трассу сообщений. DEMO полностью автономен и явно помечает синтетические записи. LIVE использует OpenAlex и GDELT; доступность зависит от сети и провайдеров. Платных LLM-вызовов эти команды не делают. Отдельный клиент OpenRouter находится в `src/researchradar/llm.py`; ключ читается только из локальной конфигурации вне репозитория.
 
 Отчёт и схемы лежат в `deliverables/` и `docs/diagrams/`. ЛР №2–4 пока не реализованы.
+
+Проверенный комплект ЛР №1: [GitHub Release lab1-v1.0](https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab1-v1.0). Текущие ограничения и результаты проверок приведены в [test-status](docs/test-status.md).
