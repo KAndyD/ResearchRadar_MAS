@@ -178,9 +178,10 @@ class ReviewAgent:
         agreement = commit.payload["agreement_id"]
         units = commit.payload["units"]
         if not await self.budget.start(agreement, self.check.owner):
+            await self.budget.cancel(agreement, self.check.owner)
             await self.bus.send(Message.make(self.check.owner, "mediator", "failure",
                 self.bus.run_id, {"check_id": self.check.id,
-                                  "reason": "no active reservation"}, commit.id))
+                                  "reason": "start_denied"}, commit.id))
             return
         began = perf_counter()
         try:
@@ -192,7 +193,8 @@ class ReviewAgent:
                                                 self.check.owner, units):
                 raise PermissionError("verification authorization expired")
             evidence = perform_check(self.check, units)
-            await self.budget.finish(agreement, self.check.owner)
+            if not await self.budget.finish(agreement, self.check.owner):
+                raise RuntimeError("verification completion rejected")
             await self.bus.send(Message.make(self.check.owner, "mediator", "result",
                 self.bus.run_id, {"check_id": self.check.id, "agreement_id": agreement,
                                   "units": units, "evidence": evidence,
@@ -334,11 +336,16 @@ class Mediator:
             await self.bus.send(commit)
         replies = await self._collect({"result", "failure"},
                                       {owner: commit.id for owner, commit in commits.items()})
+        results = {}
         for owner, agreement in agreements.items():
-            if owner not in replies:
+            reply = replies.get(owner)
+            finished = self.budget.snapshot()["reservations"][agreement]["phase"] == "finished"
+            if reply and reply.kind == "result" and finished:
+                results[owner] = reply.payload
+            else:
+                if reply and reply.kind == "result":
+                    self.invalid_messages += 1
                 await self.budget.abort(agreement, owner)
-        results = {owner: message.payload for owner, message in replies.items()
-                   if message.kind == "result"}
         return {"plan": plan, "agreements": agreements, "results": results,
                 "rounds": rounds, "negotiation_ms": negotiation_ms,
                 "invalid_messages": self.invalid_messages,
@@ -357,7 +364,8 @@ async def review_research(research: dict, *, mode: str = "baseline", credits: in
                           checks: tuple[CheckRequest, ...] | None = None,
                           silent_owners: frozenset[str] = frozenset(),
                           delay_ms: float = 1.0,
-                          timeout: float = 0.05) -> dict:
+                          timeout: float = 0.05,
+                          concurrent_slots: int | None = None) -> dict:
     if mode not in {"baseline", "negotiation"}:
         raise ValueError("unknown resource policy")
     chosen = checks if checks is not None else derive_checks(research)
@@ -365,7 +373,7 @@ async def review_research(research: dict, *, mode: str = "baseline", credits: in
         raise ValueError("duplicate owner or check identifier")
     run_id = str(uuid4())
     bus = NegotiationBus(tuple(x.owner for x in chosen), run_id)
-    budget = VerificationBudget(credits)
+    budget = VerificationBudget(credits, concurrent_slots)
     agents = [ReviewAgent(x, bus, budget, silent=x.owner in silent_owners,
                           delay_ms=delay_ms) for x in chosen]
     runners = [asyncio.create_task(agent.run()) for agent in agents]

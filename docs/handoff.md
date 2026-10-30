@@ -1,5 +1,11 @@
 # Передача состояния проекта
 
+## Исправление ЛР №3 — lab3-v1.1
+
+Финальным выпуском ЛР №3 служит `lab3-v1.1`; исторический `lab3-v1.0` не переписывать. Причины исправления: прежний `_active()` складывал кредитную стоимость вместо числа проверок, а после `failure` посредник не освобождал зарезервированные кредиты. Исправлены `src/researchradar/resources.py` (`_active`, `start`) и `src/researchradar/negotiation.py` (`ReviewAgent._execute`, `Mediator.run`, необязательный `concurrent_slots` в `review_research`); CLI принимает `--slots`. Контракт фаз и отказа без ожидания — `docs/resource_lifecycle_lab3_v1.1.md`, решение — ADR 015.
+
+Проверка: `py -3.14 -m unittest discover -s tests -q`; пограничный DEMO: `py -3.14 -m researchradar.cli_stage3 "multi agent systems" --mode demo --resource-policy baseline --credits 4 --slots 1`. Исходные 120 измерений и PDF/DOCX сохранены побайтно; SHA-256 и контрольное сравнение — `audit_evidence/lab3_v1.1_preservation.json`. Новые прогоны писать в `run_output/`, не в опубликованный корпус. Архивы `lab3-v1.1` формирует `tools/package_lab3.py` после коммита; распаковывать и испытывать вне Git. Внешние API и платный Qwen для исправления не нужны. ЛР №4 не начинать без отдельного поручения.
+
 ## Лабораторная №3 — lab3-v1.0
 
 Исходные требования: `project_guide/Лабораторные-МАС.pdf`; учебная сверка: `submission_manifest_lab3.md`. Протокол и ресурсный журнал: `src/researchradar/negotiation.py`, `resources.py`; запуск: `py -3.14 -m researchradar.cli_stage3 "multi agent systems" --mode demo --resource-policy negotiation --credits 3`. Сравнение: `py -3.14 tools/run_negotiation_experiments.py --repeats 1 --output run_output/lab3_smoke`, затем `py -3.14 tools/verify_lab3_results.py --results run_output/lab3_smoke`. Сохранённые 120 запусков: `experiments/lab3/results/`; исходный код измерения — коммит `8144ef765e839a03ecccc3a9d88e39f1c6a2783e`. Замороженные результаты не перезаписывать.

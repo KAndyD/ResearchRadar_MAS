@@ -37,7 +37,7 @@ class VerificationBudget:
                    if r.phase in {"reserved", "active"})
 
     def _active(self) -> int:
-        return sum(r.units for r in self.reservations.values() if r.phase == "active")
+        return sum(1 for r in self.reservations.values() if r.phase == "active")
 
     def _assert_invariants(self) -> None:
         if self.spent + self._held() > self.credits or self._active() > self.concurrent_slots:
@@ -71,7 +71,7 @@ class VerificationBudget:
             record = self.reservations.get(agreement_id)
             if record is None or record.owner != owner or record.phase != "reserved":
                 return False
-            if self._active() + record.units > self.concurrent_slots:
+            if self._active() + 1 > self.concurrent_slots:
                 return False
             record.phase = "active"
             self.peak_active = max(self.peak_active, self._active())

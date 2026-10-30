@@ -1,6 +1,19 @@
 # ResearchRadar MAS
 
-## Переговоры за бюджет проверок
+## Исправленная версия ЛР №3: lab3-v1.1
+
+Кредиты проверки и одновременные исполнительные слоты учитываются независимо. Одна двухкредитная проверка занимает один слот; отказ запуска освобождает ещё не начатое резервирование. Переговорная политика, исходные 120 измерений, графики и основной PDF/DOCX сохранены. Изменения жизненного цикла и пограничные условия описаны в [техническом контракте](docs/resource_lifecycle_lab3_v1.1.md) и [сверке версии 1.1](submission_manifest_lab3_v1.1.md).
+
+```powershell
+py -3.14 -m pip install -e .
+py -3.14 -m unittest discover -s tests -q
+py -3.14 -m researchradar.cli_stage3 "multi agent systems" --mode demo --resource-policy baseline --credits 4 --slots 1 --output run_output/slot_conflict.json
+py -3.14 tools/verify_lab3_results.py --results experiments/lab3/results
+```
+
+`--slots` задаёт число одновременно выполняемых проверок; при отказе из-за занятого слота эта версия сразу сообщает `failure` и освобождает резерв. Архивы `ResearchRadar_MAS_lab3_v1.1_submission.zip` и `_audit.zip` создаёт `tools/package_lab3.py` после коммита; новые испытания записывайте в `run_output/`.
+
+## Переговоры за бюджет проверок — исходная версия lab3-v1.0
 
 Третья версия добавляет отдельный ресурсный конфликт после научного и новостного поиска. `baseline` распределяет кредиты проверки по порядку заявок; `negotiation` проводит два раунда предложений, уступок и подтверждений. Выделенные кредиты разрешают реальные операции над метаданными, аннотацией и заголовками, а не только меняют число в симуляции. Утверждение из одной новости остаётся непроверенным; тематическое сходство не выдаётся за прямую доказанную связь.
 
@@ -14,11 +27,11 @@ py -3.14 tools/run_negotiation_experiments.py --repeats 12 --output run_output/l
 
 DEMO и эксперимент не обращаются к сети и OpenRouter. `--allocation centralized|contract-net` выбирает прежний способ назначения поисковых задач; `--resource-policy baseline|negotiation` выбирает способ согласования ограниченных проверок. Для небольшого LIVE-поиска используйте `--mode live`; Qwen подключается отдельно через `--llm recorded --recorded-plan data/recorded_plan.json` либо `--llm live` с явно проверенными тарифами. Платный LLM не требуется для переговоров. Стенд пишет новые данные в `run_output/`, чтобы не изменить результаты предыдущих работ; Git не нужен при запуске из ZIP.
 
-[Отчёт PDF](deliverables/ResearchRadar_MAS_Resource_Negotiation.pdf), [DOCX](deliverables/ResearchRadar_MAS_Resource_Negotiation.docx), [сверка требований и воспроизведение](submission_manifest_lab3.md). Сохранены 120 измерений по пяти сценариям в `experiments/lab3/results/`; их проверяет `py -3.14 tools/verify_lab3_results.py --results experiments/lab3/results`. Архивы для сдачи и аудита создаёт `tools/package_lab3.py` после финального коммита.
+[Отчёт PDF](deliverables/ResearchRadar_MAS_Resource_Negotiation.pdf), [DOCX](deliverables/ResearchRadar_MAS_Resource_Negotiation.docx), [сверка исходных требований](submission_manifest_lab3.md). Сохранены 120 измерений по пяти сценариям в `experiments/lab3/results/`; их проверяет `py -3.14 tools/verify_lab3_results.py --results experiments/lab3/results`. Исторические архивы версии 1.0 доступны в соответствующем GitHub Release.
 
 ## История второй версии
 
-**Текущая версия: лабораторная №2, `lab2-v1.1`.** ResearchRadar MAS распределяет поиск научных публикаций и новостей между шестью автономными исполнителями. Реализованы централизованное назначение и Contract Net. [Отчёт PDF](deliverables/ResearchRadar_MAS_Task_Allocation.pdf), [DOCX](deliverables/ResearchRadar_MAS_Task_Allocation.docx), [сверка требований](submission_manifest_lab2.md). Принятая версия первой работы `lab1-v1.2` сохранена.
+**Принятая версия лабораторной №2, `lab2-v1.1`.** ResearchRadar MAS распределяет поиск научных публикаций и новостей между шестью автономными исполнителями. Реализованы централизованное назначение и Contract Net. [Отчёт PDF](deliverables/ResearchRadar_MAS_Task_Allocation.pdf), [DOCX](deliverables/ResearchRadar_MAS_Task_Allocation.docx), [сверка требований](submission_manifest_lab2.md). Принятая версия первой работы `lab1-v1.2` сохранена.
 
 ## Версия 2: быстрый запуск
 

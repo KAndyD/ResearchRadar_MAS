@@ -9,10 +9,10 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "deliverables"
-VERSION = "lab3-v1.0"
+VERSION = "lab3-v1.1"
 BASE = (
     ".env.example", ".github/workflows/tests.yml", "AGENTS.md", "README.md",
-    "pyproject.toml", "submission_manifest_lab3.md",
+    "pyproject.toml", "submission_manifest_lab3_v1.1.md",
     "deliverables/ResearchRadar_MAS_Resource_Negotiation.pdf",
 )
 FOLDERS = ("src/researchradar", "tests", "data", "experiments", "docs", "tools")
@@ -47,7 +47,7 @@ def selected(audit: bool) -> list[Path]:
 
 def build(audit: bool) -> Path:
     kind = "audit" if audit else "submission"
-    output = OUT / f"ResearchRadar_MAS_lab3_v1.0_{kind}.zip"
+    output = OUT / f"ResearchRadar_MAS_lab3_v1.1_{kind}.zip"
     commit = subprocess.check_output(["git", "rev-parse", "HEAD"],
                                      cwd=ROOT, text=True).strip()
     experiment = json.loads((ROOT / "experiments/lab3/results/metadata.json").read_text(encoding="utf-8"))

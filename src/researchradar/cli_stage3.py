@@ -28,6 +28,7 @@ def main() -> None:
     parser.add_argument("--resource-policy", choices=("baseline", "negotiation"),
                         default="negotiation")
     parser.add_argument("--credits", type=int, default=3)
+    parser.add_argument("--slots", type=int, help="maximum simultaneous checks")
     parser.add_argument("--llm", choices=("off", "recorded", "live"), default="off")
     parser.add_argument("--recorded-plan", type=Path)
     parser.add_argument("--input-rate", type=float)
@@ -36,6 +37,8 @@ def main() -> None:
     args = parser.parse_args()
     if args.credits < 0 or args.credits > 50:
         parser.error("--credits must be 0..50")
+    if args.slots is not None and args.slots < 1:
+        parser.error("--slots must be at least 1")
     alternative = "distributed task allocation" if args.mode == "demo" else None
     if args.llm == "recorded":
         if not args.recorded_plan:
@@ -63,6 +66,7 @@ def main() -> None:
                     deadline_seconds=75 if args.mode == "live" else 5)
         review = await review_research(search, mode=args.resource_policy,
                                        credits=args.credits,
+                                       concurrent_slots=args.slots,
                                        timeout=30 if args.mode == "live" else 0.05)
         return {"mode": args.mode, "llm_mode": args.llm,
                 "alternative_query": alternative, "search": search, "review": review}
