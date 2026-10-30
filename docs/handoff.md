@@ -2,6 +2,8 @@
 
 ## Исправление ЛР №3 — lab3-v1.1
 
+Финальный архивный коммит `a50a2c4da1c3562893f94b57476fbe1af5e36091`; выпуск: https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab3-v1.1. Финальный аудиторский ZIP испытан вне Git (58 тестов, слотный DEMO, 10 запусков). Push CI `41123167649` и теговый CI `41123364044` успешны; все семь скачанных вложений совпали по SHA-256. Тег `lab3-v1.0` и прежние релизы сохранены.
+
 Финальным выпуском ЛР №3 служит `lab3-v1.1`; исторический `lab3-v1.0` не переписывать. Причины исправления: прежний `_active()` складывал кредитную стоимость вместо числа проверок, а после `failure` посредник не освобождал зарезервированные кредиты. Исправлены `src/researchradar/resources.py` (`_active`, `start`) и `src/researchradar/negotiation.py` (`ReviewAgent._execute`, `Mediator.run`, необязательный `concurrent_slots` в `review_research`); CLI принимает `--slots`. Контракт фаз и отказа без ожидания — `docs/resource_lifecycle_lab3_v1.1.md`, решение — ADR 015.
 
 Проверка: `py -3.14 -m unittest discover -s tests -q`; пограничный DEMO: `py -3.14 -m researchradar.cli_stage3 "multi agent systems" --mode demo --resource-policy baseline --credits 4 --slots 1`. Исходные 120 измерений и PDF/DOCX сохранены побайтно; SHA-256 и контрольное сравнение — `audit_evidence/lab3_v1.1_preservation.json`. Новые прогоны писать в `run_output/`, не в опубликованный корпус. Архивы `lab3-v1.1` формирует `tools/package_lab3.py` после коммита; распаковывать и испытывать вне Git. Внешние API и платный Qwen для исправления не нужны. ЛР №4 не начинать без отдельного поручения.
