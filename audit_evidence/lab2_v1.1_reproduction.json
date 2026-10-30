@@ -1,0 +1,21 @@
+{
+  "kind": "external_archive_reproduction_smoke",
+  "archive_source_commit": "32edad6571e7de01b72b5787764aaf63b5813c5a",
+  "archive_sha256": "852cac5d010e75289aa24764c2e8907ddb175bb128178248f5ae735ea6d2d544",
+  "archive_was_extracted_outside_repository": true,
+  "git_directory_in_extracted_copy": false,
+  "editable_install_in_separate_venv": true,
+  "imported_coordination_module_from_extracted_copy": true,
+  "python_version": "3.14.7",
+  "unit_tests_passed": 35,
+  "smoke_repeats": 1,
+  "smoke_scenarios": 4,
+  "smoke_mechanisms": 2,
+  "smoke_rows": 8,
+  "smoke_trace_files": 8,
+  "smoke_svg_files": 3,
+  "smoke_metadata_code_commit_at_run": null,
+  "smoke_metadata_code_commit_source": "unavailable_no_git_metadata",
+  "frozen_sha256_matches_extracted_fixture": true,
+  "notes": "Candidate archive check; smoke output was separate from the preserved 96-run corpus. The first editable install attempt lacked setuptools in the new venv; installing setuptools>=70 resolved this environment prerequisite."
+}

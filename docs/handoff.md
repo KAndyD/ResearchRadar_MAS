@@ -6,7 +6,7 @@
 
 Для независимой проверки распаковать `ResearchRadar_MAS_lab2_v1.1_audit.zip` **вне любого Git-репозитория**. На Windows/Python 3.14 запустить `py -3.14 -m pip install -e .`, `py -3.14 -m unittest discover -s tests -q`, `py -3.14 tools/run_experiments.py --repeats 1 --output run_output/experiment_smoke`. Ожидаются 35 тестов, восемь строк CSV, четыре сценария, два механизма, `code_commit_at_run: null`, `code_commit_source: unavailable_no_git_metadata`. Интеграционный тест также создаёт отдельную копию вне Git и убирает Git из PATH. Сравнение абсолютных миллисекунд между машинами не требуется.
 
-Сборка ZIP: `py -3.14 tools/package_lab2.py` после финального коммита. Упаковщик создаёт `lab2_v1.1_submission.zip` и `lab2_v1.1_audit.zip`, включает старый корпус, новые тесты и описание происхождения, записывает SHA-256 каждого члена и отдельно SHA архивного кода и первоначального измерения. Старые выпуски `lab1-v1.2` и `lab2-v1.0` сохранены.
+Сборка ZIP: `py -3.14 tools/package_lab2.py` после финального коммита. Упаковщик создаёт `ResearchRadar_MAS_lab2_v1.1_submission.zip` и `ResearchRadar_MAS_lab2_v1.1_audit.zip`, включает старый корпус, новые тесты и описание происхождения, записывает SHA-256 каждого члена и отдельно SHA архивного кода и первоначального измерения. Кандидат ZIP коммита `32edad6` проверен вне Git: 35 тестов и восемь запусков; свидетельство в `audit_evidence/lab2_v1.1_reproduction.json`. Старые выпуски `lab1-v1.2` и `lab2-v1.0` сохранены.
 
 ## История: lab2-v1.0
 
