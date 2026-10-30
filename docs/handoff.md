@@ -1,6 +1,14 @@
 # Передача состояния проекта
 
-## Текущая версия: lab2-v1.0
+## Исправленная версия: lab2-v1.1
+
+Главная корректировка: `tools/run_experiments.py` больше не требует Git; SHA нового запуска записывается только для чистого checkout с `.git` в корне копии, иначе ставятся `null` и причина. Скрипт по умолчанию пишет в `run_output/experiments`, сохраняя исходные 96 измерений. `docs/experiment_provenance.md` разъясняет различие исходного коммита измерений `2e38714` и более позднего релизного коммита. Отчёт, алгоритмы распределения и научные данные не менялись.
+
+Для независимой проверки распаковать `ResearchRadar_MAS_lab2_v1.1_audit.zip` **вне любого Git-репозитория**. На Windows/Python 3.14 запустить `py -3.14 -m pip install -e .`, `py -3.14 -m unittest discover -s tests -q`, `py -3.14 tools/run_experiments.py --repeats 1 --output run_output/experiment_smoke`. Ожидаются 35 тестов, восемь строк CSV, четыре сценария, два механизма, `code_commit_at_run: null`, `code_commit_source: unavailable_no_git_metadata`. Интеграционный тест также создаёт отдельную копию вне Git и убирает Git из PATH. Сравнение абсолютных миллисекунд между машинами не требуется.
+
+Сборка ZIP: `py -3.14 tools/package_lab2.py` после финального коммита. Упаковщик создаёт `lab2_v1.1_submission.zip` и `lab2_v1.1_audit.zip`, включает старый корпус, новые тесты и описание происхождения, записывает SHA-256 каждого члена и отдельно SHA архивного кода и первоначального измерения. Старые выпуски `lab1-v1.2` и `lab2-v1.0` сохранены.
+
+## История: lab2-v1.0
 
 1. Прочитать `AGENTS.md`, оригинальную методичку `project_guide/Лабораторные-МАС.pdf`, `docs/architecture.md`, `docs/decisions.md`, `docs/progress.md`, `docs/test-status.md`, `docs/source_policy.md`, `docs/api_validation.md` и `submission_manifest_lab2.md`. Методичка имеет приоритет; лекций в проекте нет.
 2. На Windows/Python 3.14: `py -3.14 -m pip install -e .`, `py -3.14 -m unittest discover -s tests -q`. Запуск: `py -3.14 -m researchradar.cli_stage2 "multi agent systems" --mode demo --coordination contract-net` или `--coordination centralized`. Оба DEMO полностью автономны; `run_output/` игнорируется Git.

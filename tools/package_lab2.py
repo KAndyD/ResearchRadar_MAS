@@ -2,12 +2,14 @@
 from __future__ import annotations
 
 from hashlib import sha256
+import json
 from pathlib import Path
 import subprocess
 from zipfile import ZIP_DEFLATED, ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "deliverables"
+RELEASE = "lab2-v1.1"
 BASE = (
     ".env.example", ".github/workflows/tests.yml", "AGENTS.md", "README.md",
     "pyproject.toml", "submission_manifest_lab2.md",
@@ -15,7 +17,8 @@ BASE = (
 )
 FOLDERS = ("src/researchradar", "tests", "data", "experiments/results",
            "docs/diagrams", "project_guide")
-DOCS = ("docs/architecture.md", "docs/decisions.md", "docs/source_policy.md",
+DOCS = ("docs/architecture.md", "docs/decisions.md", "docs/experiment_provenance.md",
+        "docs/source_policy.md",
         "docs/api_validation.md", "docs/test-status.md", "docs/progress.md",
         "docs/handoff.md")
 SCRIPTS = ("tools/run_experiments.py", "tools/package_lab2.py", "tools/build_lab2_report.py",
@@ -51,25 +54,31 @@ def selected(audit: bool) -> list[Path]:
 
 def build(audit: bool) -> Path:
     kind = "audit" if audit else "submission"
-    output = OUT / f"ResearchRadar_MAS_lab2_v1.0_{kind}.zip"
+    output = OUT / f"ResearchRadar_MAS_{RELEASE.replace('-', '_')}_{kind}.zip"
     commit = subprocess.check_output(["git", "rev-parse", "HEAD"],
                                      cwd=ROOT, text=True).strip()
-    manifest = [f"ResearchRadar MAS lab2-v1.0 {kind}", f"Commit: {commit}",
-                "Release: https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab2-v1.0",
+    experiment = json.loads((ROOT / "experiments/results/metadata.json").read_text(encoding="utf-8"))
+    measured_commit = experiment.get("code_commit_at_run")
+    manifest = [f"ResearchRadar MAS {RELEASE} {kind}",
+                f"Archive source commit: {commit}",
+                f"Original measurement code commit: {measured_commit or 'unknown'}",
+                "The two commits identify different events; measurements are preserved unchanged.",
+                f"Release: https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/{RELEASE}",
                 "SHA-256 of archive members:"]
     paths = selected(audit)
+    member_lines = []
     with ZipFile(output, "w", ZIP_DEFLATED) as archive:
         for path in paths:
             name = path.relative_to(ROOT).as_posix()
             data = path.read_bytes()
             archive.writestr(name, data)
-            manifest.append(f"{sha256(data).hexdigest()}  {name}")
-        archive.writestr("ARCHIVE_MANIFEST.txt", "\n".join(manifest) + "\n")
+            member_lines.append(f"{sha256(data).hexdigest()}  {name}")
+        archive.writestr("ARCHIVE_MANIFEST.txt", "\n".join(manifest + member_lines) + "\n")
     with ZipFile(output) as archive:
         assert archive.testzip() is None
         assert set(archive.namelist()) == {p.relative_to(ROOT).as_posix() for p in paths} | {
             "ARCHIVE_MANIFEST.txt"}
-        for line in manifest[4:]:
+        for line in member_lines:
             digest, name = line.split("  ", 1)
             assert sha256(archive.read(name)).hexdigest() == digest
     print(output, len(paths), "files, SHA-256", sha256(output.read_bytes()).hexdigest())

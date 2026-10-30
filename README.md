@@ -1,6 +1,6 @@
 # ResearchRadar MAS
 
-**Текущая версия: лабораторная №2, `lab2-v1.0`.** ResearchRadar MAS распределяет поиск научных публикаций и новостей между шестью автономными исполнителями. Реализованы централизованное назначение и Contract Net. [Отчёт PDF](deliverables/ResearchRadar_MAS_Task_Allocation.pdf), [DOCX](deliverables/ResearchRadar_MAS_Task_Allocation.docx), [сверка требований](submission_manifest_lab2.md). Принятая версия первой работы `lab1-v1.2` сохранена.
+**Текущая версия: лабораторная №2, `lab2-v1.1`.** ResearchRadar MAS распределяет поиск научных публикаций и новостей между шестью автономными исполнителями. Реализованы централизованное назначение и Contract Net. [Отчёт PDF](deliverables/ResearchRadar_MAS_Task_Allocation.pdf), [DOCX](deliverables/ResearchRadar_MAS_Task_Allocation.docx), [сверка требований](submission_manifest_lab2.md). Принятая версия первой работы `lab1-v1.2` сохранена.
 
 ## Версия 2: быстрый запуск
 
@@ -9,10 +9,22 @@ py -3.14 -m pip install -e .
 py -3.14 -m unittest discover -s tests -q
 py -3.14 -m researchradar.cli_stage2 "multi agent systems" --mode demo --coordination centralized
 py -3.14 -m researchradar.cli_stage2 "multi agent systems" --mode demo --coordination contract-net
-py -3.14 tools/run_experiments.py --repeats 12
+py -3.14 tools/run_experiments.py --repeats 12 --output run_output/experiments
 ```
 
-DEMO и эксперименты используют явно синтетический фиксированный набор `data/frozen_sources.json` без сети и платных API. Результат и трасса сохраняются в `run_output/stage2-result.json`. Эксперименты записывают первичные измерения в `experiments/results/raw.csv`, парные и сводные данные в JSON, образцы трасс и векторные графики. Параметры нагрузки для пары механизмов одинаковы; измеренное время также зависит от планировщика ОС.
+DEMO и эксперименты используют явно синтетический фиксированный набор `data/frozen_sources.json` без сети и платных API. Результат и трасса DEMO сохраняются в `run_output/stage2-result.json`. Опубликованные 96 измерений находятся в `experiments/results/`. Новый запуск по умолчанию пишет в `run_output/experiments/`, сохраняя исходный корпус; `--output` меняет этот путь. Там создаются `raw.csv`, `summary.json`, `paired.json`, `metadata.json`, трассы и SVG-графики. Параметры нагрузки для пары механизмов одинаковы; измеренное время также зависит от планировщика ОС.
+
+## Запуск из распакованного архива без Git
+
+Распакуйте `ResearchRadar_MAS_lab2_v1.1_audit.zip` в отдельный каталог вне другого Git-репозитория. Из этого каталога в PowerShell:
+
+```powershell
+py -3.14 -m pip install -e .
+py -3.14 -m unittest discover -s tests -q
+py -3.14 tools/run_experiments.py --repeats 1 --output run_output/experiment_smoke
+```
+
+Git не требуется для исследования. Скрипт берёт версию из собственного константного поля; достоверный SHA записывает только при доступном Git-репозитории именно в корне этой копии. В архиве поле `code_commit_at_run` нового прогона будет `null`, а `code_commit_source` объяснит отсутствие метаданных Git. Первоначальные 96 измерений были получены на коммите `2e38714e768e044928208e89009fe74cf7da9f87`; более поздний SHA выпуска обозначает сборку и не заменяет происхождение измерений. Одно повторение создаёт восемь запусков и служит проверкой работоспособности, а не заменой опубликованного корпуса.
 
 LIVE: `py -3.14 -m researchradar.cli_stage2 "multi agent systems" --mode live --coordination contract-net --news-source rss --news-window-days 30`. Адаптеры OpenAlex, Crossref, arXiv и Google News RSS проверены в LIVE. `--news-window-days` добавляет к RSS-запросу `when:Nd`, но не гарантирует строгой фильтрации дат. GDELT доступен через `--news-source gdelt`; последняя проверка дала HTTP 429. Отказ отдельного источника сохраняет частичные результаты остальных.
 

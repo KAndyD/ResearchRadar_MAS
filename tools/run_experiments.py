@@ -9,18 +9,46 @@ from hashlib import sha256
 import json
 from pathlib import Path
 import random
+import re
 import statistics
 import subprocess
+import platform
 
 from researchradar.coordination import WorkerSpec, default_workers, research_stage2
 from researchradar.frozen import load_frozen
 
 ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "experiments" / "results"
+RESULTS = ROOT / "run_output" / "experiments"
+SOFTWARE_VERSION = "lab2-v1.1"
 QUESTION = "multi agent systems"
 ALTERNATIVE = "distributed task allocation"
 SCENARIOS = ("balanced", "hidden_load", "limited_availability", "source_failure")
 METHODS = ("centralized", "contract-net")
+
+
+def code_revision() -> tuple[str | None, str]:
+    """Identify this checkout only; a parent repository is not provenance."""
+    if not (ROOT / ".git").exists():
+        return None, "unavailable_no_git_metadata"
+    try:
+        status = subprocess.run(["git", "status", "--porcelain", "--untracked-files=normal"],
+                                cwd=ROOT, text=True, capture_output=True,
+                                check=True, timeout=3)
+        if status.stdout.strip():
+            return None, "unavailable_dirty_checkout"
+        reply = subprocess.run(["git", "rev-parse", "--verify", "HEAD"],
+                               cwd=ROOT, text=True, capture_output=True,
+                               check=True, timeout=3)
+    except FileNotFoundError:
+        return None, "unavailable_git_not_installed"
+    except subprocess.CalledProcessError:
+        return None, "unavailable_git_command_failed"
+    except subprocess.TimeoutExpired:
+        return None, "unavailable_git_timeout"
+    commit = reply.stdout.strip()
+    if not re.fullmatch(r"[0-9a-fA-F]{40}|[0-9a-fA-F]{64}", commit):
+        return None, "unavailable_invalid_git_response"
+    return commit.lower(), "git_head"
 
 
 class FailingSource:
@@ -129,7 +157,7 @@ async def run(repeats: int, output: Path) -> None:
     trace_dir.mkdir(exist_ok=True)
     rows = []
     frozen_hash = sha256((ROOT / "data/frozen_sources.json").read_bytes()).hexdigest()
-    commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+    commit, commit_source = code_revision()
     for scenario in SCENARIOS:
         for seed in range(repeats):
             for mechanism in METHODS:
@@ -161,12 +189,15 @@ async def run(repeats: int, output: Path) -> None:
     summary = summarize(rows)
     (output / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     (output / "paired.json").write_text(json.dumps(paired_differences(rows), ensure_ascii=False, indent=2), encoding="utf-8")
-    metadata = {"version": "lab2-v1.0-candidate", "code_commit_at_run": commit,
+    metadata = {"version": SOFTWARE_VERSION, "version_source": "script_constant",
+                "code_commit_at_run": commit, "code_commit_source": commit_source,
                 "question": QUESTION, "alternative": ALTERNATIVE,
                 "data_kind": "synthetic_fixture", "frozen_sha256": frozen_hash,
-                "scenarios": SCENARIOS, "seeds": list(range(repeats)),
+                "scenarios": SCENARIOS, "repeats": repeats, "seeds": list(range(repeats)),
                 "mechanisms": METHODS, "runs": len(rows), "agents_per_run": 6,
-                "tasks_per_run": 5, "time_note": "wall and cumulative coordination measured with perf_counter; worker service delays are controlled synthetic milliseconds; actual thread scheduling contributes to wall time"}
+                "tasks_per_run": 5, "python_version": platform.python_version(),
+                "platform": platform.platform(),
+                "time_note": "wall and cumulative coordination measured with perf_counter; worker service delays are controlled synthetic milliseconds; actual thread scheduling contributes to wall time"}
     (output / "metadata.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8")
     chart(summary, "messages", "Сообщения протокола", "сообщений", output / "messages.svg")
     chart(summary, "wall_ms", "Время исследования", "мс, wall-clock", output / "wall_time.svg")
