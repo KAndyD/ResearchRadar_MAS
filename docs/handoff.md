@@ -1,5 +1,11 @@
 # Передача состояния проекта
 
+## Лабораторная №3 — lab3-v1.0
+
+Исходные требования: `project_guide/Лабораторные-МАС.pdf`; учебная сверка: `submission_manifest_lab3.md`. Протокол и ресурсный журнал: `src/researchradar/negotiation.py`, `resources.py`; запуск: `py -3.14 -m researchradar.cli_stage3 "multi agent systems" --mode demo --resource-policy negotiation --credits 3`. Сравнение: `py -3.14 tools/run_negotiation_experiments.py --repeats 1 --output run_output/lab3_smoke`, затем `py -3.14 tools/verify_lab3_results.py --results run_output/lab3_smoke`. Сохранённые 120 запусков: `experiments/lab3/results/`; исходный код измерения — коммит `8144ef765e839a03ecccc3a9d88e39f1c6a2783e`. Замороженные результаты не перезаписывать.
+
+Отчёт: `deliverables/ResearchRadar_MAS_Resource_Negotiation.docx/.pdf`; сборка: `tools/build_lab3_report.py`, `tools/build_lab3_pdf.py`, `tools/embed_lab3_vectors.ps1`. Архивы формирует `tools/package_lab3.py` после коммита. Распаковывать и испытывать вне Git; новый прогон пишет в `run_output/`. LIVE со связанными источниками и `--llm recorded` проверен; новый платный запрос Qwen не нужен. Результаты показывают и выигрыш, и потерю полезности в разных сценариях; не трактовать тематическое совпадение как подтверждение научной связи. ЛР №4 требует отдельного поручения.
+
 ## Исправленная версия: lab2-v1.1
 
 Главная корректировка: `tools/run_experiments.py` больше не требует Git; SHA нового запуска записывается только для чистого checkout с `.git` в корне копии, иначе ставятся `null` и причина. Скрипт по умолчанию пишет в `run_output/experiments`, сохраняя исходные 96 измерений. `docs/experiment_provenance.md` разъясняет различие исходного коммита измерений `2e38714` и более позднего релизного коммита. Отчёт, алгоритмы распределения и научные данные не менялись.

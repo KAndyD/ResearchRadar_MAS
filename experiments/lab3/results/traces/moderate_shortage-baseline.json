@@ -1,0 +1,102 @@
+[
+  {
+    "elapsed_ms": 0.0434,
+    "sender": "science",
+    "recipient": "mediator",
+    "kind": "request",
+    "check_id": "science-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.0539,
+    "sender": "news",
+    "recipient": "mediator",
+    "kind": "request",
+    "check_id": "news-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.0603,
+    "sender": "link",
+    "recipient": "mediator",
+    "kind": "request",
+    "check_id": "link-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.1014,
+    "sender": "mediator",
+    "recipient": "science",
+    "kind": "commit",
+    "check_id": "science-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.1123,
+    "sender": "mediator",
+    "recipient": "news",
+    "kind": "commit",
+    "check_id": "news-check",
+    "round": null,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 14.9482,
+    "sender": "news",
+    "recipient": "mediator",
+    "kind": "result",
+    "check_id": "news-check",
+    "round": null,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 15.0007,
+    "sender": "science",
+    "recipient": "mediator",
+    "kind": "result",
+    "check_id": "science-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 15.069,
+    "sender": "mediator",
+    "recipient": "science",
+    "kind": "shutdown",
+    "check_id": null,
+    "round": null,
+    "units": null,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 15.0804,
+    "sender": "mediator",
+    "recipient": "news",
+    "kind": "shutdown",
+    "check_id": null,
+    "round": null,
+    "units": null,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 15.0881,
+    "sender": "mediator",
+    "recipient": "link",
+    "kind": "shutdown",
+    "check_id": null,
+    "round": null,
+    "units": null,
+    "reason": null
+  }
+]

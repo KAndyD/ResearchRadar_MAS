@@ -1,0 +1,41 @@
+{
+  "version": "lab3-v1.0",
+  "version_source": "script_constant",
+  "code_commit_at_run": "8144ef765e839a03ecccc3a9d88e39f1c6a2783e",
+  "code_commit_source": "git_clean_experiment_inputs",
+  "frozen_sha256": "279e928edd1c7183da6264988a0558caadfcb8d2b084989ed588ed31330c3320",
+  "scenarios_sha256": "434f5e5d9dd0a9360a96e3ad979ab0319da61ed1dd11acd36f692284b86e8200",
+  "research_materials_sha256": "77b22c7eea372c84884ae821e97c6f578eba4115cbb07b73ea10c416a3d91cbc",
+  "data_kind": "synthetic_fixture",
+  "search_allocation": "centralized",
+  "modes": [
+    "baseline",
+    "negotiation"
+  ],
+  "scenarios": [
+    "sufficient",
+    "moderate_shortage",
+    "strong_shortage",
+    "unequal_values",
+    "unresponsive_agent"
+  ],
+  "repeats": 12,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "runs": 120,
+  "python_version": "3.14.7",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "time_note": "Wall time includes OS scheduling; delay_ms is a controlled synthetic verification delay; check_ms_sum can overlap across agents."
+}

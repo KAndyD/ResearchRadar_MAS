@@ -14,6 +14,8 @@ py -3.14 tools/run_negotiation_experiments.py --repeats 12 --output run_output/l
 
 DEMO и эксперимент не обращаются к сети и OpenRouter. `--allocation centralized|contract-net` выбирает прежний способ назначения поисковых задач; `--resource-policy baseline|negotiation` выбирает способ согласования ограниченных проверок. Для небольшого LIVE-поиска используйте `--mode live`; Qwen подключается отдельно через `--llm recorded --recorded-plan data/recorded_plan.json` либо `--llm live` с явно проверенными тарифами. Платный LLM не требуется для переговоров. Стенд пишет новые данные в `run_output/`, чтобы не изменить результаты предыдущих работ; Git не нужен при запуске из ZIP.
 
+[Отчёт PDF](deliverables/ResearchRadar_MAS_Resource_Negotiation.pdf), [DOCX](deliverables/ResearchRadar_MAS_Resource_Negotiation.docx), [сверка требований и воспроизведение](submission_manifest_lab3.md). Сохранены 120 измерений по пяти сценариям в `experiments/lab3/results/`; их проверяет `py -3.14 tools/verify_lab3_results.py --results experiments/lab3/results`. Архивы для сдачи и аудита создаёт `tools/package_lab3.py` после финального коммита.
+
 ## История второй версии
 
 **Текущая версия: лабораторная №2, `lab2-v1.1`.** ResearchRadar MAS распределяет поиск научных публикаций и новостей между шестью автономными исполнителями. Реализованы централизованное назначение и Contract Net. [Отчёт PDF](deliverables/ResearchRadar_MAS_Task_Allocation.pdf), [DOCX](deliverables/ResearchRadar_MAS_Task_Allocation.docx), [сверка требований](submission_manifest_lab2.md). Принятая версия первой работы `lab1-v1.2` сохранена.

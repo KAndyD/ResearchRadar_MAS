@@ -1,0 +1,242 @@
+[
+  {
+    "elapsed_ms": 0.1085,
+    "sender": "science",
+    "recipient": "mediator",
+    "kind": "request",
+    "check_id": "science-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.135,
+    "sender": "news",
+    "recipient": "mediator",
+    "kind": "request",
+    "check_id": "news-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.1464,
+    "sender": "link",
+    "recipient": "mediator",
+    "kind": "request",
+    "check_id": "link-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.216,
+    "sender": "mediator",
+    "recipient": "science",
+    "kind": "offer",
+    "check_id": "science-check",
+    "round": 1,
+    "units": 0,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.2269,
+    "sender": "mediator",
+    "recipient": "news",
+    "kind": "offer",
+    "check_id": "news-check",
+    "round": 1,
+    "units": 0,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.2361,
+    "sender": "mediator",
+    "recipient": "link",
+    "kind": "offer",
+    "check_id": "link-check",
+    "round": 1,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.2761,
+    "sender": "science",
+    "recipient": "mediator",
+    "kind": "counter",
+    "check_id": "science-check",
+    "round": 1,
+    "units": 1,
+    "reason": "partial_check"
+  },
+  {
+    "elapsed_ms": 0.2903,
+    "sender": "news",
+    "recipient": "mediator",
+    "kind": "counter",
+    "check_id": "news-check",
+    "round": 1,
+    "units": 1,
+    "reason": "partial_check"
+  },
+  {
+    "elapsed_ms": 0.3027,
+    "sender": "link",
+    "recipient": "mediator",
+    "kind": "counter",
+    "check_id": "link-check",
+    "round": 1,
+    "units": 1,
+    "reason": "concede_for_peers"
+  },
+  {
+    "elapsed_ms": 0.3634,
+    "sender": "mediator",
+    "recipient": "science",
+    "kind": "offer",
+    "check_id": "science-check",
+    "round": 2,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.3734,
+    "sender": "mediator",
+    "recipient": "news",
+    "kind": "offer",
+    "check_id": "news-check",
+    "round": 2,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.3807,
+    "sender": "mediator",
+    "recipient": "link",
+    "kind": "offer",
+    "check_id": "link-check",
+    "round": 2,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.4068,
+    "sender": "science",
+    "recipient": "mediator",
+    "kind": "accept",
+    "check_id": "science-check",
+    "round": 2,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.4182,
+    "sender": "news",
+    "recipient": "mediator",
+    "kind": "accept",
+    "check_id": "news-check",
+    "round": 2,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.4285,
+    "sender": "link",
+    "recipient": "mediator",
+    "kind": "accept",
+    "check_id": "link-check",
+    "round": 2,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.4794,
+    "sender": "mediator",
+    "recipient": "science",
+    "kind": "commit",
+    "check_id": "science-check",
+    "round": null,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.4948,
+    "sender": "mediator",
+    "recipient": "news",
+    "kind": "commit",
+    "check_id": "news-check",
+    "round": null,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.5102,
+    "sender": "mediator",
+    "recipient": "link",
+    "kind": "commit",
+    "check_id": "link-check",
+    "round": null,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 13.7827,
+    "sender": "science",
+    "recipient": "mediator",
+    "kind": "result",
+    "check_id": "science-check",
+    "round": null,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 13.8391,
+    "sender": "news",
+    "recipient": "mediator",
+    "kind": "result",
+    "check_id": "news-check",
+    "round": null,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 13.89,
+    "sender": "link",
+    "recipient": "mediator",
+    "kind": "result",
+    "check_id": "link-check",
+    "round": null,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 13.9814,
+    "sender": "mediator",
+    "recipient": "science",
+    "kind": "shutdown",
+    "check_id": null,
+    "round": null,
+    "units": null,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 13.9934,
+    "sender": "mediator",
+    "recipient": "news",
+    "kind": "shutdown",
+    "check_id": null,
+    "round": null,
+    "units": null,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 14.0035,
+    "sender": "mediator",
+    "recipient": "link",
+    "kind": "shutdown",
+    "check_id": null,
+    "round": null,
+    "units": null,
+    "reason": null
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "mode": "live",
+  "search_allocation": "contract-net",
+  "resource_policy": "negotiation",
+  "llm_mode": "recorded",
+  "new_llm_calls": 0,
+  "new_llm_cost_usd": 0,
+  "search_completed_tasks": 5,
+  "search_task_count": 5,
+  "search_errors": {},
+  "source_counts": {
+    "OpenAlex": 6,
+    "Crossref": 3,
+    "arXiv": 3,
+    "Google News RSS": 3
+  },
+  "verification_budget_credits": 3,
+  "completed_checks": 3,
+  "check_assessments": {
+    "science": "metadata_checked",
+    "news": "claim_unverified",
+    "link": "thematic_candidate"
+  },
+  "budget_violations": 0,
+  "slot_violations": 0
+}

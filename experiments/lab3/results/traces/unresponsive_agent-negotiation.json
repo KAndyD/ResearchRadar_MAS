@@ -1,0 +1,202 @@
+[
+  {
+    "elapsed_ms": 0.0772,
+    "sender": "science",
+    "recipient": "mediator",
+    "kind": "request",
+    "check_id": "science-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.1138,
+    "sender": "news",
+    "recipient": "mediator",
+    "kind": "request",
+    "check_id": "news-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.1236,
+    "sender": "link",
+    "recipient": "mediator",
+    "kind": "request",
+    "check_id": "link-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.1835,
+    "sender": "mediator",
+    "recipient": "science",
+    "kind": "offer",
+    "check_id": "science-check",
+    "round": 1,
+    "units": 0,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.1942,
+    "sender": "mediator",
+    "recipient": "news",
+    "kind": "offer",
+    "check_id": "news-check",
+    "round": 1,
+    "units": 0,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.2028,
+    "sender": "mediator",
+    "recipient": "link",
+    "kind": "offer",
+    "check_id": "link-check",
+    "round": 1,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 0.2344,
+    "sender": "science",
+    "recipient": "mediator",
+    "kind": "counter",
+    "check_id": "science-check",
+    "round": 1,
+    "units": 1,
+    "reason": "partial_check"
+  },
+  {
+    "elapsed_ms": 0.247,
+    "sender": "news",
+    "recipient": "mediator",
+    "kind": "counter",
+    "check_id": "news-check",
+    "round": 1,
+    "units": 1,
+    "reason": "partial_check"
+  },
+  {
+    "elapsed_ms": 30.804,
+    "sender": "mediator",
+    "recipient": "science",
+    "kind": "offer",
+    "check_id": "science-check",
+    "round": 2,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 30.8407,
+    "sender": "mediator",
+    "recipient": "news",
+    "kind": "offer",
+    "check_id": "news-check",
+    "round": 2,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 30.854,
+    "sender": "mediator",
+    "recipient": "link",
+    "kind": "offer",
+    "check_id": "link-check",
+    "round": 2,
+    "units": 0,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 30.9337,
+    "sender": "science",
+    "recipient": "mediator",
+    "kind": "accept",
+    "check_id": "science-check",
+    "round": 2,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 30.9545,
+    "sender": "news",
+    "recipient": "mediator",
+    "kind": "accept",
+    "check_id": "news-check",
+    "round": 2,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 62.3617,
+    "sender": "mediator",
+    "recipient": "science",
+    "kind": "commit",
+    "check_id": "science-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 62.3967,
+    "sender": "mediator",
+    "recipient": "news",
+    "kind": "commit",
+    "check_id": "news-check",
+    "round": null,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 77.9383,
+    "sender": "news",
+    "recipient": "mediator",
+    "kind": "result",
+    "check_id": "news-check",
+    "round": null,
+    "units": 1,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 77.9934,
+    "sender": "science",
+    "recipient": "mediator",
+    "kind": "result",
+    "check_id": "science-check",
+    "round": null,
+    "units": 2,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 78.0781,
+    "sender": "mediator",
+    "recipient": "science",
+    "kind": "shutdown",
+    "check_id": null,
+    "round": null,
+    "units": null,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 78.0913,
+    "sender": "mediator",
+    "recipient": "news",
+    "kind": "shutdown",
+    "check_id": null,
+    "round": null,
+    "units": null,
+    "reason": null
+  },
+  {
+    "elapsed_ms": 78.1034,
+    "sender": "mediator",
+    "recipient": "link",
+    "kind": "shutdown",
+    "check_id": null,
+    "round": null,
+    "units": null,
+    "reason": null
+  }
+]

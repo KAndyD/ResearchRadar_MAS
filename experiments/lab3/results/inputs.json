@@ -1,0 +1,2186 @@
+[
+  {
+    "scenario": "sufficient",
+    "seed": 0,
+    "credits": 6,
+    "delay_ms": 2.11352,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.12399,
+        "partial_value": 4.06191,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.97141,
+        "partial_value": 2.95661,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.00541,
+        "partial_value": 4.97148,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "sufficient",
+    "seed": 1,
+    "credits": 6,
+    "delay_ms": 2.06064,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.86837,
+        "partial_value": 4.08338,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.09496,
+        "partial_value": 2.95591,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.99781,
+        "partial_value": 4.98485,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "sufficient",
+    "seed": 2,
+    "credits": 6,
+    "delay_ms": 2.06789,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.16417,
+        "partial_value": 4.10748,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.84036,
+        "partial_value": 2.92528,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.16104,
+        "partial_value": 5.07079,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "sufficient",
+    "seed": 3,
+    "credits": 6,
+    "delay_ms": 1.80527,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.90567,
+        "partial_value": 4.01062,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.95318,
+        "partial_value": 3.01871,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.06035,
+        "partial_value": 4.86966,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "sufficient",
+    "seed": 4,
+    "credits": 6,
+    "delay_ms": 2.16718,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.90498,
+        "partial_value": 3.90476,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.96258,
+        "partial_value": 2.9379,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.79193,
+        "partial_value": 4.97048,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "sufficient",
+    "seed": 5,
+    "credits": 6,
+    "delay_ms": 1.8116,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.04424,
+        "partial_value": 4.05803,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.10627,
+        "partial_value": 3.07964,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.11515,
+        "partial_value": 5.1267,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "sufficient",
+    "seed": 6,
+    "credits": 6,
+    "delay_ms": 1.9881,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.1056,
+        "partial_value": 4.07727,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.99461,
+        "partial_value": 2.95709,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.76022,
+        "partial_value": 5.04885,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "sufficient",
+    "seed": 7,
+    "credits": 6,
+    "delay_ms": 1.8232,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.93658,
+        "partial_value": 3.9162,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.05434,
+        "partial_value": 2.92304,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.01722,
+        "partial_value": 4.95971,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "sufficient",
+    "seed": 8,
+    "credits": 6,
+    "delay_ms": 2.19965,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.90161,
+        "partial_value": 4.11095,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.86548,
+        "partial_value": 3.03687,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.80089,
+        "partial_value": 4.92423,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "sufficient",
+    "seed": 9,
+    "credits": 6,
+    "delay_ms": 2.15932,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.98668,
+        "partial_value": 3.96959,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.86987,
+        "partial_value": 3.06598,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.76309,
+        "partial_value": 5.00083,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "sufficient",
+    "seed": 10,
+    "credits": 6,
+    "delay_ms": 2.06139,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.0257,
+        "partial_value": 3.98293,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.02811,
+        "partial_value": 2.9471,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.15039,
+        "partial_value": 5.09708,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "sufficient",
+    "seed": 11,
+    "credits": 6,
+    "delay_ms": 1.87386,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.98286,
+        "partial_value": 4.01435,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.15272,
+        "partial_value": 2.99382,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.00376,
+        "partial_value": 5.02622,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "moderate_shortage",
+    "seed": 0,
+    "credits": 3,
+    "delay_ms": 2.18692,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.85363,
+        "partial_value": 4.06901,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.06883,
+        "partial_value": 3.07516,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.11081,
+        "partial_value": 4.95508,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "moderate_shortage",
+    "seed": 1,
+    "credits": 3,
+    "delay_ms": 2.14247,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.91624,
+        "partial_value": 3.99391,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.8889,
+        "partial_value": 2.99325,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.19679,
+        "partial_value": 4.95762,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "moderate_shortage",
+    "seed": 2,
+    "credits": 3,
+    "delay_ms": 2.09216,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.11948,
+        "partial_value": 3.95446,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.84939,
+        "partial_value": 2.94942,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.90575,
+        "partial_value": 4.92666,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "moderate_shortage",
+    "seed": 3,
+    "credits": 3,
+    "delay_ms": 1.81984,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.95337,
+        "partial_value": 4.02712,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.13663,
+        "partial_value": 3.06466,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.76816,
+        "partial_value": 5.10378,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "moderate_shortage",
+    "seed": 4,
+    "credits": 3,
+    "delay_ms": 2.01194,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.15921,
+        "partial_value": 3.888,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.08643,
+        "partial_value": 2.96362,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.84461,
+        "partial_value": 5.03507,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "moderate_shortage",
+    "seed": 5,
+    "credits": 3,
+    "delay_ms": 1.81373,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.04914,
+        "partial_value": 4.09778,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.08291,
+        "partial_value": 2.92211,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.8839,
+        "partial_value": 4.91954,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "moderate_shortage",
+    "seed": 6,
+    "credits": 3,
+    "delay_ms": 1.87765,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.11238,
+        "partial_value": 4.01178,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.99389,
+        "partial_value": 2.92095,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.9154,
+        "partial_value": 5.04004,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "moderate_shortage",
+    "seed": 7,
+    "credits": 3,
+    "delay_ms": 1.81421,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.85585,
+        "partial_value": 4.05483,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.0926,
+        "partial_value": 2.92187,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.91673,
+        "partial_value": 4.88384,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "moderate_shortage",
+    "seed": 8,
+    "credits": 3,
+    "delay_ms": 1.96672,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.04108,
+        "partial_value": 3.91816,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.01068,
+        "partial_value": 2.95288,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.08937,
+        "partial_value": 4.93762,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "moderate_shortage",
+    "seed": 9,
+    "credits": 3,
+    "delay_ms": 2.17295,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.14064,
+        "partial_value": 3.92,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.13964,
+        "partial_value": 2.98843,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.09835,
+        "partial_value": 4.98224,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "moderate_shortage",
+    "seed": 10,
+    "credits": 3,
+    "delay_ms": 1.98199,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.00211,
+        "partial_value": 4.00529,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.01155,
+        "partial_value": 3.01059,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.0332,
+        "partial_value": 5.11343,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "moderate_shortage",
+    "seed": 11,
+    "credits": 3,
+    "delay_ms": 1.92248,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.92102,
+        "partial_value": 4.0511,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.06592,
+        "partial_value": 2.95936,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.82614,
+        "partial_value": 4.85304,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "strong_shortage",
+    "seed": 0,
+    "credits": 2,
+    "delay_ms": 2.15385,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.87848,
+        "partial_value": 3.96223,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.14884,
+        "partial_value": 3.01151,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.15367,
+        "partial_value": 4.97484,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "strong_shortage",
+    "seed": 1,
+    "credits": 2,
+    "delay_ms": 2.18004,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.11733,
+        "partial_value": 4.02999,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.01864,
+        "partial_value": 3.07108,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.76134,
+        "partial_value": 5.00656,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "strong_shortage",
+    "seed": 2,
+    "credits": 2,
+    "delay_ms": 2.05408,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.82564,
+        "partial_value": 4.00746,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.14764,
+        "partial_value": 3.05436,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.02519,
+        "partial_value": 4.95703,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "strong_shortage",
+    "seed": 3,
+    "credits": 2,
+    "delay_ms": 2.19331,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.04245,
+        "partial_value": 4.02172,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.05827,
+        "partial_value": 2.9483,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.82486,
+        "partial_value": 5.13021,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "strong_shortage",
+    "seed": 4,
+    "credits": 2,
+    "delay_ms": 2.12303,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.93065,
+        "partial_value": 4.05764,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.8388,
+        "partial_value": 3.02513,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.97851,
+        "partial_value": 4.8795,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "strong_shortage",
+    "seed": 5,
+    "credits": 2,
+    "delay_ms": 2.12832,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.90652,
+        "partial_value": 3.98172,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.95314,
+        "partial_value": 3.03434,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.175,
+        "partial_value": 4.92085,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "strong_shortage",
+    "seed": 6,
+    "credits": 2,
+    "delay_ms": 2.16644,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.01798,
+        "partial_value": 4.06249,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.00601,
+        "partial_value": 3.00414,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.78122,
+        "partial_value": 5.11818,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "strong_shortage",
+    "seed": 7,
+    "credits": 2,
+    "delay_ms": 2.10215,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.04523,
+        "partial_value": 4.0255,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.9924,
+        "partial_value": 2.99993,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.90922,
+        "partial_value": 5.00431,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "strong_shortage",
+    "seed": 8,
+    "credits": 2,
+    "delay_ms": 1.98937,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.83831,
+        "partial_value": 3.90213,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.05127,
+        "partial_value": 2.91496,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.17542,
+        "partial_value": 5.09565,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "strong_shortage",
+    "seed": 9,
+    "credits": 2,
+    "delay_ms": 2.03016,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.92341,
+        "partial_value": 4.03757,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.13302,
+        "partial_value": 3.01852,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.91695,
+        "partial_value": 4.96528,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "strong_shortage",
+    "seed": 10,
+    "credits": 2,
+    "delay_ms": 1.82812,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.06286,
+        "partial_value": 3.89959,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.94332,
+        "partial_value": 3.08803,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.90758,
+        "partial_value": 5.12257,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "strong_shortage",
+    "seed": 11,
+    "credits": 2,
+    "delay_ms": 1.90557,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.97367,
+        "partial_value": 4.03797,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.06766,
+        "partial_value": 2.97838,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.17939,
+        "partial_value": 4.96214,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unequal_values",
+    "seed": 0,
+    "credits": 3,
+    "delay_ms": 1.94996,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 10.08185,
+        "partial_value": 2.00431,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.13137,
+        "partial_value": 3.04591,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.79678,
+        "partial_value": 5.0986,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unequal_values",
+    "seed": 1,
+    "credits": 3,
+    "delay_ms": 1.88715,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 10.26549,
+        "partial_value": 1.97541,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.95632,
+        "partial_value": 2.93326,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.20586,
+        "partial_value": 4.88935,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unequal_values",
+    "seed": 2,
+    "credits": 3,
+    "delay_ms": 1.96884,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 10.18537,
+        "partial_value": 1.99218,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.14827,
+        "partial_value": 3.05361,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.85131,
+        "partial_value": 5.05768,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unequal_values",
+    "seed": 3,
+    "credits": 3,
+    "delay_ms": 2.00738,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 10.21439,
+        "partial_value": 1.96645,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.89284,
+        "partial_value": 2.94834,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.12688,
+        "partial_value": 5.09288,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unequal_values",
+    "seed": 4,
+    "credits": 3,
+    "delay_ms": 1.98333,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 10.16287,
+        "partial_value": 2.04968,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.15933,
+        "partial_value": 3.08113,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.06478,
+        "partial_value": 4.90595,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unequal_values",
+    "seed": 5,
+    "credits": 3,
+    "delay_ms": 1.9581,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 9.75218,
+        "partial_value": 1.99222,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.09431,
+        "partial_value": 2.98013,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.90457,
+        "partial_value": 4.91615,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unequal_values",
+    "seed": 6,
+    "credits": 3,
+    "delay_ms": 1.81874,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 10.02324,
+        "partial_value": 2.04163,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.97681,
+        "partial_value": 2.99185,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.7634,
+        "partial_value": 5.01993,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unequal_values",
+    "seed": 7,
+    "credits": 3,
+    "delay_ms": 1.93517,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 9.79602,
+        "partial_value": 2.00815,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.8749,
+        "partial_value": 2.94821,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.19689,
+        "partial_value": 5.00173,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unequal_values",
+    "seed": 8,
+    "credits": 3,
+    "delay_ms": 2.0482,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 9.87016,
+        "partial_value": 1.98896,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.04489,
+        "partial_value": 3.00288,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.20978,
+        "partial_value": 4.95994,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unequal_values",
+    "seed": 9,
+    "credits": 3,
+    "delay_ms": 1.90584,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 10.1546,
+        "partial_value": 1.99957,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.9534,
+        "partial_value": 2.94905,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.08018,
+        "partial_value": 5.06587,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unequal_values",
+    "seed": 10,
+    "credits": 3,
+    "delay_ms": 2.16309,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 9.74255,
+        "partial_value": 2.04187,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.8524,
+        "partial_value": 3.03679,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.90442,
+        "partial_value": 4.90732,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unequal_values",
+    "seed": 11,
+    "credits": 3,
+    "delay_ms": 2.1656,
+    "silent_owners": [],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 10.03347,
+        "partial_value": 2.05664,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.94952,
+        "partial_value": 3.00229,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.8955,
+        "partial_value": 4.9912,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unresponsive_agent",
+    "seed": 0,
+    "credits": 3,
+    "delay_ms": 2.15222,
+    "silent_owners": [
+      "link"
+    ],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.87657,
+        "partial_value": 4.06694,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.82664,
+        "partial_value": 2.91185,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.8557,
+        "partial_value": 4.97032,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unresponsive_agent",
+    "seed": 1,
+    "credits": 3,
+    "delay_ms": 2.06928,
+    "silent_owners": [
+      "link"
+    ],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.86241,
+        "partial_value": 3.9676,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.8372,
+        "partial_value": 3.01383,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.95267,
+        "partial_value": 5.05541,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unresponsive_agent",
+    "seed": 2,
+    "credits": 3,
+    "delay_ms": 2.19027,
+    "silent_owners": [
+      "link"
+    ],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.88917,
+        "partial_value": 4.02707,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.12527,
+        "partial_value": 3.00706,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.90124,
+        "partial_value": 4.85684,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unresponsive_agent",
+    "seed": 3,
+    "credits": 3,
+    "delay_ms": 2.18869,
+    "silent_owners": [
+      "link"
+    ],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.99898,
+        "partial_value": 3.88561,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.07812,
+        "partial_value": 2.9198,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.13426,
+        "partial_value": 5.14293,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unresponsive_agent",
+    "seed": 4,
+    "credits": 3,
+    "delay_ms": 2.05731,
+    "silent_owners": [
+      "link"
+    ],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.00384,
+        "partial_value": 4.03178,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.9373,
+        "partial_value": 2.96934,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.76685,
+        "partial_value": 5.13198,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unresponsive_agent",
+    "seed": 5,
+    "credits": 3,
+    "delay_ms": 1.91255,
+    "silent_owners": [
+      "link"
+    ],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.05495,
+        "partial_value": 4.11316,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.15927,
+        "partial_value": 2.98682,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.13884,
+        "partial_value": 4.86763,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unresponsive_agent",
+    "seed": 6,
+    "credits": 3,
+    "delay_ms": 1.83259,
+    "silent_owners": [
+      "link"
+    ],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.89177,
+        "partial_value": 3.99125,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.91584,
+        "partial_value": 2.93621,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.90272,
+        "partial_value": 4.94712,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unresponsive_agent",
+    "seed": 7,
+    "credits": 3,
+    "delay_ms": 2.15079,
+    "silent_owners": [
+      "link"
+    ],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.01813,
+        "partial_value": 4.01528,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.83536,
+        "partial_value": 3.08868,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.12135,
+        "partial_value": 5.11783,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unresponsive_agent",
+    "seed": 8,
+    "credits": 3,
+    "delay_ms": 1.82497,
+    "silent_owners": [
+      "link"
+    ],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.01568,
+        "partial_value": 3.97318,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.90362,
+        "partial_value": 2.95593,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 8.14471,
+        "partial_value": 4.97299,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unresponsive_agent",
+    "seed": 9,
+    "credits": 3,
+    "delay_ms": 2.0156,
+    "silent_owners": [
+      "link"
+    ],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.09271,
+        "partial_value": 3.91685,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.09524,
+        "partial_value": 3.03409,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.89648,
+        "partial_value": 4.91407,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unresponsive_agent",
+    "seed": 10,
+    "credits": 3,
+    "delay_ms": 1.81806,
+    "silent_owners": [
+      "link"
+    ],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 6.17857,
+        "partial_value": 4.01636,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 6.13823,
+        "partial_value": 2.94125,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.96528,
+        "partial_value": 5.11973,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  },
+  {
+    "scenario": "unresponsive_agent",
+    "seed": 11,
+    "credits": 3,
+    "delay_ms": 1.96901,
+    "silent_owners": [
+      "link"
+    ],
+    "checks": [
+      {
+        "id": "science-check",
+        "owner": "science",
+        "full_value": 5.92376,
+        "partial_value": 4.03853,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "news-check",
+        "owner": "news",
+        "full_value": 5.88146,
+        "partial_value": 3.05554,
+        "public_priority": 2,
+        "full_units": 2,
+        "min_units": 1
+      },
+      {
+        "id": "link-check",
+        "owner": "link",
+        "full_value": 7.81279,
+        "partial_value": 4.94307,
+        "public_priority": 3,
+        "full_units": 2,
+        "min_units": 1
+      }
+    ]
+  }
+]

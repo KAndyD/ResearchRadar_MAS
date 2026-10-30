@@ -1,0 +1,5 @@
+10 runs; 5 scenarios; 1 paired repeats: C:\Users\adkor\AppData\Local\Temp\tmp3k1k3tr4
+----------------------------------------------------------------------
+Ran 47 tests in 7.274s
+
+OK

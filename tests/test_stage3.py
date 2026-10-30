@@ -12,6 +12,7 @@ from researchradar.negotiation import (CheckRequest, Mediator, NegotiationBus,
                                        derive_checks, perform_check, review_research)
 from researchradar.resources import VerificationBudget
 from tools.run_negotiation_experiments import run as run_experiments
+from tools.verify_lab3_results import verify
 
 
 class Stage3Tests(unittest.TestCase):
@@ -180,6 +181,7 @@ class Stage3Tests(unittest.TestCase):
                     item["estimated_utility_difference_mean"], places=5)
             self.assertEqual(len(list((output / "traces").glob("*.json"))), 10)
             self.assertEqual(len(list(output.glob("*.svg"))), 4)
+            self.assertEqual(verify(output)["resource_violations"], 0)
 
 
 if __name__ == "__main__":
