@@ -1,0 +1,15 @@
+{
+  "candidate_archive_source_commit": "7f11a14",
+  "environment": "Windows 11, Python 3.14 with installed project dependencies",
+  "location": "external temporary directory outside Git",
+  "git_removed_from_path": true,
+  "imported_module": "src/researchradar/negotiation.py inside extracted archive",
+  "tests_passed": 47,
+  "smoke_runs": 10,
+  "smoke_pairs": 5,
+  "smoke_scenarios": 5,
+  "resource_violations": 0,
+  "code_commit_at_run": null,
+  "code_commit_source": "unavailable_no_git_metadata",
+  "frozen_sha256": "279e928edd1c7183da6264988a0558caadfcb8d2b084989ed588ed31330c3320"
+}
