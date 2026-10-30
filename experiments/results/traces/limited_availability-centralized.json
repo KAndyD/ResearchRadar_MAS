@@ -1,0 +1,114 @@
+[
+  {
+    "elapsed_ms": 0.1627,
+    "sender": "coordinator",
+    "recipient": "scholar_b",
+    "kind": "task",
+    "task_id": "oa-primary"
+  },
+  {
+    "elapsed_ms": 0.2202,
+    "sender": "coordinator",
+    "recipient": "preprint_b",
+    "kind": "task",
+    "task_id": "cr-bibliography"
+  },
+  {
+    "elapsed_ms": 0.2485,
+    "sender": "coordinator",
+    "recipient": "preprint_a",
+    "kind": "task",
+    "task_id": "ax-preprints"
+  },
+  {
+    "elapsed_ms": 0.2717,
+    "sender": "coordinator",
+    "recipient": "news_b",
+    "kind": "task",
+    "task_id": "news-primary"
+  },
+  {
+    "elapsed_ms": 0.2935,
+    "sender": "coordinator",
+    "recipient": "scholar_b",
+    "kind": "task",
+    "task_id": "oa-alternative"
+  },
+  {
+    "elapsed_ms": 31.7675,
+    "sender": "preprint_a",
+    "recipient": "coordinator",
+    "kind": "result",
+    "task_id": "ax-preprints"
+  },
+  {
+    "elapsed_ms": 39.8079,
+    "sender": "news_b",
+    "recipient": "coordinator",
+    "kind": "result",
+    "task_id": "news-primary"
+  },
+  {
+    "elapsed_ms": 39.8641,
+    "sender": "scholar_b",
+    "recipient": "coordinator",
+    "kind": "result",
+    "task_id": "oa-primary"
+  },
+  {
+    "elapsed_ms": 54.7118,
+    "sender": "preprint_b",
+    "recipient": "coordinator",
+    "kind": "result",
+    "task_id": "cr-bibliography"
+  },
+  {
+    "elapsed_ms": 88.7462,
+    "sender": "scholar_b",
+    "recipient": "coordinator",
+    "kind": "result",
+    "task_id": "oa-alternative"
+  },
+  {
+    "elapsed_ms": 88.9424,
+    "sender": "coordinator",
+    "recipient": "scholar_a",
+    "kind": "shutdown",
+    "task_id": null
+  },
+  {
+    "elapsed_ms": 88.9588,
+    "sender": "coordinator",
+    "recipient": "scholar_b",
+    "kind": "shutdown",
+    "task_id": null
+  },
+  {
+    "elapsed_ms": 88.9698,
+    "sender": "coordinator",
+    "recipient": "preprint_a",
+    "kind": "shutdown",
+    "task_id": null
+  },
+  {
+    "elapsed_ms": 88.9795,
+    "sender": "coordinator",
+    "recipient": "preprint_b",
+    "kind": "shutdown",
+    "task_id": null
+  },
+  {
+    "elapsed_ms": 88.9897,
+    "sender": "coordinator",
+    "recipient": "news_a",
+    "kind": "shutdown",
+    "task_id": null
+  },
+  {
+    "elapsed_ms": 88.9995,
+    "sender": "coordinator",
+    "recipient": "news_b",
+    "kind": "shutdown",
+    "task_id": null
+  }
+]

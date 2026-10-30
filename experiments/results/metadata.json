@@ -1,0 +1,36 @@
+{
+  "version": "lab2-v1.0-candidate",
+  "code_commit_at_run": "7f35c5814c4800bc1c63ad67c758275a856a4e25",
+  "question": "multi agent systems",
+  "alternative": "distributed task allocation",
+  "data_kind": "synthetic_fixture",
+  "frozen_sha256": "279e928edd1c7183da6264988a0558caadfcb8d2b084989ed588ed31330c3320",
+  "scenarios": [
+    "balanced",
+    "hidden_load",
+    "limited_availability",
+    "source_failure"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "mechanisms": [
+    "centralized",
+    "contract-net"
+  ],
+  "runs": 96,
+  "agents_per_run": 6,
+  "tasks_per_run": 5,
+  "time_note": "wall and cumulative coordination measured with perf_counter; worker service delays are controlled synthetic milliseconds; actual thread scheduling contributes to wall time"
+}

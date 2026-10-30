@@ -25,6 +25,8 @@ def main() -> None:
     parser.add_argument("--coordination", choices=("centralized", "contract-net"),
                         default="centralized")
     parser.add_argument("--news-source", choices=("rss", "gdelt"), default="rss")
+    parser.add_argument("--news-window-days", type=int, choices=(7, 30, 90),
+                        help="best-effort Google News RSS when:Nd query window")
     parser.add_argument("--llm", choices=("off", "recorded", "live"), default="off")
     parser.add_argument("--recorded-plan", type=Path)
     parser.add_argument("--input-rate", type=float,
@@ -58,6 +60,8 @@ def main() -> None:
         "news": GoogleNewsRSS() if args.news_source == "rss" else GDELT()})
     result = asyncio.run(research_stage2(args.question, sources,
                          mechanism=args.coordination, alternative=alternative,
+                         news_query=(f"{args.question} when:{args.news_window_days}d"
+                                     if args.news_window_days and args.news_source == "rss" else None),
                          task_timeout=30 if args.mode == "live" else 0.5,
                          deadline_seconds=75 if args.mode == "live" else 5))
     result["mode"] = args.mode

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620">
+<defs><style>text{font-family:Arial,sans-serif;fill:#1b2935}.h{font-size:22px;font-weight:bold}.t{font-size:18px}.s{font-size:15px}.life{stroke:#9aa8b3;stroke-width:2;stroke-dasharray:6 6}.msg{stroke:#31465b;stroke-width:2.5;marker-end:url(#arrow)}.alt{stroke:#ad6547;stroke-width:2.5;marker-end:url(#arrow)}</style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#31465b"/></marker></defs>
+<rect width="1000" height="620" fill="white"/><text x="500" y="33" text-anchor="middle" class="h">Обмен сообщениями Contract Net для одной задачи</text>
+<text x="160" y="78" text-anchor="middle" class="h">Координатор</text><text x="500" y="78" text-anchor="middle" class="h">Исполнитель A</text><text x="840" y="78" text-anchor="middle" class="h">Исполнитель B</text>
+<path d="M160 95 V565 M500 95 V565 M840 95 V565" class="life"/>
+<path d="M160 130 H490 M160 165 H830" class="msg"/><text x="310" y="123" text-anchor="middle" class="t">CFP</text><text x="670" y="158" text-anchor="middle" class="t">CFP</text>
+<path d="M500 220 H170 M840 255 H170" class="msg"/><text x="330" y="211" text-anchor="middle" class="t">предложение A</text><text x="665" y="247" text-anchor="middle" class="t">предложение B / отказ</text>
+<rect x="80" y="278" width="160" height="56" rx="5" fill="#eef3f6" stroke="#31465b"/><text x="160" y="302" text-anchor="middle" class="s">сравнение заявок</text><text x="160" y="322" text-anchor="middle" class="s">и срока ожидания</text>
+<path d="M160 365 H490 M160 400 H830" class="alt"/><text x="320" y="357" text-anchor="middle" class="t">accept</text><text x="660" y="392" text-anchor="middle" class="t">reject</text>
+<path d="M500 475 H170" class="msg"/><text x="330" y="467" text-anchor="middle" class="t">result / failure</text>
+<path d="M490 124 L490 136 L501 130 Z M830 159 L830 171 L841 165 Z M170 214 L170 226 L159 220 Z M170 249 L170 261 L159 255 Z M490 359 L490 371 L501 365 Z M830 394 L830 406 L841 400 Z M170 469 L170 481 L159 475 Z" fill="#31465b"/>
+<text x="500" y="590" text-anchor="middle" class="s">При таймауте координатор отправляет cancel и повторяет выбор среди оставшихся кандидатов.</text>
+</svg>

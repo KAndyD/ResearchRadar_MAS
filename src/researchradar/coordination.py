@@ -199,14 +199,15 @@ def default_workers() -> tuple[WorkerSpec, ...]:
     )
 
 
-def make_tasks(question: str, alternative: str | None = None) -> list[WorkTask]:
+def make_tasks(question: str, alternative: str | None = None,
+               news_query: str | None = None) -> list[WorkTask]:
     question = question.strip()
     if not question:
         raise ValueError("research question is empty")
     tasks = [WorkTask("oa-primary", "openalex", question),
              WorkTask("cr-bibliography", "crossref", question),
              WorkTask("ax-preprints", "arxiv", question),
-             WorkTask("news-primary", "news", question)]
+             WorkTask("news-primary", "news", news_query or question)]
     if alternative and alternative.strip() and alternative.strip().lower() != question.lower():
         tasks.append(WorkTask("oa-alternative", "openalex", alternative.strip()))
     return tasks
@@ -354,12 +355,13 @@ class Coordinator:
 
 async def research_stage2(question: str, sources: dict[str, Source], *,
                           mechanism: str = "centralized", alternative: str | None = None,
+                          news_query: str | None = None,
                           workers: tuple[WorkerSpec, ...] | None = None,
                           bid_timeout: float = 0.15, task_timeout: float = 0.5,
                           deadline_seconds: float = 5.0) -> dict[str, Any]:
     if mechanism not in {"centralized", "contract-net"}:
         raise ValueError("unknown coordination mechanism")
-    tasks = make_tasks(question, alternative)
+    tasks = make_tasks(question, alternative, news_query)
     specs = workers or default_workers()
     request_id = str(uuid4())
     bus = Bus(tuple(spec.name for spec in specs))

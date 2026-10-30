@@ -25,6 +25,8 @@ class Stage2Tests(unittest.TestCase):
     def test_task_plan_and_overlapping_competencies(self):
         self.assertEqual(len(make_tasks("agent systems", "task allocation")), 5)
         self.assertEqual(len(make_tasks("agent systems", "agent systems")), 4)
+        self.assertEqual(make_tasks("agents", news_query="agents when:7d")[3].query,
+                         "agents when:7d")
         with self.assertRaises(ValueError):
             make_tasks(" ")
 

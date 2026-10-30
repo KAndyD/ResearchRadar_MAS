@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="480" viewBox="0 0 1100 480">
+<defs><style>text{font-family:Arial,sans-serif;fill:#1b2935}.h{font-size:22px;font-weight:bold}.t{font-size:16px}.s{font-size:14px}.b{fill:white;stroke:#31465b;stroke-width:2}.a{fill:none;stroke:#31465b;stroke-width:2;marker-end:url(#arrow)}</style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#31465b"/></marker></defs>
+<rect width="1100" height="480" fill="white"/>
+<text x="550" y="35" text-anchor="middle" class="h">Общий контур исследования и распределения задач</text>
+<rect x="35" y="83" width="210" height="86" rx="7" class="b"/><text x="140" y="115" text-anchor="middle" class="h">План запроса</text><text x="140" y="143" text-anchor="middle" class="t">основная и новая темы</text>
+<rect x="350" y="83" width="280" height="86" rx="7" class="b"/><text x="490" y="115" text-anchor="middle" class="h">Координатор</text><text x="490" y="143" text-anchor="middle" class="t">выбор политики назначения</text>
+<rect x="735" y="83" width="320" height="86" rx="7" class="b"/><text x="895" y="115" text-anchor="middle" class="h">Результат</text><text x="895" y="143" text-anchor="middle" class="t">данные · ошибки · трасса · метрики</text>
+<path d="M245 126 H350 M630 126 H735" class="a"/>
+<path d="M490 169 V216 H190 V244 M490 216 H490 V244 M490 216 H790 V244" class="a"/>
+<rect x="40" y="244" width="300" height="102" rx="7" class="b"/><text x="190" y="277" text-anchor="middle" class="h">Научные исполнители</text><text x="190" y="304" text-anchor="middle" class="t">4 агента, пересекающиеся навыки</text><text x="190" y="328" text-anchor="middle" class="s">OpenAlex · Crossref · arXiv</text>
+<rect x="375" y="244" width="230" height="102" rx="7" class="b"/><text x="490" y="277" text-anchor="middle" class="h">Шина сообщений</text><text x="490" y="304" text-anchor="middle" class="t">очереди и полномочия</text><text x="490" y="328" text-anchor="middle" class="s">CFP · заявки · назначения</text>
+<rect x="640" y="244" width="300" height="102" rx="7" class="b"/><text x="790" y="277" text-anchor="middle" class="h">Новостные исполнители</text><text x="790" y="304" text-anchor="middle" class="t">2 агента, общая компетенция</text><text x="790" y="328" text-anchor="middle" class="s">Google News RSS · GDELT по выбору</text>
+<path d="M340 295 H375 M605 295 H640" class="a"/>
+<text x="550" y="405" text-anchor="middle" class="t">Каждый исполнитель имеет отдельную очередь, состояние и оценку собственной заявки.</text>
+<text x="550" y="434" text-anchor="middle" class="s">Фактический поиск выполняется через общие адаптеры, независимо от механизма назначения.</text>
+</svg>

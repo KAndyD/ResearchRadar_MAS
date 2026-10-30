@@ -1,5 +1,17 @@
 # Передача состояния проекта
 
+## Текущая версия: lab2-v1.0
+
+1. Прочитать `AGENTS.md`, оригинальную методичку `project_guide/Лабораторные-МАС.pdf`, `docs/architecture.md`, `docs/decisions.md`, `docs/progress.md`, `docs/test-status.md`, `docs/source_policy.md`, `docs/api_validation.md` и `submission_manifest_lab2.md`. Методичка имеет приоритет; лекций в проекте нет.
+2. На Windows/Python 3.14: `py -3.14 -m pip install -e .`, `py -3.14 -m unittest discover -s tests -q`. Запуск: `py -3.14 -m researchradar.cli_stage2 "multi agent systems" --mode demo --coordination contract-net` или `--coordination centralized`. Оба DEMO полностью автономны; `run_output/` игнорируется Git.
+3. Эксперимент: `py -3.14 tools/run_experiments.py --repeats 12`. `data/frozen_sources.json` — явно синтетический набор; `experiments/results/raw.csv`, `summary.json`, `paired.json`, `metadata.json`, `traces/` и `*.svg` — проверяемые результаты. Условия seed парные, но миллисекунды могут измениться из-за ОС. Координационное время суммируется по задачам и может перекрываться.
+4. LIVE: `py -3.14 -m researchradar.cli_stage2 "multi agent systems" --mode live --coordination contract-net --news-source rss`. Qwen не обязательна: режим `recorded` использует `data/recorded_plan.json` для соответствующего вопроса, режим `live` требует явно проверенные тарифы и ключ вне репозитория. Не повторять платный smoke test без необходимости. Известные расходы и статус источников — `docs/api_validation.md`.
+5. Отчёт: `deliverables/ResearchRadar_MAS_Task_Allocation.docx/.pdf`; пересборка в порядке `tools/build_lab2_report.py`, `tools/build_lab2_pdf.py`, `tools/embed_lab2_vectors.ps1` с зависимостями `tools/requirements-report.txt` и Word. Схемы `docs/diagrams/lab2_*.svg`, графики `experiments/results/*.svg`.
+6. Архивы `ResearchRadar_MAS_lab2_v1.0_submission.zip` и `_audit.zip` создаёт `tools/package_lab2.py` после Git-коммита; внутри `ARCHIVE_MANIFEST.txt` с SHA-256. Аудиторский архив включает DOCX и безопасные результаты проверок. Раздельная первая версия `lab1-v1.2` и её релиз не переписываются.
+7. Перспектива ЛР №3: сообщения CFP/proposal/accept уже явные, но будущий протокол переговоров должен самостоятельно определить полезность, резервирование ресурсов, конфликт нескольких параллельных контрактов и строгие границы сроков. ЛР №3–4 не начинать без нового поручения.
+
+## Архив передачи первой версии
+
 1. Прочитать `AGENTS.md`, `project_guide/Лабораторные-МАС.pdf`, `docs/architecture.md`, `docs/decisions.md`, `docs/progress.md`, `docs/test-status.md`, `docs/source_policy.md`, `docs/api_validation.md`; проверить `git status`.
 2. Запуск без сети и оплаты: `py -3.14 -m pip install -e .`, `py -3.14 -m unittest discover -s tests -v`, `py -3.14 -m researchradar.cli "multi agent systems" --mode demo`. Очищенные результаты — `audit_evidence/`.
 3. Основной отчёт: `deliverables/ResearchRadar_MAS_Architecture.docx` и `.pdf`; учебная сверка — `submission_manifest.md`. Схемы — `docs/diagrams/*.svg`. Пересборка: `tools/build_report.py`, затем `tools/build_pdf.py`, затем `tools/embed_vectors.ps1`; PDF строится до замены текстовых якорей на SVG в DOCX.

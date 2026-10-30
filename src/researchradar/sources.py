@@ -28,6 +28,16 @@ def _text(value: object) -> str:
     return value.strip() if isinstance(value, str) else ""
 
 
+def _rss_date(value: object) -> str | None:
+    text = _text(value)
+    if not text:
+        return None
+    try:
+        return parsedate_to_datetime(text).astimezone(timezone.utc).isoformat()
+    except (ValueError, TypeError, OverflowError):
+        return None
+
+
 def normalize_openalex(row: dict, provenance: str = "live_api") -> Material | None:
     title = _text(row.get("display_name"))
     url = _text(row.get("id"))
@@ -180,7 +190,7 @@ class GoogleNewsRSS:
                 if not title or not url:
                     continue
                 items.append(Material("news", "Google News RSS", url, title, url,
-                                      _text(node.findtext("pubDate")) or None,
+                                      _rss_date(node.findtext("pubDate")),
                                       None, None, "headline", "live_rss"))
                 if len(items) >= limit:
                     break

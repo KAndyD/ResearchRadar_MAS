@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="430" viewBox="0 0 1050 430">
+<rect width="100%" height="100%" fill="white"/>
+<text x="525" y="34" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold">Время исследования</text>
+<line x1="85" y1="355" x2="1010" y2="355" stroke="#333"/>
+<text x="35" y="65" font-family="Arial" font-size="15">мс, wall-clock</text>
+<rect x="120" y="268.88" width="55" height="86.12" fill="#304b68"/>
+<text x="147" y="260.88" text-anchor="middle" font-family="Arial" font-size="14">63.44</text>
+<rect x="192" y="264.85" width="55" height="90.15" fill="#bc6540"/>
+<text x="219" y="256.85" text-anchor="middle" font-family="Arial" font-size="14">66.41</text>
+<text x="183" y="383" text-anchor="middle" font-family="Arial" font-size="14">равномерная</text>
+<rect x="345" y="138.90" width="55" height="216.10" fill="#304b68"/>
+<text x="372" y="130.90" text-anchor="middle" font-family="Arial" font-size="14">159.19</text>
+<rect x="417" y="196.10" width="55" height="158.90" fill="#bc6540"/>
+<text x="444" y="188.10" text-anchor="middle" font-family="Arial" font-size="14">117.05</text>
+<text x="408" y="383" text-anchor="middle" font-family="Arial" font-size="14">скрытая загрузка</text>
+<rect x="570" y="243.60" width="55" height="111.40" fill="#304b68"/>
+<text x="597" y="235.60" text-anchor="middle" font-family="Arial" font-size="14">82.06</text>
+<rect x="642" y="193.68" width="55" height="161.32" fill="#bc6540"/>
+<text x="669" y="185.68" text-anchor="middle" font-family="Arial" font-size="14">118.83</text>
+<text x="633" y="383" text-anchor="middle" font-family="Arial" font-size="14">ограниченный состав</text>
+<rect x="795" y="244.84" width="55" height="110.16" fill="#304b68"/>
+<text x="822" y="236.84" text-anchor="middle" font-family="Arial" font-size="14">81.15</text>
+<rect x="867" y="244.28" width="55" height="110.72" fill="#bc6540"/>
+<text x="894" y="236.28" text-anchor="middle" font-family="Arial" font-size="14">81.56</text>
+<text x="858" y="383" text-anchor="middle" font-family="Arial" font-size="14">отказ источника</text>
+<rect x="320" y="400" width="14" height="14" fill="#304b68"/>
+<text x="342" y="412" font-family="Arial" font-size="14">централизованное</text>
+<rect x="520" y="400" width="14" height="14" fill="#bc6540"/>
+<text x="542" y="412" font-family="Arial" font-size="14">контрактная сеть</text>
+</svg>

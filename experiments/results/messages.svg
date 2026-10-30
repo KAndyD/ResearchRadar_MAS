@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="430" viewBox="0 0 1050 430">
+<rect width="100%" height="100%" fill="white"/>
+<text x="525" y="34" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold">Сообщения протокола</text>
+<line x1="85" y1="355" x2="1010" y2="355" stroke="#333"/>
+<text x="35" y="65" font-family="Arial" font-size="15">сообщений</text>
+<rect x="120" y="309.98" width="55" height="45.02" fill="#304b68"/>
+<text x="147" y="301.98" text-anchor="middle" font-family="Arial" font-size="14">10.00</text>
+<rect x="192" y="156.91" width="55" height="198.09" fill="#bc6540"/>
+<text x="219" y="148.91" text-anchor="middle" font-family="Arial" font-size="14">44.00</text>
+<text x="183" y="383" text-anchor="middle" font-family="Arial" font-size="14">равномерная</text>
+<rect x="345" y="309.98" width="55" height="45.02" fill="#304b68"/>
+<text x="372" y="301.98" text-anchor="middle" font-family="Arial" font-size="14">10.00</text>
+<rect x="417" y="156.91" width="55" height="198.09" fill="#bc6540"/>
+<text x="444" y="148.91" text-anchor="middle" font-family="Arial" font-size="14">44.00</text>
+<text x="408" y="383" text-anchor="middle" font-family="Arial" font-size="14">скрытая загрузка</text>
+<rect x="570" y="309.98" width="55" height="45.02" fill="#304b68"/>
+<text x="597" y="301.98" text-anchor="middle" font-family="Arial" font-size="14">10.00</text>
+<rect x="642" y="210.93" width="55" height="144.07" fill="#bc6540"/>
+<text x="669" y="202.93" text-anchor="middle" font-family="Arial" font-size="14">32.00</text>
+<text x="633" y="383" text-anchor="middle" font-family="Arial" font-size="14">ограниченный состав</text>
+<rect x="795" y="300.97" width="55" height="54.03" fill="#304b68"/>
+<text x="822" y="292.97" text-anchor="middle" font-family="Arial" font-size="14">12.00</text>
+<rect x="867" y="138.90" width="55" height="216.10" fill="#bc6540"/>
+<text x="894" y="130.90" text-anchor="middle" font-family="Arial" font-size="14">48.00</text>
+<text x="858" y="383" text-anchor="middle" font-family="Arial" font-size="14">отказ источника</text>
+<rect x="320" y="400" width="14" height="14" fill="#304b68"/>
+<text x="342" y="412" font-family="Arial" font-size="14">централизованное</text>
+<rect x="520" y="400" width="14" height="14" fill="#bc6540"/>
+<text x="542" y="412" font-family="Arial" font-size="14">контрактная сеть</text>
+</svg>
