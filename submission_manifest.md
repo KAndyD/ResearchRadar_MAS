@@ -5,7 +5,7 @@
 **Автор:** Коротаев Андрей Дмитриевич, Б24-507
 
 **Работа:** «Спецификация и архитектурное проектирование многоагентной системы»
-**Версия:** `lab1-v1.1`
+**Версия:** `lab1-v1.2`
 
 Основной документ — самостоятельный технический отчёт, без учебных организационных формулировок. Этот файл предназначен для сверки комплекта с методическими рекомендациями `project_guide/Лабораторные-МАС.pdf`.
 
@@ -25,9 +25,10 @@
 - `deliverables/ResearchRadar_MAS_Architecture.docx`
 - `deliverables/ResearchRadar_MAS_Architecture.pdf`
 - `docs/diagrams/roles.svg`, `docs/diagrams/communication.svg`
-- `deliverables/ResearchRadar_MAS_lab1_v1.1_submission.zip`
+- `deliverables/ResearchRadar_MAS_lab1_v1.2_submission.zip`
+- `deliverables/ResearchRadar_MAS_lab1_v1.2_audit.zip` — отдельный комплект для независимого аудита
 - Репозиторий: https://github.com/KAndyD/ResearchRadar_MAS
-- Релиз: https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab1-v1.1
+- Релиз: https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab1-v1.2
 
 ## Проверка на Windows 11
 

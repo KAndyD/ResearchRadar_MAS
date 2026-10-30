@@ -12,4 +12,5 @@ guide-*.png
 *.sqlite3-*
 *.db
 ~$*.docx
+deliverables/*.zip
 

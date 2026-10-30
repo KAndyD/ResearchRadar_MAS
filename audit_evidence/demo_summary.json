@@ -1,0 +1,53 @@
+{
+  "python": "3.14.7",
+  "mode": "demo",
+  "question": "multi agent systems",
+  "task_count": 2,
+  "material_counts": {
+    "scientific": 1,
+    "news": 1
+  },
+  "provenance": [
+    "synthetic_fixture"
+  ],
+  "agent_phases": {
+    "coordinator": "done",
+    "journalist": "done",
+    "scientist": "done",
+    "synthesizer": "done"
+  },
+  "message_routes": [
+    [
+      "coordinator",
+      "scientist",
+      "task"
+    ],
+    [
+      "coordinator",
+      "journalist",
+      "task"
+    ],
+    [
+      "journalist",
+      "coordinator",
+      "result"
+    ],
+    [
+      "scientist",
+      "coordinator",
+      "result"
+    ],
+    [
+      "coordinator",
+      "synthesizer",
+      "task"
+    ],
+    [
+      "synthesizer",
+      "coordinator",
+      "result"
+    ]
+  ],
+  "errors": {},
+  "paid_calls": 0
+}

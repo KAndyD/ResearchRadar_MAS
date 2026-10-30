@@ -99,17 +99,22 @@ class Coordinator:
         tasks = [ResearchTask("science", request.id, "scientific", request.question),
                  ResearchTask("news", request.id, "news", request.question)]
         assigned: dict[str, str] = {}
+        pending: dict[str, str] = {}
         for task in tasks:
             recipient = self.choose(task.kind, set(assigned))
             assigned[recipient] = task.kind
-            await self.router.send(Message.make("coordinator", recipient, "task",
-                                               request.id, asdict(task)))
+            message = Message.make("coordinator", recipient, "task",
+                                   request.id, asdict(task))
+            pending[recipient] = message.id
+            await self.router.send(message)
         materials: dict[str, list[dict]] = {"scientific": [], "news": []}
         errors: dict[str, str] = {}
         for _ in tasks:
             message = await self.router.queues["coordinator"].get()
-            if message.sender not in assigned or message.request_id != request.id:
+            if (message.sender not in pending or message.request_id != request.id
+                    or message.correlation_id != pending[message.sender]):
                 raise ValueError("unrelated worker response")
+            del pending[message.sender]
             kind = assigned[message.sender]
             if message.kind == "error":
                 errors[kind] = str(message.payload["error"])
@@ -119,9 +124,14 @@ class Coordinator:
         for kind in materials:
             materials[kind] = list({(m["source"], m["source_id"]): m
                                     for m in materials[kind]}.values())
-        await self.router.send(Message.make("coordinator", "synthesizer", "task",
-                                            request.id, materials))
+        synthesis_task = Message.make("coordinator", "synthesizer", "task",
+                                      request.id, materials)
+        await self.router.send(synthesis_task)
         synthesis = await self.router.queues["coordinator"].get()
+        if (synthesis.sender != "synthesizer" or synthesis.kind != "result"
+                or synthesis.request_id != request.id
+                or synthesis.correlation_id != synthesis_task.id):
+            raise ValueError("unrelated synthesis response")
         self.state.handled += 1
         self.state.change(Phase.DONE)
         return {"request": asdict(request), "tasks": [asdict(t) for t in tasks],

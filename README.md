@@ -24,6 +24,8 @@ py -3.14 -m researchradar.cli "artificial intelligence" --mode live --news-sourc
 - `src/researchradar/llm.py`: отдельный бюджетируемый клиент Qwen через OpenRouter с постоянным журналом SQLite.
 - `docs/architecture.md`: подробная техническая спецификация.
 - `docs/diagrams/*.svg`: редактируемые векторные схемы.
+- `docs/source_policy.md`: статусы источников и границы доверия.
+- `docs/api_validation.md`: результаты LIVE-проверок и учёт расходов.
 
 Обычный запуск и тесты не обращаются к OpenRouter. Ключ читается из `%LOCALAPPDATA%\ResearchRadar_MAS\.env` или переменной окружения; журнал затрат хранится вне репозитория в `%LOCALAPPDATA%\ResearchRadar_MAS\usage.sqlite3`. Основной бюджет проекта — 10 USD, внешний лимит отдельного ключа около 8 USD, резерв 2 USD. Клиент по умолчанию ограничивает локальный расход 8 USD и оценочную стоимость вызова 0,05 USD; тарифы входных и выходных токенов передаются явно после проверки актуальной цены модели.
 
@@ -31,4 +33,4 @@ py -3.14 -m researchradar.cli "artificial intelligence" --mode live --news-sourc
 
 Отчёт генерируется `tools/build_report.py`; PDF строится из того же текста скриптом `tools/build_pdf.py`, а SVG встраиваются в DOCX через `tools/embed_vectors.ps1` и Microsoft Word. Для самостоятельной пересборки на Windows нужны пакеты из `tools/requirements-report.txt` и установленный Word. Сначала запустить `build_report.py`, затем `build_pdf.py`, затем `embed_vectors.ps1`; PDF надо строить до встраивания SVG в DOCX, пока в нём есть текстовые маркеры рисунков. Оба итоговых файла проверяются визуально. Исходники, тесты, DOCX, PDF, SVG и сопроводительный документ входят в локальный архив сдачи.
 
-Релиз: [lab1-v1.1](https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab1-v1.1). Известные ограничения и подтверждённые испытания: [состояние тестов](docs/test-status.md). Лабораторные работы №2–4 не реализованы.
+Релиз: [lab1-v1.2](https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab1-v1.2). Известные ограничения и подтверждённые испытания: [состояние тестов](docs/test-status.md). Архивы сдачи и полного аудита доступны в Release; `tools/package_submission.py` собирает их локально из зафиксированной версии. Лабораторные работы №2–4 не реализованы.

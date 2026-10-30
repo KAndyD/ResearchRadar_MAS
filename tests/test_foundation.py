@@ -78,6 +78,21 @@ class FoundationTests(unittest.TestCase):
         self.assertEqual(result["agents"]["scientist"]["phase"], "done")
         self.assertNotIn("backup", result["agents"])
 
+    def test_duplicate_worker_reply_cannot_replace_other_task(self):
+        class DuplicatingRouter(Router):
+            duplicated = False
+
+            async def send(self, message):
+                await super().send(message)
+                if message.kind == "result" and message.sender in {"scientist", "journalist"} and not self.duplicated:
+                    self.duplicated = True
+                    await self.queues["coordinator"].put(message)
+
+        with patch("researchradar.engine.Router", DuplicatingRouter):
+            with self.assertRaisesRegex(ValueError, "unrelated worker response"):
+                asyncio.run(research("multi-agent systems", FixtureSource("scientific"),
+                                     FixtureSource("news")))
+
     def test_cli_demo_writes_structured_result_without_api(self):
         with TemporaryDirectory() as directory:
             output = Path(directory) / "demo.json"
