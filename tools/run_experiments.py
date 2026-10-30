@@ -67,6 +67,28 @@ def summarize(rows: list[dict]) -> list[dict]:
     return summary
 
 
+def paired_differences(rows: list[dict]) -> list[dict]:
+    """Contract Net minus centralized under identical scenario and seed."""
+    result = []
+    for scenario in SCENARIOS:
+        group = [r for r in rows if r["scenario"] == scenario]
+        seeds = sorted({int(r["seed"]) for r in group})
+        item = {"scenario": scenario, "pairs": len(seeds)}
+        for metric in ("wall_ms", "coordination_ms", "messages", "completed_tasks"):
+            values = []
+            for seed in seeds:
+                pair = {r["mechanism"]: r for r in group if int(r["seed"]) == seed}
+                if set(pair) != set(METHODS):
+                    raise ValueError(f"unpaired experiment: {scenario}/{seed}")
+                values.append(float(pair["contract-net"][metric]) - float(pair["centralized"][metric]))
+            item[metric + "_difference_mean"] = round(statistics.mean(values), 5)
+            item[metric + "_difference_sd"] = round(statistics.stdev(values), 5) if len(values) > 1 else 0.0
+            item[metric + "_difference_min"] = round(min(values), 5)
+            item[metric + "_difference_max"] = round(max(values), 5)
+        result.append(item)
+    return result
+
+
 def chart(summary: list[dict], metric: str, title: str, unit: str, output: Path) -> None:
     # Editable vector chart; values are read directly from summary derived from raw.csv.
     width, height = 1050, 430
@@ -136,6 +158,7 @@ async def run(repeats: int, output: Path) -> None:
         writer.writerows(rows)
     summary = summarize(rows)
     (output / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    (output / "paired.json").write_text(json.dumps(paired_differences(rows), ensure_ascii=False, indent=2), encoding="utf-8")
     metadata = {"version": "lab2-v1.0-candidate", "code_commit_at_run": commit,
                 "question": QUESTION, "alternative": ALTERNATIVE,
                 "data_kind": "synthetic_fixture", "frozen_sha256": frozen_hash,

@@ -6,7 +6,7 @@ from tempfile import TemporaryDirectory
 from unittest.mock import Mock, patch
 from xml.etree import ElementTree
 
-from researchradar.coordination import (Bus, WorkerSpec, WorkerState,
+from researchradar.coordination import (Bus, Worker, WorkerSpec, WorkerState,
                                         make_tasks, research_stage2)
 from researchradar.frozen import load_frozen
 from researchradar.model import Material, Message
@@ -65,6 +65,27 @@ class Stage2Tests(unittest.TestCase):
         self.assertEqual(result["metrics"]["completed_tasks"], 1)
         self.assertGreaterEqual(result["metrics"]["message_kinds"]["cancel"], 1)
         self.assertTrue(all(x["phase"] == "stopped" for x in result["agents"].values()))
+
+    def test_unmatched_reply_is_ignored_and_recorded(self):
+        original = Worker._execute
+
+        async def with_forgery(worker, task, assignment):
+            await worker.bus.send(Message.make(worker.spec.name, "coordinator", "result",
+                worker.request_id, {"task_id": task.id, "materials": []}, "wrong-correlation"))
+            await original(worker, task, assignment)
+
+        with patch.object(Worker, "_execute", with_forgery):
+            result = asyncio.run(research_stage2("agents", load_frozen()))
+        self.assertEqual(result["metrics"]["completed_tasks"], 4)
+        self.assertGreaterEqual(result["metrics"]["late_or_invalid_messages"], 4)
+
+    def test_no_eligible_proposal_reports_partial_failure(self):
+        only_news = (WorkerSpec("news", ("news",), {"news": 5}, {"news": 1}),)
+        result = asyncio.run(research_stage2("agents", load_frozen(),
+                                             mechanism="contract-net", workers=only_news))
+        self.assertEqual(result["metrics"]["completed_tasks"], 1)
+        self.assertEqual(len(result["errors"]), 3)
+        self.assertEqual(len(result["materials"]["news"]), 1)
 
     def test_authority_and_state_transitions(self):
         state = WorkerState()
