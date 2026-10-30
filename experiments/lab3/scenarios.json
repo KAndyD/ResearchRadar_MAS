@@ -1,0 +1,7 @@
+[
+  {"name":"sufficient","description":"Enough verification credits for every full request","credits":6,"silent_owners":[]},
+  {"name":"moderate_shortage","description":"Three credits for six requested units","credits":3,"silent_owners":[]},
+  {"name":"strong_shortage","description":"Only two credits for six requested units","credits":2,"silent_owners":[]},
+  {"name":"unequal_values","description":"Different marginal value for a scientific partial check","credits":3,"silent_owners":[],"science_full_value":10.0,"science_partial_value":2.0},
+  {"name":"unresponsive_agent","description":"The link agent does not answer offers; bounded arbitration","credits":3,"silent_owners":["link"]}
+]

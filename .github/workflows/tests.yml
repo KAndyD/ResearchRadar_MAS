@@ -14,3 +14,6 @@ jobs:
       - run: python -m researchradar.cli_stage2 "multi agent systems" --mode demo --coordination centralized
       - run: python -m researchradar.cli_stage2 "multi agent systems" --mode demo --coordination contract-net
       - run: python tools/run_experiments.py --repeats 1 --output run_output/ci-experiment
+      - run: python -m researchradar.cli_stage3 "multi agent systems" --mode demo --resource-policy baseline --output run_output/ci-stage3-baseline.json
+      - run: python -m researchradar.cli_stage3 "multi agent systems" --mode demo --resource-policy negotiation --output run_output/ci-stage3-negotiation.json
+      - run: python tools/run_negotiation_experiments.py --repeats 1 --output run_output/ci-stage3-experiment

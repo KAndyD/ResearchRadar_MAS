@@ -1,5 +1,21 @@
 # ResearchRadar MAS
 
+## Переговоры за бюджет проверок
+
+Третья версия добавляет отдельный ресурсный конфликт после научного и новостного поиска. `baseline` распределяет кредиты проверки по порядку заявок; `negotiation` проводит два раунда предложений, уступок и подтверждений. Выделенные кредиты разрешают реальные операции над метаданными, аннотацией и заголовками, а не только меняют число в симуляции. Утверждение из одной новости остаётся непроверенным; тематическое сходство не выдаётся за прямую доказанную связь.
+
+```powershell
+py -3.14 -m pip install -e .
+py -3.14 -m unittest discover -s tests -q
+py -3.14 -m researchradar.cli_stage3 "multi agent systems" --mode demo --resource-policy baseline --credits 3 --output run_output/stage3_baseline.json
+py -3.14 -m researchradar.cli_stage3 "multi agent systems" --mode demo --resource-policy negotiation --credits 3 --output run_output/stage3_negotiation.json
+py -3.14 tools/run_negotiation_experiments.py --repeats 12 --output run_output/lab3_experiments
+```
+
+DEMO и эксперимент не обращаются к сети и OpenRouter. `--allocation centralized|contract-net` выбирает прежний способ назначения поисковых задач; `--resource-policy baseline|negotiation` выбирает способ согласования ограниченных проверок. Для небольшого LIVE-поиска используйте `--mode live`; Qwen подключается отдельно через `--llm recorded --recorded-plan data/recorded_plan.json` либо `--llm live` с явно проверенными тарифами. Платный LLM не требуется для переговоров. Стенд пишет новые данные в `run_output/`, чтобы не изменить результаты предыдущих работ; Git не нужен при запуске из ZIP.
+
+## История второй версии
+
 **Текущая версия: лабораторная №2, `lab2-v1.1`.** ResearchRadar MAS распределяет поиск научных публикаций и новостей между шестью автономными исполнителями. Реализованы централизованное назначение и Contract Net. [Отчёт PDF](deliverables/ResearchRadar_MAS_Task_Allocation.pdf), [DOCX](deliverables/ResearchRadar_MAS_Task_Allocation.docx), [сверка требований](submission_manifest_lab2.md). Принятая версия первой работы `lab1-v1.2` сохранена.
 
 ## Версия 2: быстрый запуск

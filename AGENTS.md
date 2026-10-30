@@ -1,6 +1,6 @@
 # ResearchRadar MAS — постоянные правила проекта
 
-Перед изменениями прочитать `project_guide/Лабораторные-МАС.pdf`, `docs/architecture.md`, `docs/decisions.md`, `docs/progress.md`, `docs/handoff.md` и проверить Git. Методичка — основной источник требований четырёх лабораторных, лекции — вспомогательная теория. ЛР №1 и №2 выполнены по отдельным поручениям; ЛР №3–4 не начинать без нового поручения.
+Перед изменениями прочитать `project_guide/Лабораторные-МАС.pdf`, `docs/architecture.md`, `docs/decisions.md`, `docs/progress.md`, `docs/handoff.md` и проверить Git. Методичка — основной источник требований четырёх лабораторных, лекции — вспомогательная теория. ЛР №1–3 выполняются по отдельным поручениям; ЛР №4 не начинать без нового поручения.
 
 Проверка на Windows/Python 3.14: `py -3.14 -m unittest discover -s tests -v`; автономная демонстрация: `py -3.14 -m researchradar.cli "multi agent systems" --mode demo`. Сетевые и платные проверки проводить отдельно и экономно. Синтетические fixtures не выдавать за реальные источники. Ключ OpenRouter находится вне Git в `%LOCALAPPDATA%/ResearchRadar_MAS/.env`; никогда не печатать его. Журнал расходов SQLite также вне Git.
 
