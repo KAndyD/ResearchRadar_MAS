@@ -81,6 +81,10 @@ class Material:
     doi: str | None = None
     text_scope: str = "metadata"
     provenance: str = "live_api"
+    authors: tuple[str, ...] = ()
+    venue: str | None = None
+    arxiv_id: str | None = None
+    discovered_in: tuple[str, ...] = ()
 
     def as_dict(self) -> dict[str, Any]:
         return asdict(self)

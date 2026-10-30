@@ -1,0 +1,9 @@
+{
+  "question": "multi agent systems",
+  "alternative_query": "applications and architectures of multi-agent systems in AI",
+  "model": "qwen/qwen3.5-35b-a3b",
+  "provenance": "recorded_live_qwen",
+  "prompt_tokens": 58,
+  "completion_tokens": 21,
+  "actual_usd": 2.97e-05
+}

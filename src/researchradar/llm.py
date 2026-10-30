@@ -142,6 +142,7 @@ class BudgetedOpenRouter:
                     "model": MODEL,
                     "messages": [{"role": "user", "content": prompt}],
                     "max_tokens": max_tokens,
+                    "reasoning_effort": "none",
                     "usage": {"include": True}}, timeout=30,
                     headers={"Authorization": f"Bearer {key}",
                              "Content-Type": "application/json"})

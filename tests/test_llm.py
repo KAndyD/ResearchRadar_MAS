@@ -55,6 +55,7 @@ class LedgerTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "duplicate"):
             self.call(client, call_id="fixed")
         self.assertEqual(post.call_count, 1)
+        self.assertEqual(post.call_args.kwargs["json"]["reasoning_effort"], "none")
         self.assertNotIn("sensitive-test-key", str(row))
 
     @patch("researchradar.llm.requests.post", return_value=Reply(body=body(cost=None)))

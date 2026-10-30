@@ -1,0 +1,14 @@
+{
+  "mode": "live",
+  "mechanism": "contract-net",
+  "task_count": 5,
+  "completed_tasks": 5,
+  "source_counts": {
+    "OpenAlex": 6,
+    "Crossref": 3,
+    "arXiv": 3,
+    "Google News RSS": 3
+  },
+  "errors": {},
+  "llm_query_used": "applications and architectures of multi-agent systems in AI"
+}

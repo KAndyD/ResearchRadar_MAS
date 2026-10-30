@@ -1,0 +1,16 @@
+{
+  "description": "Synthetic metadata solely for controlled coordination experiments; no record represents a verified publication or news item.",
+  "openalex": [
+    {"kind":"scientific","source":"Synthetic OpenAlex","source_id":"fixture:oa:1","title":"Synthetic multi-agent coordination study","url":"https://example.org/synthetic/oa1","published":"2025-01-01","abstract":"Synthetic abstract on allocation policies.","doi":"10.9999/synthetic.shared","text_scope":"abstract","provenance":"synthetic_fixture","authors":["A. Example"],"venue":"Synthetic Journal","discovered_in":["Synthetic OpenAlex"]},
+    {"kind":"scientific","source":"Synthetic OpenAlex","source_id":"fixture:oa:2","title":"Synthetic task routing study","url":"https://example.org/synthetic/oa2","published":"2025-02-01","abstract":null,"doi":null,"text_scope":"metadata","provenance":"synthetic_fixture","authors":["B. Example"],"venue":null,"discovered_in":["Synthetic OpenAlex"]}
+  ],
+  "crossref": [
+    {"kind":"scientific","source":"Synthetic Crossref","source_id":"10.9999/synthetic.shared","title":"Synthetic multi-agent coordination study","url":"https://example.org/synthetic/cr1","published":"2025-01-01","abstract":null,"doi":"10.9999/synthetic.shared","text_scope":"metadata","provenance":"synthetic_fixture","authors":["A. Example"],"venue":"Synthetic Journal","discovered_in":["Synthetic Crossref"]}
+  ],
+  "arxiv": [
+    {"kind":"scientific","source":"Synthetic arXiv","source_id":"2501.00001","title":"Synthetic agent preprint","url":"https://example.org/synthetic/ax1","published":"2025-01-02","abstract":"Synthetic preprint abstract.","doi":null,"text_scope":"abstract","provenance":"synthetic_fixture","authors":["C. Example"],"venue":null,"arxiv_id":"2501.00001","discovered_in":["Synthetic arXiv"]}
+  ],
+  "news": [
+    {"kind":"news","source":"Synthetic RSS","source_id":"fixture:news:1","title":"Synthetic research news","url":"https://example.org/synthetic/news1","published":"2025-01-03","abstract":null,"doi":null,"text_scope":"headline","provenance":"synthetic_fixture","discovered_in":["Synthetic RSS"]}
+  ]
+}
