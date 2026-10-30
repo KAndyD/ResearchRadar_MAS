@@ -28,10 +28,14 @@ def revision() -> tuple[str | None, str]:
     if not (ROOT / ".git").exists():
         return None, "unavailable_no_git_metadata"
     try:
-        status = subprocess.run(["git", "status", "--porcelain", "--untracked-files=normal"],
+        status = subprocess.run(["git", "status", "--porcelain", "--untracked-files=normal",
+                                 "--", "src/researchradar",
+                                 "tools/run_negotiation_experiments.py",
+                                 "experiments/lab3/scenarios.json",
+                                 "data/frozen_sources.json", "pyproject.toml"],
                                 cwd=ROOT, capture_output=True, text=True, check=True, timeout=3)
         if status.stdout.strip():
-            return None, "unavailable_dirty_checkout"
+            return None, "unavailable_dirty_experiment_inputs"
         reply = subprocess.run(["git", "rev-parse", "--verify", "HEAD"],
                                cwd=ROOT, capture_output=True, text=True, check=True, timeout=3)
     except FileNotFoundError:
@@ -43,7 +47,7 @@ def revision() -> tuple[str | None, str]:
     commit = reply.stdout.strip()
     if not re.fullmatch(r"[0-9a-fA-F]{40}|[0-9a-fA-F]{64}", commit):
         return None, "unavailable_invalid_git_response"
-    return commit.lower(), "git_head"
+    return commit.lower(), "git_clean_experiment_inputs"
 
 
 def summarize(rows: list[dict], scenarios: list[dict]) -> list[dict]:
@@ -125,6 +129,7 @@ async def run(repeats: int, output: Path) -> None:
     scenarios = json.loads(CONFIG.read_text(encoding="utf-8"))
     if len({x["name"] for x in scenarios}) != len(scenarios):
         raise ValueError("duplicate scenario")
+    commit, commit_source = revision()
     output.mkdir(parents=True, exist_ok=True)
     traces = output / "traces"
     traces.mkdir(exist_ok=True)
@@ -182,7 +187,6 @@ async def run(repeats: int, output: Path) -> None:
     (output / "inputs.json").write_text(json.dumps(inputs, ensure_ascii=False, indent=2), encoding="utf-8")
     (output / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     (output / "paired.json").write_text(json.dumps(paired(rows, scenarios), ensure_ascii=False, indent=2), encoding="utf-8")
-    commit, commit_source = revision()
     metadata = {"version": "lab3-v1.0", "version_source": "script_constant",
                 "code_commit_at_run": commit, "code_commit_source": commit_source,
                 "frozen_sha256": sha256((ROOT / "data/frozen_sources.json").read_bytes()).hexdigest(),
