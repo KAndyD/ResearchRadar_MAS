@@ -18,7 +18,7 @@ FOLDERS = ("src/researchradar", "tests", "data", "experiments/results",
 DOCS = ("docs/architecture.md", "docs/decisions.md", "docs/source_policy.md",
         "docs/api_validation.md", "docs/test-status.md", "docs/progress.md",
         "docs/handoff.md")
-SCRIPTS = ("tools/run_experiments.py", "tools/build_lab2_report.py",
+SCRIPTS = ("tools/run_experiments.py", "tools/package_lab2.py", "tools/build_lab2_report.py",
            "tools/build_lab2_pdf.py", "tools/embed_lab2_vectors.ps1",
            "tools/requirements-report.txt")
 EXCLUDED = {"__pycache__", ".git", "tmp", "run_output"}

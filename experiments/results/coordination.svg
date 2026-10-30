@@ -3,25 +3,25 @@
 <text x="525" y="34" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold">Сумма задержек назначения</text>
 <line x1="85" y1="355" x2="1010" y2="355" stroke="#333"/>
 <text x="35" y="65" font-family="Arial" font-size="15">мс, по задачам</text>
-<rect x="120" y="353.32" width="55" height="1.68" fill="#304b68"/>
-<text x="147" y="345.32" text-anchor="middle" font-family="Arial" font-size="14">0.02</text>
-<rect x="192" y="149.83" width="55" height="205.17" fill="#bc6540"/>
-<text x="219" y="141.83" text-anchor="middle" font-family="Arial" font-size="14">2.60</text>
+<rect x="120" y="353.23" width="55" height="1.77" fill="#304b68"/>
+<text x="147" y="345.23" text-anchor="middle" font-family="Arial" font-size="14">0.02</text>
+<rect x="192" y="177.01" width="55" height="177.99" fill="#bc6540"/>
+<text x="219" y="169.01" text-anchor="middle" font-family="Arial" font-size="14">2.40</text>
 <text x="183" y="383" text-anchor="middle" font-family="Arial" font-size="14">равномерная</text>
-<rect x="345" y="353.15" width="55" height="1.85" fill="#304b68"/>
-<text x="372" y="345.15" text-anchor="middle" font-family="Arial" font-size="14">0.02</text>
-<rect x="417" y="160.42" width="55" height="194.58" fill="#bc6540"/>
-<text x="444" y="152.42" text-anchor="middle" font-family="Arial" font-size="14">2.47</text>
+<rect x="345" y="353.05" width="55" height="1.95" fill="#304b68"/>
+<text x="372" y="345.05" text-anchor="middle" font-family="Arial" font-size="14">0.03</text>
+<rect x="417" y="191.79" width="55" height="163.21" fill="#bc6540"/>
+<text x="444" y="183.79" text-anchor="middle" font-family="Arial" font-size="14">2.20</text>
 <text x="408" y="383" text-anchor="middle" font-family="Arial" font-size="14">скрытая загрузка</text>
-<rect x="570" y="353.02" width="55" height="1.98" fill="#304b68"/>
-<text x="597" y="345.02" text-anchor="middle" font-family="Arial" font-size="14">0.03</text>
-<rect x="642" y="191.38" width="55" height="163.62" fill="#bc6540"/>
-<text x="669" y="183.38" text-anchor="middle" font-family="Arial" font-size="14">2.07</text>
+<rect x="570" y="353.38" width="55" height="1.62" fill="#304b68"/>
+<text x="597" y="345.38" text-anchor="middle" font-family="Arial" font-size="14">0.02</text>
+<rect x="642" y="205.57" width="55" height="149.43" fill="#bc6540"/>
+<text x="669" y="197.57" text-anchor="middle" font-family="Arial" font-size="14">2.01</text>
 <text x="633" y="383" text-anchor="middle" font-family="Arial" font-size="14">ограниченный состав</text>
-<rect x="795" y="352.03" width="55" height="2.97" fill="#304b68"/>
-<text x="822" y="344.03" text-anchor="middle" font-family="Arial" font-size="14">0.04</text>
+<rect x="795" y="352.58" width="55" height="2.42" fill="#304b68"/>
+<text x="822" y="344.58" text-anchor="middle" font-family="Arial" font-size="14">0.03</text>
 <rect x="867" y="138.90" width="55" height="216.10" fill="#bc6540"/>
-<text x="894" y="130.90" text-anchor="middle" font-family="Arial" font-size="14">2.74</text>
+<text x="894" y="130.90" text-anchor="middle" font-family="Arial" font-size="14">2.91</text>
 <text x="858" y="383" text-anchor="middle" font-family="Arial" font-size="14">отказ источника</text>
 <rect x="320" y="400" width="14" height="14" fill="#304b68"/>
 <text x="342" y="412" font-family="Arial" font-size="14">централизованное</text>

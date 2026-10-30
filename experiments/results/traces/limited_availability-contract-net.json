@@ -1,265 +1,265 @@
 [
   {
-    "elapsed_ms": 0.1808,
+    "elapsed_ms": 0.1977,
     "sender": "coordinator",
     "recipient": "scholar_b",
     "kind": "cfp",
     "task_id": "oa-primary"
   },
   {
-    "elapsed_ms": 0.2176,
+    "elapsed_ms": 0.2361,
     "sender": "coordinator",
     "recipient": "preprint_a",
     "kind": "cfp",
     "task_id": "oa-primary"
   },
   {
-    "elapsed_ms": 0.2645,
+    "elapsed_ms": 0.2742,
     "sender": "coordinator",
     "recipient": "scholar_b",
     "kind": "cfp",
     "task_id": "cr-bibliography"
   },
   {
-    "elapsed_ms": 0.279,
+    "elapsed_ms": 0.2848,
     "sender": "coordinator",
     "recipient": "preprint_b",
     "kind": "cfp",
     "task_id": "cr-bibliography"
   },
   {
-    "elapsed_ms": 0.3104,
+    "elapsed_ms": 0.3068,
     "sender": "coordinator",
     "recipient": "preprint_a",
     "kind": "cfp",
     "task_id": "ax-preprints"
   },
   {
-    "elapsed_ms": 0.3235,
+    "elapsed_ms": 0.3157,
     "sender": "coordinator",
     "recipient": "preprint_b",
     "kind": "cfp",
     "task_id": "ax-preprints"
   },
   {
-    "elapsed_ms": 0.3511,
+    "elapsed_ms": 0.3338,
     "sender": "coordinator",
     "recipient": "news_b",
     "kind": "cfp",
     "task_id": "news-primary"
   },
   {
-    "elapsed_ms": 0.3858,
+    "elapsed_ms": 0.3558,
     "sender": "coordinator",
     "recipient": "scholar_b",
     "kind": "cfp",
     "task_id": "oa-alternative"
   },
   {
-    "elapsed_ms": 0.3985,
+    "elapsed_ms": 0.3673,
     "sender": "coordinator",
     "recipient": "preprint_a",
     "kind": "cfp",
     "task_id": "oa-alternative"
   },
   {
-    "elapsed_ms": 0.435,
+    "elapsed_ms": 0.3991,
     "sender": "scholar_b",
     "recipient": "coordinator",
     "kind": "proposal",
     "task_id": "oa-primary"
   },
   {
-    "elapsed_ms": 0.451,
+    "elapsed_ms": 0.4139,
     "sender": "scholar_b",
     "recipient": "coordinator",
     "kind": "proposal",
     "task_id": "cr-bibliography"
   },
   {
-    "elapsed_ms": 0.4629,
+    "elapsed_ms": 0.4247,
     "sender": "scholar_b",
     "recipient": "coordinator",
     "kind": "proposal",
     "task_id": "oa-alternative"
   },
   {
-    "elapsed_ms": 0.479,
+    "elapsed_ms": 0.4393,
     "sender": "preprint_a",
     "recipient": "coordinator",
     "kind": "proposal",
     "task_id": "oa-primary"
   },
   {
-    "elapsed_ms": 0.4909,
+    "elapsed_ms": 0.4505,
     "sender": "preprint_a",
     "recipient": "coordinator",
     "kind": "proposal",
     "task_id": "ax-preprints"
   },
   {
-    "elapsed_ms": 0.5027,
+    "elapsed_ms": 0.4615,
     "sender": "preprint_a",
     "recipient": "coordinator",
     "kind": "proposal",
     "task_id": "oa-alternative"
   },
   {
-    "elapsed_ms": 0.5163,
+    "elapsed_ms": 0.4751,
     "sender": "preprint_b",
     "recipient": "coordinator",
     "kind": "proposal",
     "task_id": "cr-bibliography"
   },
   {
-    "elapsed_ms": 0.5269,
+    "elapsed_ms": 0.4852,
     "sender": "preprint_b",
     "recipient": "coordinator",
     "kind": "proposal",
     "task_id": "ax-preprints"
   },
   {
-    "elapsed_ms": 0.5399,
+    "elapsed_ms": 0.4984,
     "sender": "news_b",
     "recipient": "coordinator",
     "kind": "proposal",
     "task_id": "news-primary"
   },
   {
-    "elapsed_ms": 0.6051,
+    "elapsed_ms": 0.5625,
     "sender": "coordinator",
     "recipient": "preprint_a",
     "kind": "reject",
     "task_id": "oa-primary"
   },
   {
-    "elapsed_ms": 0.6301,
+    "elapsed_ms": 0.5875,
     "sender": "coordinator",
     "recipient": "scholar_b",
     "kind": "accept",
     "task_id": "oa-primary"
   },
   {
-    "elapsed_ms": 0.6638,
+    "elapsed_ms": 0.6222,
     "sender": "coordinator",
     "recipient": "preprint_b",
     "kind": "reject",
     "task_id": "cr-bibliography"
   },
   {
-    "elapsed_ms": 0.6814,
+    "elapsed_ms": 0.6412,
     "sender": "coordinator",
     "recipient": "scholar_b",
     "kind": "accept",
     "task_id": "cr-bibliography"
   },
   {
-    "elapsed_ms": 0.7096,
+    "elapsed_ms": 0.6683,
     "sender": "coordinator",
     "recipient": "preprint_a",
     "kind": "reject",
     "task_id": "oa-alternative"
   },
   {
-    "elapsed_ms": 0.726,
+    "elapsed_ms": 0.6842,
     "sender": "coordinator",
     "recipient": "scholar_b",
     "kind": "accept",
     "task_id": "oa-alternative"
   },
   {
-    "elapsed_ms": 0.7523,
+    "elapsed_ms": 0.7103,
     "sender": "coordinator",
     "recipient": "preprint_b",
     "kind": "reject",
     "task_id": "ax-preprints"
   },
   {
-    "elapsed_ms": 0.7657,
+    "elapsed_ms": 0.7249,
     "sender": "coordinator",
     "recipient": "preprint_a",
     "kind": "accept",
     "task_id": "ax-preprints"
   },
   {
-    "elapsed_ms": 0.7896,
+    "elapsed_ms": 0.7478,
     "sender": "coordinator",
     "recipient": "news_b",
     "kind": "accept",
     "task_id": "news-primary"
   },
   {
-    "elapsed_ms": 32.3463,
+    "elapsed_ms": 31.0463,
     "sender": "preprint_a",
     "recipient": "coordinator",
     "kind": "result",
     "task_id": "ax-preprints"
   },
   {
-    "elapsed_ms": 40.3181,
+    "elapsed_ms": 46.5386,
     "sender": "news_b",
     "recipient": "coordinator",
     "kind": "result",
     "task_id": "news-primary"
   },
   {
-    "elapsed_ms": 40.3864,
+    "elapsed_ms": 46.5925,
     "sender": "scholar_b",
     "recipient": "coordinator",
     "kind": "result",
     "task_id": "oa-primary"
   },
   {
-    "elapsed_ms": 81.4082,
+    "elapsed_ms": 72.7873,
     "sender": "scholar_b",
     "recipient": "coordinator",
     "kind": "result",
     "task_id": "cr-bibliography"
   },
   {
-    "elapsed_ms": 130.8512,
+    "elapsed_ms": 114.9246,
     "sender": "scholar_b",
     "recipient": "coordinator",
     "kind": "result",
     "task_id": "oa-alternative"
   },
   {
-    "elapsed_ms": 131.1783,
+    "elapsed_ms": 115.0857,
     "sender": "coordinator",
     "recipient": "scholar_a",
     "kind": "shutdown",
     "task_id": null
   },
   {
-    "elapsed_ms": 131.1984,
+    "elapsed_ms": 115.0976,
     "sender": "coordinator",
     "recipient": "scholar_b",
     "kind": "shutdown",
     "task_id": null
   },
   {
-    "elapsed_ms": 131.2073,
+    "elapsed_ms": 115.1062,
     "sender": "coordinator",
     "recipient": "preprint_a",
     "kind": "shutdown",
     "task_id": null
   },
   {
-    "elapsed_ms": 131.2161,
+    "elapsed_ms": 115.1136,
     "sender": "coordinator",
     "recipient": "preprint_b",
     "kind": "shutdown",
     "task_id": null
   },
   {
-    "elapsed_ms": 131.2236,
+    "elapsed_ms": 115.1207,
     "sender": "coordinator",
     "recipient": "news_a",
     "kind": "shutdown",
     "task_id": null
   },
   {
-    "elapsed_ms": 131.2309,
+    "elapsed_ms": 115.1281,
     "sender": "coordinator",
     "recipient": "news_b",
     "kind": "shutdown",

@@ -1,97 +1,97 @@
 scenario,seed,mechanism,agent_count,task_count,wall_ms,coordination_ms,messages,completed_tasks,reassignments,scientific_records,news_records,load_std,errors
-balanced,0,centralized,6,5,65.9284,0.0293,10,5,0,3,1,0.68718,{}
-balanced,0,contract-net,6,5,72.1047,1.8851,44,5,0,3,1,0.68718,{}
-balanced,1,centralized,6,5,64.9057,0.0223,10,5,0,3,1,0.68718,{}
-balanced,1,contract-net,6,5,74.2705,2.6845,44,5,0,3,1,0.68718,{}
-balanced,2,centralized,6,5,64.3117,0.021,10,5,0,3,1,0.68718,{}
-balanced,2,contract-net,6,5,65.4025,2.5511,44,5,0,3,1,0.68718,{}
-balanced,3,centralized,6,5,51.089,0.0193,10,5,0,3,1,0.68718,{}
-balanced,3,contract-net,6,5,64.7188,1.9348,44,5,0,3,1,0.68718,{}
-balanced,4,centralized,6,5,58.9541,0.0217,10,5,0,3,1,0.68718,{}
-balanced,4,contract-net,6,5,57.2666,1.8066,44,5,0,3,1,0.68718,{}
-balanced,5,centralized,6,5,64.4911,0.0202,10,5,0,3,1,0.68718,{}
-balanced,5,contract-net,6,5,66.6036,2.1261,44,5,0,3,1,0.68718,{}
-balanced,6,centralized,6,5,58.7719,0.0203,10,5,0,3,1,0.68718,{}
-balanced,6,contract-net,6,5,71.2666,2.3779,44,5,0,3,1,0.68718,{}
-balanced,7,centralized,6,5,66.6059,0.0192,10,5,0,3,1,0.68718,{}
-balanced,7,contract-net,6,5,66.3216,3.1039,44,5,0,3,1,0.68718,{}
-balanced,8,centralized,6,5,65.4834,0.0213,10,5,0,3,1,0.68718,{}
-balanced,8,contract-net,6,5,63.9366,1.9165,44,5,0,3,1,0.68718,{}
-balanced,9,centralized,6,5,68.8921,0.0201,10,5,0,3,1,0.68718,{}
-balanced,9,contract-net,6,5,65.3626,1.9396,44,5,0,3,1,0.68718,{}
-balanced,10,centralized,6,5,65.0581,0.0199,10,5,0,3,1,0.68718,{}
-balanced,10,contract-net,6,5,63.7397,3.6776,44,5,0,3,1,0.68718,{}
-balanced,11,centralized,6,5,66.8012,0.0204,10,5,0,3,1,0.68718,{}
-balanced,11,contract-net,6,5,65.8835,5.2123,44,5,0,3,1,0.68718,{}
-hidden_load,0,centralized,6,5,167.8448,0.0189,10,5,0,3,1,0.68718,{}
-hidden_load,0,contract-net,6,5,108.1058,2.1155,44,5,0,3,1,1.06719,{}
-hidden_load,1,centralized,6,5,148.3457,0.0208,10,5,0,3,1,0.68718,{}
-hidden_load,1,contract-net,6,5,117.0736,2.5539,44,5,0,3,1,1.06719,{}
-hidden_load,2,centralized,6,5,165.9201,0.0255,10,5,0,3,1,0.68718,{}
-hidden_load,2,contract-net,6,5,115.5323,2.7703,44,5,0,3,1,1.06719,{}
-hidden_load,3,centralized,6,5,151.0141,0.02,10,5,0,3,1,0.68718,{}
-hidden_load,3,contract-net,6,5,115.4832,2.003,44,5,0,3,1,1.06719,{}
-hidden_load,4,centralized,6,5,150.0071,0.0198,10,5,0,3,1,0.68718,{}
-hidden_load,4,contract-net,6,5,125.3831,4.5859,44,5,0,3,1,1.06719,{}
-hidden_load,5,centralized,6,5,166.0358,0.0268,10,5,0,3,1,0.68718,{}
-hidden_load,5,contract-net,6,5,122.6995,2.4834,44,5,0,3,1,1.06719,{}
-hidden_load,6,centralized,6,5,165.2037,0.0287,10,5,0,3,1,0.68718,{}
-hidden_load,6,contract-net,6,5,118.1706,2.4433,44,5,0,3,1,1.06719,{}
-hidden_load,7,centralized,6,5,150.4315,0.0222,10,5,0,3,1,0.68718,{}
-hidden_load,7,contract-net,6,5,115.9832,1.764,44,5,0,3,1,1.06719,{}
-hidden_load,8,centralized,6,5,157.8195,0.0192,10,5,0,3,1,0.68718,{}
-hidden_load,8,contract-net,6,5,100.2351,2.157,44,5,0,3,1,1.06719,{}
-hidden_load,9,centralized,6,5,156.7346,0.0284,10,5,0,3,1,0.68718,{}
-hidden_load,9,contract-net,6,5,123.612,2.5628,44,5,0,3,1,1.06719,{}
-hidden_load,10,centralized,6,5,165.2074,0.032,10,5,0,3,1,0.68718,{}
-hidden_load,10,contract-net,6,5,116.5333,2.335,44,5,0,3,1,1.06719,{}
-hidden_load,11,centralized,6,5,165.6837,0.019,10,5,0,3,1,0.68718,{}
-hidden_load,11,contract-net,6,5,125.7659,1.8301,44,5,0,3,1,1.06719,{}
-limited_availability,0,centralized,6,5,89.0234,0.0207,10,5,0,3,1,0.68718,{}
-limited_availability,0,contract-net,6,5,131.2364,2.12,32,5,0,3,1,1.06719,{}
-limited_availability,1,centralized,6,5,82.7671,0.0221,10,5,0,3,1,0.68718,{}
-limited_availability,1,contract-net,6,5,124.6379,1.8244,32,5,0,3,1,1.06719,{}
-limited_availability,2,centralized,6,5,73.8008,0.0236,10,5,0,3,1,0.68718,{}
-limited_availability,2,contract-net,6,5,114.5881,1.6414,32,5,0,3,1,1.06719,{}
-limited_availability,3,centralized,6,5,90.6597,0.0441,10,5,0,3,1,0.68718,{}
-limited_availability,3,contract-net,6,5,117.2189,5.5757,32,5,0,3,1,1.06719,{}
-limited_availability,4,centralized,6,5,90.7507,0.0198,10,5,0,3,1,0.68718,{}
-limited_availability,4,contract-net,6,5,107.7693,1.7788,32,5,0,3,1,1.06719,{}
-limited_availability,5,centralized,6,5,84.9203,0.0197,10,5,0,3,1,0.68718,{}
-limited_availability,5,contract-net,6,5,113.3214,2.0025,32,5,0,3,1,1.06719,{}
-limited_availability,6,centralized,6,5,83.4497,0.0202,10,5,0,3,1,0.68718,{}
-limited_availability,6,contract-net,6,5,132.6365,1.3399,32,5,0,3,1,1.06719,{}
-limited_availability,7,centralized,6,5,81.7885,0.0268,10,5,0,3,1,0.68718,{}
-limited_availability,7,contract-net,6,5,131.6199,1.9536,32,5,0,3,1,1.06719,{}
-limited_availability,8,centralized,6,5,66.6669,0.025,10,5,0,3,1,0.68718,{}
-limited_availability,8,contract-net,6,5,98.1835,1.9094,32,5,0,3,1,1.06719,{}
-limited_availability,9,centralized,6,5,66.546,0.0301,10,5,0,3,1,0.68718,{}
-limited_availability,9,contract-net,6,5,99.181,1.3985,32,5,0,3,1,1.06719,{}
-limited_availability,10,centralized,6,5,91.5321,0.0196,10,5,0,3,1,0.68718,{}
-limited_availability,10,contract-net,6,5,123.0166,1.3986,32,5,0,3,1,1.06719,{}
-limited_availability,11,centralized,6,5,82.867,0.0296,10,5,0,3,1,0.68718,{}
-limited_availability,11,contract-net,6,5,132.5833,1.9502,32,5,0,3,1,1.06719,{}
-source_failure,0,centralized,6,5,80.0652,0.0616,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,0,contract-net,6,5,75.1122,1.926,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,1,centralized,6,5,89.6431,0.0369,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,1,contract-net,6,5,73.9643,2.4209,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,2,centralized,6,5,75.0652,0.0339,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,2,contract-net,6,5,82.2063,6.909,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,3,centralized,6,5,73.0114,0.0267,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,3,contract-net,6,5,83.56,2.2622,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,4,centralized,6,5,82.0042,0.0598,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,4,contract-net,6,5,90.9069,2.0624,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,5,centralized,6,5,91.5355,0.0321,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,5,contract-net,6,5,73.5267,2.7843,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,6,centralized,6,5,80.6125,0.0365,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,6,contract-net,6,5,84.7352,2.4592,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,7,centralized,6,5,74.428,0.0325,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,7,contract-net,6,5,80.3299,1.9345,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,8,centralized,6,5,90.7866,0.0406,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,8,contract-net,6,5,92.4595,2.2015,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,9,centralized,6,5,81.1405,0.0313,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,9,contract-net,6,5,84.0382,2.5356,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,10,centralized,6,5,81.1743,0.0305,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,10,contract-net,6,5,75.4744,3.5333,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,11,centralized,6,5,74.3389,0.0301,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
-source_failure,11,contract-net,6,5,82.4381,1.8496,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+balanced,0,centralized,6,5,60.9087,0.0269,10,5,0,3,1,0.68718,{}
+balanced,0,contract-net,6,5,65.4967,2.7132,44,5,0,3,1,0.68718,{}
+balanced,1,centralized,6,5,62.6401,0.0269,10,5,0,3,1,0.68718,{}
+balanced,1,contract-net,6,5,51.7185,2.3496,44,5,0,3,1,0.68718,{}
+balanced,2,centralized,6,5,73.507,0.0207,10,5,0,3,1,0.68718,{}
+balanced,2,contract-net,6,5,74.1546,2.1383,44,5,0,3,1,0.68718,{}
+balanced,3,centralized,6,5,50.2078,0.0204,10,5,0,3,1,0.68718,{}
+balanced,3,contract-net,6,5,57.5329,1.7648,44,5,0,3,1,0.68718,{}
+balanced,4,centralized,6,5,56.898,0.0212,10,5,0,3,1,0.68718,{}
+balanced,4,contract-net,6,5,58.2892,1.7361,44,5,0,3,1,0.68718,{}
+balanced,5,centralized,6,5,82.4093,0.0188,10,5,0,3,1,0.68718,{}
+balanced,5,contract-net,6,5,72.2221,1.7073,44,5,0,3,1,0.68718,{}
+balanced,6,centralized,6,5,58.2288,0.0337,10,5,0,3,1,0.68718,{}
+balanced,6,contract-net,6,5,75.3393,2.4318,44,5,0,3,1,0.68718,{}
+balanced,7,centralized,6,5,64.5653,0.0192,10,5,0,3,1,0.68718,{}
+balanced,7,contract-net,6,5,63.8823,2.685,44,5,0,3,1,0.68718,{}
+balanced,8,centralized,6,5,67.2105,0.0202,10,5,0,3,1,0.68718,{}
+balanced,8,contract-net,6,5,57.9302,5.2096,44,5,0,3,1,0.68718,{}
+balanced,9,centralized,6,5,67.5457,0.0256,10,5,0,3,1,0.68718,{}
+balanced,9,contract-net,6,5,70.3525,1.736,44,5,0,3,1,0.68718,{}
+balanced,10,centralized,6,5,61.1163,0.0269,10,5,0,3,1,0.68718,{}
+balanced,10,contract-net,6,5,64.271,2.4723,44,5,0,3,1,0.68718,{}
+balanced,11,centralized,6,5,63.6325,0.0262,10,5,0,3,1,0.68718,{}
+balanced,11,contract-net,6,5,66.4771,1.8317,44,5,0,3,1,0.68718,{}
+hidden_load,0,centralized,6,5,166.1608,0.0281,10,5,0,3,1,0.68718,{}
+hidden_load,0,contract-net,6,5,116.6479,1.8818,44,5,0,3,1,1.06719,{}
+hidden_load,1,centralized,6,5,138.7708,0.0273,10,5,0,3,1,0.68718,{}
+hidden_load,1,contract-net,6,5,117.7577,2.2003,44,5,0,3,1,1.06719,{}
+hidden_load,2,centralized,6,5,174.0619,0.0264,10,5,0,3,1,0.68718,{}
+hidden_load,2,contract-net,6,5,110.5205,2.5673,44,5,0,3,1,1.06719,{}
+hidden_load,3,centralized,6,5,147.0427,0.0283,10,5,0,3,1,0.68718,{}
+hidden_load,3,contract-net,6,5,122.7244,2.0575,44,5,0,3,1,1.06719,{}
+hidden_load,4,centralized,6,5,166.0183,0.0219,10,5,0,3,1,0.68718,{}
+hidden_load,4,contract-net,6,5,116.8544,1.887,44,5,0,3,1,1.06719,{}
+hidden_load,5,centralized,6,5,158.8485,0.022,10,5,0,3,1,0.68718,{}
+hidden_load,5,contract-net,6,5,123.4488,2.7203,44,5,0,3,1,1.06719,{}
+hidden_load,6,centralized,6,5,172.7088,0.0223,10,5,0,3,1,0.68718,{}
+hidden_load,6,contract-net,6,5,116.9141,1.757,44,5,0,3,1,1.06719,{}
+hidden_load,7,centralized,6,5,150.6841,0.0473,10,5,0,3,1,0.68718,{}
+hidden_load,7,contract-net,6,5,114.9138,1.7467,44,5,0,3,1,1.06719,{}
+hidden_load,8,centralized,6,5,150.5956,0.0207,10,5,0,3,1,0.68718,{}
+hidden_load,8,contract-net,6,5,107.6157,1.8035,44,5,0,3,1,1.06719,{}
+hidden_load,9,centralized,6,5,150.0594,0.0234,10,5,0,3,1,0.68718,{}
+hidden_load,9,contract-net,6,5,107.0222,2.074,44,5,0,3,1,1.06719,{}
+hidden_load,10,centralized,6,5,149.3527,0.0202,10,5,0,3,1,0.68718,{}
+hidden_load,10,contract-net,6,5,116.0976,3.1649,44,5,0,3,1,1.06719,{}
+hidden_load,11,centralized,6,5,149.542,0.0273,10,5,0,3,1,0.68718,{}
+hidden_load,11,contract-net,6,5,115.6005,2.5261,44,5,0,3,1,1.06719,{}
+limited_availability,0,centralized,6,5,82.5085,0.0229,10,5,0,3,1,0.68718,{}
+limited_availability,0,contract-net,6,5,115.1281,1.9233,32,5,0,3,1,1.06719,{}
+limited_availability,1,centralized,6,5,90.2091,0.0195,10,5,0,3,1,0.68718,{}
+limited_availability,1,contract-net,6,5,124.6436,1.3725,32,5,0,3,1,1.06719,{}
+limited_availability,2,centralized,6,5,73.1965,0.0232,10,5,0,3,1,0.68718,{}
+limited_availability,2,contract-net,6,5,99.1768,1.3476,32,5,0,3,1,1.06719,{}
+limited_availability,3,centralized,6,5,91.5924,0.0246,10,5,0,3,1,0.68718,{}
+limited_availability,3,contract-net,6,5,122.9507,2.0226,32,5,0,3,1,1.06719,{}
+limited_availability,4,centralized,6,5,83.5489,0.0267,10,5,0,3,1,0.68718,{}
+limited_availability,4,contract-net,6,5,116.2558,1.3386,32,5,0,3,1,1.06719,{}
+limited_availability,5,centralized,6,5,83.7567,0.0237,10,5,0,3,1,0.68718,{}
+limited_availability,5,contract-net,6,5,123.208,1.8229,32,5,0,3,1,1.06719,{}
+limited_availability,6,centralized,6,5,90.6358,0.0181,10,5,0,3,1,0.68718,{}
+limited_availability,6,contract-net,6,5,116.972,1.5655,32,5,0,3,1,1.06719,{}
+limited_availability,7,centralized,6,5,83.8978,0.019,10,5,0,3,1,0.68718,{}
+limited_availability,7,contract-net,6,5,105.5887,2.3418,32,5,0,3,1,1.06719,{}
+limited_availability,8,centralized,6,5,74.7554,0.0249,10,5,0,3,1,0.68718,{}
+limited_availability,8,contract-net,6,5,115.325,1.9127,32,5,0,3,1,1.06719,{}
+limited_availability,9,centralized,6,5,66.8229,0.0188,10,5,0,3,1,0.68718,{}
+limited_availability,9,contract-net,6,5,123.4746,5.0165,32,5,0,3,1,1.06719,{}
+limited_availability,10,centralized,6,5,89.6501,0.021,10,5,0,3,1,0.68718,{}
+limited_availability,10,contract-net,6,5,125.9433,1.3389,32,5,0,3,1,1.06719,{}
+limited_availability,11,centralized,6,5,90.9249,0.0189,10,5,0,3,1,0.68718,{}
+limited_availability,11,contract-net,6,5,122.0505,2.1559,32,5,0,3,1,1.06719,{}
+source_failure,0,centralized,6,5,83.3455,0.037,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,0,contract-net,6,5,80.0316,3.4289,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,1,centralized,6,5,74.1733,0.0367,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,1,contract-net,6,5,90.1401,1.9703,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,2,centralized,6,5,74.6212,0.0295,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,2,contract-net,6,5,85.5944,2.7001,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,3,centralized,6,5,80.0685,0.0266,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,3,contract-net,6,5,74.0274,2.8225,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,4,centralized,6,5,82.7314,0.0358,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,4,contract-net,6,5,88.854,3.214,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,5,centralized,6,5,75.3986,0.0374,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,5,contract-net,6,5,73.6486,2.7645,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,6,centralized,6,5,74.2716,0.0267,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,6,contract-net,6,5,82.2302,1.9439,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,7,centralized,6,5,74.897,0.0358,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,7,contract-net,6,5,73.8216,2.6397,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,8,centralized,6,5,82.9809,0.0302,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,8,contract-net,6,5,82.1429,5.6591,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,9,centralized,6,5,88.8346,0.031,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,9,contract-net,6,5,79.6369,3.07,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,10,centralized,6,5,79.9222,0.036,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,10,contract-net,6,5,73.8773,1.9191,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,11,centralized,6,5,91.986,0.0285,12,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
+source_failure,11,contract-net,6,5,87.8738,2.8055,48,4,2,2,1,0.74536,"{""ax-preprints"": ""no eligible proposal or available worker""}"
