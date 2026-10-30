@@ -1,0 +1,27 @@
+{
+  "candidate_source_commit": "1163c40c6d9f3022770de20dad25f1f2418eb066",
+  "environment": "Windows 11, Python 3.14, isolated virtual environment",
+  "archive": "ResearchRadar_MAS_lab3_v1.1_audit.zip",
+  "location": "separate temporary directory outside Git",
+  "git_directory_absent": true,
+  "git_excluded_from_path": true,
+  "installed_from_extracted_archive": true,
+  "imported_module": "src/researchradar/negotiation.py inside extracted archive",
+  "tests_passed": 58,
+  "new_regression_tests_passed": 11,
+  "slot_conflict": {
+    "credits": 4,
+    "concurrent_slots": 1,
+    "completed_checks": 1,
+    "failures": 1,
+    "spent": 2,
+    "held": 0,
+    "active": 0,
+    "peak_active": 1
+  },
+  "experiment_smoke_runs": 10,
+  "experiment_smoke_pairs": 5,
+  "resource_violations": 0,
+  "frozen_sha256": "279e928edd1c7183da6264988a0558caadfcb8d2b084989ed588ed31330c3320",
+  "experiment_code_commit": "8144ef765e839a03ecccc3a9d88e39f1c6a2783e"
+}
