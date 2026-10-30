@@ -95,6 +95,8 @@ def chart(summary: list[dict], metric: str, title: str, unit: str, output: Path)
     values = [r[metric + "_mean"] for r in summary]
     top = max(values) * 1.18 if values else 1
     colors = {"centralized": "#304b68", "contract-net": "#bc6540"}
+    labels = {"balanced": "равномерная", "hidden_load": "скрытая загрузка",
+              "limited_availability": "ограниченный состав", "source_failure": "отказ источника"}
     esc = lambda s: (str(s).replace("&", "&amp;").replace("<", "&lt;")
                      .replace(">", "&gt;"))
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
@@ -112,11 +114,11 @@ def chart(summary: list[dict], metric: str, title: str, unit: str, output: Path)
             y = 355 - bar_height
             parts.append(f'<rect x="{x}" y="{y:.2f}" width="55" height="{bar_height:.2f}" fill="{colors[mechanism]}"/>')
             parts.append(f'<text x="{x+27}" y="{y-8:.2f}" text-anchor="middle" font-family="Arial" font-size="14">{value:.2f}</text>')
-        parts.append(f'<text x="{left+63}" y="383" text-anchor="middle" font-family="Arial" font-size="14">{esc(scenario.replace("_", " "))}</text>')
+        parts.append(f'<text x="{left+63}" y="383" text-anchor="middle" font-family="Arial" font-size="14">{esc(labels[scenario])}</text>')
     parts.extend(['<rect x="320" y="400" width="14" height="14" fill="#304b68"/>',
-                  '<text x="342" y="412" font-family="Arial" font-size="14">centralized</text>',
+                  '<text x="342" y="412" font-family="Arial" font-size="14">централизованное</text>',
                   '<rect x="520" y="400" width="14" height="14" fill="#bc6540"/>',
-                  '<text x="542" y="412" font-family="Arial" font-size="14">contract-net</text>',
+                  '<text x="542" y="412" font-family="Arial" font-size="14">контрактная сеть</text>',
                   '</svg>'])
     output.write_text("\n".join(parts), encoding="utf-8")
 
