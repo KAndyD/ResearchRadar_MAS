@@ -31,7 +31,10 @@ def selected(audit: bool) -> list[Path]:
         names += ("deliverables/ResearchRadar_MAS_Task_Allocation.docx",)
     paths = [ROOT / name for name in names]
     for folder in FOLDERS + (("audit_evidence",) if audit else ()):
-        paths.extend(p for p in (ROOT / folder).rglob("*") if p.is_file())
+        paths.extend(p for p in (ROOT / folder).rglob("*") if p.is_file()
+                     and not any(part in EXCLUDED or part.endswith(".egg-info")
+                                 for part in p.relative_to(ROOT).parts)
+                     and p.suffix not in BAD_SUFFIX)
     result = sorted(set(paths))
     for path in result:
         relative = path.relative_to(ROOT)
