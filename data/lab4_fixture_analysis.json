@@ -1,0 +1,6 @@
+{
+  "question": "multi agent systems",
+  "context_sha256": "63794bc897a0d5ccac8df991c2c48468a5bda0569f250276affc8071fef1f3b1",
+  "origin": "authored_fixture_not_qwen",
+  "response": "{\"scientific_claim\": \"The abstract discusses allocation policies.\", \"scientific_source_id\": \"fixture:oa:1\", \"scientific_quote\": \"Synthetic abstract on allocation policies.\", \"news_claim\": \"The headline describes research news.\", \"news_source_id\": \"fixture:news:1\", \"news_quote\": \"Synthetic research news\", \"relation\": \"topic_overlap\", \"explanation\": \"The available headline does not identify a study or verify its substantive claim.\", \"next_check\": \"find_primary_source\"}"
+}

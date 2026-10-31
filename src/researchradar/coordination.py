@@ -5,6 +5,7 @@ import asyncio
 from collections import Counter
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
+from math import isfinite
 from time import perf_counter
 from typing import Any, Protocol
 from uuid import uuid4
@@ -68,11 +69,12 @@ class Bus:
     MANAGER_TO_WORKER = {"task", "cfp", "accept", "reject", "cancel", "shutdown"}
     WORKER_TO_MANAGER = {"proposal", "refuse", "result", "failure"}
 
-    def __init__(self, workers: tuple[str, ...]):
+    def __init__(self, workers: tuple[str, ...], request_id: str | None = None):
         self.queues: dict[str, asyncio.Queue[Message]] = {
             name: asyncio.Queue() for name in ("coordinator", *workers)}
         self.trace: list[dict[str, Any]] = []
         self.started = perf_counter()
+        self.request_id = request_id
 
     async def send(self, message: Message) -> None:
         allowed = ((message.sender == "coordinator" and message.recipient != "coordinator"
@@ -81,7 +83,8 @@ class Bus:
                        and message.kind in self.WORKER_TO_MANAGER))
         if not allowed or message.sender not in self.queues or message.recipient not in self.queues:
             raise PermissionError("protocol route not permitted")
-        if not message.request_id or not isinstance(message.payload, dict):
+        if (not message.request_id or not isinstance(message.payload, dict)
+                or self.request_id is not None and message.request_id != self.request_id):
             raise ValueError("invalid protocol message")
         self.trace.append({"elapsed_ms": round((perf_counter() - self.started) * 1000, 6),
                            "at": datetime.now(timezone.utc).isoformat(),
@@ -112,10 +115,10 @@ class Worker:
         queue = self.bus.queues[self.spec.name]
         while True:
             message = await queue.get()
-            if message.kind == "shutdown":
-                break
             if message.request_id != self.request_id:
                 continue
+            if message.kind == "shutdown":
+                break
             task_id = message.payload.get("task_id")
             if message.kind == "cfp":
                 task = WorkTask(**message.payload["task"])
@@ -169,7 +172,7 @@ class Worker:
         except asyncio.CancelledError:
             raise
         except Exception as exc:
-            payload = {"task_id": task.id, "error": f"{type(exc).__name__}: {exc}"}
+            payload = {"task_id": task.id, "error": type(exc).__name__}
             kind = "failure"
         finally:
             self.state.finish(success, perf_counter() - started)
@@ -268,13 +271,21 @@ class Coordinator:
                 message = await asyncio.wait_for(channel.get(), remaining)
             except TimeoutError:
                 break
-            if (message.sender not in cfps or message.sender in responded
+            if (message.request_id != self.request_id
+                    or message.payload.get("task_id") != task.id
+                    or message.sender not in cfps or message.sender in responded
                     or message.correlation_id != cfps[message.sender]
                     or message.kind not in {"proposal", "refuse"}):
                 self.late_messages += 1
                 continue
             responded.add(message.sender)
-            if message.kind == "proposal" and isinstance(message.payload.get("score_ms"), (int, float)):
+            if message.kind == "proposal":
+                score = message.payload.get("score_ms")
+                if (isinstance(score, bool) or not isinstance(score, (int, float))
+                        or not isfinite(score) or score < 0):
+                    self.late_messages += 1
+                    continue
+            if message.kind == "proposal":
                 offers[message.sender] = (float(message.payload["score_ms"]), cfps[message.sender])
         chosen_name = min(offers, key=lambda name: (offers[name][0], name)) if offers else None
         for name in offers:
@@ -308,13 +319,32 @@ class Coordinator:
                     except TimeoutError:
                         timed_out = True
                         break
-                    if (message.sender != name or message.correlation_id != assignment.id
+                    if (message.request_id != self.request_id
+                            or message.payload.get("task_id") != task.id
+                            or message.sender != name or message.correlation_id != assignment.id
                             or message.kind not in {"result", "failure"}):
                         self.late_messages += 1
                         continue
                     self.assigned_load[name] -= 1
                     if message.kind == "result":
-                        return task.id, [Material(**x) for x in message.payload["materials"]], None
+                        raw = message.payload.get("materials")
+                        try:
+                            if not isinstance(raw, list) or len(raw) > task.limit:
+                                raise ValueError("invalid result collection")
+                            materials = [Material(**x) for x in raw if isinstance(x, dict)]
+                            expected_kind = "news" if task.kind == "news" else "scientific"
+                            if (len(materials) != len(raw) or any(
+                                    x.kind != expected_kind or not all(
+                                        isinstance(value, str) and value.strip()
+                                        for value in (x.source, x.source_id, x.title, x.url))
+                                    for x in materials)):
+                                raise ValueError("invalid result material")
+                        except (TypeError, ValueError, KeyError):
+                            self.late_messages += 1
+                            excluded.add(name)
+                            self.reassignments += 1
+                            break
+                        return task.id, materials, None
                     excluded.add(name)
                     self.reassignments += 1
                     break
@@ -364,7 +394,7 @@ async def research_stage2(question: str, sources: dict[str, Source], *,
     tasks = make_tasks(question, alternative, news_query)
     specs = workers or default_workers()
     request_id = str(uuid4())
-    bus = Bus(tuple(spec.name for spec in specs))
+    bus = Bus(tuple(spec.name for spec in specs), request_id)
     agents = {spec.name: Worker(spec, sources, bus, request_id) for spec in specs}
     runners = [asyncio.create_task(worker.run()) for worker in agents.values()]
     manager = Coordinator(bus, agents, request_id, mechanism, bid_timeout, task_timeout)

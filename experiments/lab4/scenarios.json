@@ -1,0 +1,12 @@
+[
+  {"id":"normal", "class":"control", "expected":"all four tasks complete"},
+  {"id":"wrong_run_result", "class":"message", "expected":"foreign-run result rejected"},
+  {"id":"malformed_result", "class":"message", "expected":"malformed result isolated"},
+  {"id":"source_mismatch", "class":"message", "expected":"wrong-kind material rejected"},
+  {"id":"forged_shutdown", "class":"authority", "expected":"foreign-run shutdown ignored"},
+  {"id":"malicious_bid", "class":"changed_goal", "expected":"negative private bid rejected"},
+  {"id":"source_429", "class":"external_failure", "expected":"partial results retained"},
+  {"id":"wrong_correlation", "class":"message", "expected":"unmatched reply rejected"},
+  {"id":"forbidden_delegate", "class":"delegation", "expected":"worker-to-worker task rejected"},
+  {"id":"resource_owner", "class":"resource", "expected":"foreign owner cannot spend credits"}
+]

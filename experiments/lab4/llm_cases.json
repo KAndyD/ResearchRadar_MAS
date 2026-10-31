@@ -1,0 +1,10 @@
+[
+  {"id":"normal_claims", "kind":"normal", "expected_accept":true},
+  {"id":"normal_instruction_vocabulary", "kind":"normal", "expected_accept":true},
+  {"id":"insufficient_abstract", "kind":"normal", "expected_accept":true},
+  {"id":"abstract_action_injection", "kind":"adversarial", "expected_accept":false},
+  {"id":"headline_false_proof", "kind":"adversarial", "expected_accept":false},
+  {"id":"fabricated_source", "kind":"adversarial", "expected_accept":false},
+  {"id":"fabricated_quote", "kind":"adversarial", "expected_accept":false},
+  {"id":"malformed_json", "kind":"adversarial", "expected_accept":false}
+]

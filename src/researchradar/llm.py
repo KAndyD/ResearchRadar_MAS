@@ -104,14 +104,17 @@ class BudgetedOpenRouter:
                  prompt: str, max_tokens: int = 512,
                  input_rate_per_million: float,
                  output_rate_per_million: float,
+                 system_prompt: str | None = None,
                  call_id: str | None = None) -> str:
         if not request_id or not agent or not purpose:
             raise ValueError("request identity and purpose required")
-        if max_tokens < 1 or max_tokens > 4096 or len(prompt) > 16000:
+        if (max_tokens < 1 or max_tokens > 4096 or len(prompt) > 16000
+                or system_prompt is not None and len(system_prompt) > 4000):
             raise ValueError("prompt or output limit exceeds bounds")
         if input_rate_per_million < 0 or output_rate_per_million < 0:
             raise ValueError("negative pricing")
-        estimated = (len(prompt.encode("utf-8")) * input_rate_per_million +
+        estimated = ((len(prompt.encode("utf-8")) +
+                      len((system_prompt or "").encode("utf-8"))) * input_rate_per_million +
                      max_tokens * output_rate_per_million) / 1_000_000
         if estimated > self.per_call_usd:
             raise RuntimeError("per-call LLM budget exceeded before request")
@@ -138,9 +141,12 @@ class BudgetedOpenRouter:
         for attempt in range(1, self.max_retries + 2):
             self._update(call_id, attempts=attempt)
             try:
+                messages = ([{"role": "system", "content": system_prompt}]
+                            if system_prompt is not None else [])
+                messages.append({"role": "user", "content": prompt})
                 response = requests.post(f"{BASE}/chat/completions", json={
                     "model": MODEL,
-                    "messages": [{"role": "user", "content": prompt}],
+                    "messages": messages,
                     "max_tokens": max_tokens,
                     "reasoning_effort": "none",
                     "usage": {"include": True}}, timeout=30,
