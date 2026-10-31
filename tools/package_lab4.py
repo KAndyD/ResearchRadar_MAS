@@ -25,7 +25,10 @@ def selected(audit: bool) -> list[Path]:
     if audit:
         paths.append(ROOT / "project_guide/Лабораторные-МАС.pdf")
     for folder in FOLDERS + (("audit_evidence",) if audit else ()):
-        paths.extend(path for path in (ROOT / folder).rglob("*") if path.is_file())
+        paths.extend(path for path in (ROOT / folder).rglob("*") if path.is_file()
+                     and not any(part in EXCLUDED or part.endswith(".egg-info")
+                                 for part in path.relative_to(ROOT).parts)
+                     and path.suffix not in BAD_SUFFIX)
     result = sorted(set(paths))
     for path in result:
         rel = path.relative_to(ROOT)
