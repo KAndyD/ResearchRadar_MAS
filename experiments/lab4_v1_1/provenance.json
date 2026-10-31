@@ -1,0 +1,23 @@
+{
+  "historical_fault_corpus": {
+    "runs": 100,
+    "protected_code_commit_at_run": "eee29c55cab61d789c3c7f3e2d9d1dff7d24d584",
+    "metadata_path": "experiments/lab4/results/metadata.json",
+    "changed_in_this_revision": false
+  },
+  "new_mock_llm_corpus": {
+    "runs": 12,
+    "code_commit_at_run": null,
+    "reason": "implementation was still an uncommitted working tree when the saved corpus was generated",
+    "final_code_is_committed_separately": true
+  },
+  "new_live_llm_calls": {
+    "first_round": 3,
+    "second_round": 3,
+    "code_commit_at_run": null,
+    "reason": "both rounds preceded the release commit; the first prompt was an uncommitted candidate",
+    "round2_prompt_matches_final_source": true,
+    "responses_and_contexts_preserved": true
+  },
+  "release_commit": "recorded in the ZIP ARCHIVE_MANIFEST.txt after the tag is created"
+}

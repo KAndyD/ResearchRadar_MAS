@@ -7,6 +7,7 @@ import csv
 from hashlib import sha256
 import json
 from pathlib import Path
+import subprocess
 
 from researchradar.coordination import research_stage2
 from researchradar.evidence_analysis import analyze_research, context_for, context_sha256
@@ -18,6 +19,24 @@ from researchradar.frozen import load_frozen
 
 ROOT = Path(__file__).resolve().parents[1]
 CASES = ROOT / "experiments/lab4_v1_1/cases.json"
+
+
+def code_revision() -> tuple[str | None, str]:
+    if not (ROOT / ".git").exists():
+        return None, "unavailable_no_git_metadata"
+    try:
+        status = subprocess.run(["git", "status", "--porcelain", "--",
+            "src/researchradar/evidence_analysis.py", "tools/run_lab4_v1_1_llm_experiments.py",
+            "experiments/lab4_v1_1/cases.json"], cwd=ROOT, capture_output=True,
+            text=True, timeout=5, check=True)
+        if status.stdout.strip():
+            return None, "unavailable_dirty_experiment_inputs"
+        revision = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT,
+            capture_output=True, text=True, timeout=5, check=True).stdout.strip()
+        return (revision, "git_clean_experiment_inputs") if len(revision) == 40 else (
+            None, "unavailable_invalid_git_sha")
+    except (OSError, subprocess.SubprocessError):
+        return None, "unavailable_git_error"
 
 
 class StubClient:
@@ -139,8 +158,10 @@ def run(output: Path) -> dict:
                "historical_lab4_results_rewritten": False}
     (output / "summary.json").write_text(json.dumps(summary, indent=2) + "\n",
                                          encoding="utf-8")
+    revision, revision_source = code_revision()
     (output / "metadata.json").write_text(json.dumps({
         "schema_version": 2, "cases_sha256": sha256(CASES.read_bytes()).hexdigest(),
+        "code_commit_at_run": revision, "code_commit_source": revision_source,
         "expected_results_source": "manually specified in cases.json before run",
         "historical_baseline": "evidence_analysis_v1, structural-only comparator",
         "network_and_paid_calls": 0}, indent=2) + "\n", encoding="utf-8")

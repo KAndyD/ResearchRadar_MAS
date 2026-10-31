@@ -1,5 +1,7 @@
 {
   "schema_version": 2,
+  "code_commit_at_run": null,
+  "code_commit_source": "unavailable_dirty_experiment_inputs",
   "cases_sha256": "ceb008da46cd85d13e9b053b98a28ca8bf8de180baa7b1a9d930eefe10b9d831",
   "expected_results_source": "manually specified in cases.json before run",
   "historical_baseline": "evidence_analysis_v1, structural-only comparator",
