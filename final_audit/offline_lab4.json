@@ -1,0 +1,11 @@
+{
+  "archive_sha256": "ae215dc050d364e0bd4b9f7981add3d1f0b1fb027ff9da94b4556070bff6537c",
+  "outside_repository": true,
+  "git_metadata_available": false,
+  "git_executable_on_path": false,
+  "network_calls": 0,
+  "import_from_extracted_copy": true,
+  "manifest_members_verified": 306,
+  "check_count": 15,
+  "test_result": "77 tests OK"
+}

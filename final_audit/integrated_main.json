@@ -1,0 +1,16 @@
+{
+  "mode": "demo",
+  "search": {
+    "task_count": 4,
+    "completed_tasks": 4
+  },
+  "review": {
+    "completed_checks": 3
+  },
+  "evidence_analysis": {
+    "status": "usable_preliminary",
+    "schema_version": 2,
+    "claim_support": "not_assessed",
+    "semantic_entailment": "not_assessed"
+  }
+}

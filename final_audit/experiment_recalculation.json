@@ -1,0 +1,38 @@
+{
+  "lab2-v1.1": {
+    "rows": 96,
+    "scenarios": 4,
+    "paired_seed_groups": 48,
+    "aggregate_values_recomputed": 192,
+    "summary_rows": 8,
+    "paired_rows": 4
+  },
+  "lab3-v1.1": {
+    "rows": 120,
+    "scenarios": 5,
+    "paired_seed_groups": 60,
+    "aggregate_values_recomputed": 340,
+    "summary_rows": 10,
+    "paired_rows": 5
+  },
+  "lab4-v1.1": {
+    "rows": 100,
+    "scenarios": 10,
+    "paired_seed_groups": 50,
+    "aggregate_values_recomputed": 340,
+    "summary_rows": 20,
+    "paired_rows": 50,
+    "policy_violations": {
+      "baseline": 25,
+      "protected": 0
+    },
+    "correct_outcomes": {
+      "baseline": 25,
+      "protected": 50
+    },
+    "crashes": {
+      "baseline": 5,
+      "protected": 0
+    }
+  }
+}

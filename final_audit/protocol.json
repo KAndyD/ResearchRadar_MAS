@@ -1,0 +1,559 @@
+{
+  "python": "3.14.7",
+  "releases": {
+    "lab1-v1.2": {
+      "url": "https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab1-v1.2",
+      "assets": [
+        {
+          "name": "communication.svg",
+          "sha256": "565940d657dd3824f401e9e6ea91243393073467cc1a6cac318c0df5d151be59",
+          "remote_digest_match": true,
+          "size": 2452
+        },
+        {
+          "name": "ResearchRadar_MAS_Architecture.docx",
+          "sha256": "ec22fd7d5ed158f070a1dc18daa4f18c60b4e89d471a81ebbdec6058c83ab160",
+          "remote_digest_match": true,
+          "size": 212826
+        },
+        {
+          "name": "ResearchRadar_MAS_Architecture.pdf",
+          "sha256": "7a9fd023a258491fd39fbefabf33eb11c495a142dcb31d798514320112176cbb",
+          "remote_digest_match": true,
+          "size": 171747
+        },
+        {
+          "name": "ResearchRadar_MAS_lab1_v1.2_audit.zip",
+          "sha256": "5647b9e74acbe8960a762f56e599c057d9f3ced7d2ed5617569cbbd386acef38",
+          "remote_digest_match": true,
+          "size": 532437,
+          "archive": {
+            "member_count": 35,
+            "crc_ok": true,
+            "sha256_ok": true,
+            "unwanted_names": [],
+            "credential_pattern_files": [],
+            "manifest_header": [
+              "ResearchRadar MAS v1.2 audit",
+              "Commit: 345ca76b3b16c68971b5dc43e2cd7d43971ab7cf",
+              "Release: https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab1-v1.2",
+              "SHA-256 of archive members:"
+            ]
+          }
+        },
+        {
+          "name": "ResearchRadar_MAS_lab1_v1.2_submission.zip",
+          "sha256": "f8c2dfd121cb3cad02709891febf15ad17752ee6e561dd3002046925328bc93b",
+          "remote_digest_match": true,
+          "size": 531155,
+          "archive": {
+            "member_count": 33,
+            "crc_ok": true,
+            "sha256_ok": true,
+            "unwanted_names": [],
+            "credential_pattern_files": [],
+            "manifest_header": [
+              "ResearchRadar MAS v1.2 submission",
+              "Commit: 345ca76b3b16c68971b5dc43e2cd7d43971ab7cf",
+              "Release: https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab1-v1.2",
+              "SHA-256 of archive members:"
+            ]
+          }
+        },
+        {
+          "name": "roles.svg",
+          "sha256": "7d9991bfb01dc5074a0386502fe9d0b1313284f0ee1ba222547b994e60b27d4e",
+          "remote_digest_match": true,
+          "size": 2507
+        }
+      ],
+      "tag_commit": "345ca76b3b16c68971b5dc43e2cd7d43971ab7cf",
+      "archive_checks": {},
+      "runs": [
+        {
+          "command": [
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-q"
+          ],
+          "exit_code": 0,
+          "output_tail": "\n----------------------------------------------------------------------\nRan 21 tests in 0.919s\n\nOK\n",
+          "label": "tests"
+        },
+        {
+          "command": [
+            "-m",
+            "researchradar.cli",
+            "multi agent systems",
+            "--mode",
+            "demo",
+            "--output",
+            "run_output/audit_stage1.json"
+          ],
+          "exit_code": 0,
+          "output_tail": "Найдено научных записей: 1; новостей: 1. Содержательные выводы и связь между источниками не установлены: доступны только метаданные, заголовки и отдельные аннотации.\nResult and trace: run_output\\audit_stage1.json\n\n",
+          "label": "demo"
+        }
+      ],
+      "import": {
+        "command": [
+          "-c",
+          "import researchradar; print(researchradar.__file__)"
+        ],
+        "exit_code": 0,
+        "output_tail": "C:\\Users\\adkor\\AppData\\Local\\Temp\\ResearchRadarFinalAudit-q0ymzgfp\\lab1-v1.2\\src\\researchradar\\__init__.py\n\n"
+      }
+    },
+    "lab2-v1.1": {
+      "url": "https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab2-v1.1",
+      "assets": [
+        {
+          "name": "coordination.svg",
+          "sha256": "4a3ff38a23c3c3495a8dc945e15f43a9df07fee12df65f43c165b4d132b207a1",
+          "remote_digest_match": true,
+          "size": 2539
+        },
+        {
+          "name": "experiment_provenance.md",
+          "sha256": "fc07aaa9a0e8c10706009871205e7d0bd71ca2ddef8045c3b9d7b6049ae2d3b4",
+          "remote_digest_match": true,
+          "size": 2978
+        },
+        {
+          "name": "lab2_architecture.svg",
+          "sha256": "1f55ccd5acacbcab04cae957cf98a3cf84d8cfb34c50478f5ed83a8b3fa3b10c",
+          "remote_digest_match": true,
+          "size": 3207
+        },
+        {
+          "name": "lab2_contract_net.svg",
+          "sha256": "f9f67e486025d30cdebd60e3843c949918cec66a5b5524ec4c411b9cca01ee04",
+          "remote_digest_match": true,
+          "size": 2502
+        },
+        {
+          "name": "messages.svg",
+          "sha256": "af9ca42fb4e0db0c5d3edb7e486704fe3588e1e840960fac5e2b1e5cff531913",
+          "remote_digest_match": true,
+          "size": 2533
+        },
+        {
+          "name": "ResearchRadar_MAS_lab2_v1.1_audit.zip",
+          "sha256": "0df794e9a0027c6e7f880be5fcb71815c5b2c0a393ca82011c23ccfbc4f1d866",
+          "remote_digest_match": true,
+          "size": 649399,
+          "archive": {
+            "member_count": 66,
+            "crc_ok": true,
+            "sha256_ok": true,
+            "unwanted_names": [],
+            "credential_pattern_files": [],
+            "manifest_header": [
+              "ResearchRadar MAS lab2-v1.1 audit",
+              "Archive source commit: e88d321185f40db1a19c8287810f5aca092c3476",
+              "Original measurement code commit: 2e38714e768e044928208e89009fe74cf7da9f87",
+              "The two commits identify different events; measurements are preserved unchanged.",
+              "Release: https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab2-v1.1",
+              "SHA-256 of archive members:"
+            ]
+          }
+        },
+        {
+          "name": "ResearchRadar_MAS_lab2_v1.1_submission.zip",
+          "sha256": "9d8998e865d2ec2110ebc0489bbb0fb309abfb476e76e3269e5d7a13cb5c2ead",
+          "remote_digest_match": true,
+          "size": 410770,
+          "archive": {
+            "member_count": 59,
+            "crc_ok": true,
+            "sha256_ok": true,
+            "unwanted_names": [],
+            "credential_pattern_files": [],
+            "manifest_header": [
+              "ResearchRadar MAS lab2-v1.1 submission",
+              "Archive source commit: e88d321185f40db1a19c8287810f5aca092c3476",
+              "Original measurement code commit: 2e38714e768e044928208e89009fe74cf7da9f87",
+              "The two commits identify different events; measurements are preserved unchanged.",
+              "Release: https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab2-v1.1",
+              "SHA-256 of archive members:"
+            ]
+          }
+        },
+        {
+          "name": "ResearchRadar_MAS_Task_Allocation.docx",
+          "sha256": "56ca35b64346fc866708c19d26b86b0cde54e2185c3498ecd87ff15bd7697521",
+          "remote_digest_match": true,
+          "size": 328535
+        },
+        {
+          "name": "ResearchRadar_MAS_Task_Allocation.pdf",
+          "sha256": "37d946bda9cd9572e1b3c0b7a8530f2f5c9af838a96d342b60be12492898911e",
+          "remote_digest_match": true,
+          "size": 176714
+        },
+        {
+          "name": "submission_manifest_lab2.md",
+          "sha256": "029b6a794425e661f42574d8e666e4331c395b353ccdcb964a41e80f5c71be60",
+          "remote_digest_match": true,
+          "size": 6237
+        },
+        {
+          "name": "wall_time.svg",
+          "sha256": "b5bf0a17ba4354449189f2cf4be2a33bc5c8393bb8db111be2fa135312bf5233",
+          "remote_digest_match": true,
+          "size": 2534
+        }
+      ],
+      "tag_commit": "e88d321185f40db1a19c8287810f5aca092c3476",
+      "archive_checks": {},
+      "runs": [
+        {
+          "command": [
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-q"
+          ],
+          "exit_code": 0,
+          "output_tail": "\n----------------------------------------------------------------------\nRan 35 tests in 4.152s\n\nOK\n",
+          "label": "tests"
+        },
+        {
+          "command": [
+            "-m",
+            "researchradar.cli_stage2",
+            "multi agent systems",
+            "--mode",
+            "demo",
+            "--coordination",
+            "centralized",
+            "--output",
+            "run_output/audit_stage2_c.json"
+          ],
+          "exit_code": 0,
+          "output_tail": "centralized: 5/5 tasks; 10 messages; 3 scientific, 1 news\nResult and trace: run_output\\audit_stage2_c.json\n\n",
+          "label": "demo_centralized"
+        },
+        {
+          "command": [
+            "-m",
+            "researchradar.cli_stage2",
+            "multi agent systems",
+            "--mode",
+            "demo",
+            "--coordination",
+            "contract-net",
+            "--output",
+            "run_output/audit_stage2_cn.json"
+          ],
+          "exit_code": 0,
+          "output_tail": "contract-net: 5/5 tasks; 44 messages; 3 scientific, 1 news\nResult and trace: run_output\\audit_stage2_cn.json\n\n",
+          "label": "demo_contract_net"
+        }
+      ],
+      "import": {
+        "command": [
+          "-c",
+          "import researchradar; print(researchradar.__file__)"
+        ],
+        "exit_code": 0,
+        "output_tail": "C:\\Users\\adkor\\AppData\\Local\\Temp\\ResearchRadarFinalAudit-q0ymzgfp\\lab2-v1.1\\src\\researchradar\\__init__.py\n\n"
+      }
+    },
+    "lab3-v1.1": {
+      "url": "https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab3-v1.1",
+      "assets": [
+        {
+          "name": "lab3_v1.1_preservation.json",
+          "sha256": "ba48b567e650a69e23a322175b8f08b430ffcb13306da2e95b4cb23be0d4c029",
+          "remote_digest_match": true,
+          "size": 4080
+        },
+        {
+          "name": "ResearchRadar_MAS_lab3_v1.1_audit.zip",
+          "sha256": "58c3ff4da00337ab18231d9d5cb08d15fe5a2306dedfff1c4783867ad09361d4",
+          "remote_digest_match": true,
+          "size": 749531,
+          "archive": {
+            "member_count": 112,
+            "crc_ok": true,
+            "sha256_ok": true,
+            "unwanted_names": [],
+            "credential_pattern_files": [],
+            "manifest_header": [
+              "ResearchRadar MAS lab3-v1.1 audit",
+              "Archive source commit: a50a2c4da1c3562893f94b57476fbe1af5e36091",
+              "Experiment code commit: 8144ef765e839a03ecccc3a9d88e39f1c6a2783e",
+              "Experiment commit source: git_clean_experiment_inputs",
+              "Frozen data SHA-256: 279e928edd1c7183da6264988a0558caadfcb8d2b084989ed588ed31330c3320",
+              "Release: https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab3-v1.1",
+              "SHA-256 of archive members:"
+            ]
+          }
+        },
+        {
+          "name": "ResearchRadar_MAS_lab3_v1.1_submission.zip",
+          "sha256": "1fc1699cb101ec1333792c215f6023c16afc50403083484de2b30a1f887943a2",
+          "remote_digest_match": true,
+          "size": 346784,
+          "archive": {
+            "member_count": 97,
+            "crc_ok": true,
+            "sha256_ok": true,
+            "unwanted_names": [],
+            "credential_pattern_files": [],
+            "manifest_header": [
+              "ResearchRadar MAS lab3-v1.1 submission",
+              "Archive source commit: a50a2c4da1c3562893f94b57476fbe1af5e36091",
+              "Experiment code commit: 8144ef765e839a03ecccc3a9d88e39f1c6a2783e",
+              "Experiment commit source: git_clean_experiment_inputs",
+              "Frozen data SHA-256: 279e928edd1c7183da6264988a0558caadfcb8d2b084989ed588ed31330c3320",
+              "Release: https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab3-v1.1",
+              "SHA-256 of archive members:"
+            ]
+          }
+        },
+        {
+          "name": "ResearchRadar_MAS_Resource_Negotiation.docx",
+          "sha256": "f9c0bfa0ccd059342552498186303d230bdcf2fc5863d7a524fe3b4282fb26ce",
+          "remote_digest_match": true,
+          "size": 377561
+        },
+        {
+          "name": "ResearchRadar_MAS_Resource_Negotiation.pdf",
+          "sha256": "2e063c0ca72a1852e866773d43a69207ff2ee6cbdddb3a52953c6a3d8b0421c9",
+          "remote_digest_match": true,
+          "size": 179100
+        },
+        {
+          "name": "resource_lifecycle_lab3_v1.1.md",
+          "sha256": "b54de9327964467e1cfdd7e8dc871515df4b659fcad94370627443d3acd0dc63",
+          "remote_digest_match": true,
+          "size": 4424
+        },
+        {
+          "name": "submission_manifest_lab3_v1.1.md",
+          "sha256": "e835f01d0c8e15a66338e158282c22f35b62ac5215923af768da678216463464",
+          "remote_digest_match": true,
+          "size": 5568
+        }
+      ],
+      "tag_commit": "a50a2c4da1c3562893f94b57476fbe1af5e36091",
+      "archive_checks": {},
+      "runs": [
+        {
+          "command": [
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-q"
+          ],
+          "exit_code": 0,
+          "output_tail": "10 runs; 5 scenarios; 1 paired repeats: C:\\Users\\adkor\\AppData\\Local\\Temp\\tmpj9kjkf5m\n\n----------------------------------------------------------------------\nRan 58 tests in 6.648s\n\nOK\n",
+          "label": "tests"
+        },
+        {
+          "command": [
+            "-m",
+            "researchradar.cli_stage3",
+            "multi agent systems",
+            "--mode",
+            "demo",
+            "--resource-policy",
+            "baseline",
+            "--output",
+            "run_output/audit_stage3_b.json"
+          ],
+          "exit_code": 0,
+          "output_tail": "baseline: 2 checks, 3/3 credits, utility 9.00, Jain 0.600, 7 review messages\nEvidence and protocol trace: run_output\\audit_stage3_b.json\n\n",
+          "label": "demo_baseline"
+        },
+        {
+          "command": [
+            "-m",
+            "researchradar.cli_stage3",
+            "multi agent systems",
+            "--mode",
+            "demo",
+            "--resource-policy",
+            "negotiation",
+            "--credits",
+            "4",
+            "--slots",
+            "1",
+            "--output",
+            "run_output/audit_stage3_n.json"
+          ],
+          "exit_code": 0,
+          "output_tail": "negotiation: 1 checks, 2/4 credits, utility 6.00, Jain 0.333, 19 review messages\nEvidence and protocol trace: run_output\\audit_stage3_n.json\n\n",
+          "label": "demo_negotiation"
+        },
+        {
+          "command": [
+            "tools/verify_lab3_results.py",
+            "--results",
+            "experiments/lab3/results"
+          ],
+          "exit_code": 0,
+          "output_tail": "{\n  \"rows\": 120,\n  \"pairs\": 60,\n  \"scenarios\": 5,\n  \"resource_violations\": 0,\n  \"frozen_sha256\": \"279e928edd1c7183da6264988a0558caadfcb8d2b084989ed588ed31330c3320\"\n}\n\n",
+          "label": "verify_results"
+        }
+      ],
+      "import": {
+        "command": [
+          "-c",
+          "import researchradar; print(researchradar.__file__)"
+        ],
+        "exit_code": 0,
+        "output_tail": "C:\\Users\\adkor\\AppData\\Local\\Temp\\ResearchRadarFinalAudit-q0ymzgfp\\lab3-v1.1\\src\\researchradar\\__init__.py\n\n"
+      }
+    },
+    "lab4-v1.1": {
+      "url": "https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab4-v1.1",
+      "assets": [
+        {
+          "name": "ResearchRadar_MAS_lab4_v1.1_audit.zip",
+          "sha256": "ae215dc050d364e0bd4b9f7981add3d1f0b1fb027ff9da94b4556070bff6537c",
+          "remote_digest_match": true,
+          "size": 2539752,
+          "archive": {
+            "member_count": 306,
+            "crc_ok": true,
+            "sha256_ok": true,
+            "unwanted_names": [],
+            "credential_pattern_files": [],
+            "manifest_header": [
+              "ResearchRadar MAS lab4-v1.1 audit",
+              "Release tag: lab4-v1.1",
+              "Release source commit: 1df27003ab3210f0c3eb6bc23bbaf855ed240527",
+              "Protected experiment code commit: eee29c55cab61d789c3c7f3e2d9d1dff7d24d584",
+              "Historical tag: lab3-v1.1",
+              "Historical source ZIP SHA-256: da223cc3ff29e0a0842c159270c4697ca3d5960d0359e6388119de8f56caaa2a",
+              "Archive member SHA-256:"
+            ]
+          }
+        },
+        {
+          "name": "ResearchRadar_MAS_lab4_v1.1_submission.zip",
+          "sha256": "586a2900fb59829f0f4bf33e21eea29c0beacaa425be001051a7c74eb3887886",
+          "remote_digest_match": true,
+          "size": 2373589,
+          "archive": {
+            "member_count": 286,
+            "crc_ok": true,
+            "sha256_ok": true,
+            "unwanted_names": [],
+            "credential_pattern_files": [],
+            "manifest_header": [
+              "ResearchRadar MAS lab4-v1.1 submission",
+              "Release tag: lab4-v1.1",
+              "Release source commit: 1df27003ab3210f0c3eb6bc23bbaf855ed240527",
+              "Protected experiment code commit: eee29c55cab61d789c3c7f3e2d9d1dff7d24d584",
+              "Historical tag: lab3-v1.1",
+              "Historical source ZIP SHA-256: da223cc3ff29e0a0842c159270c4697ca3d5960d0359e6388119de8f56caaa2a",
+              "Archive member SHA-256:"
+            ]
+          }
+        },
+        {
+          "name": "ResearchRadar_MAS_Reliability_Assessment.docx",
+          "sha256": "ae7871a2b372d2f55860ef1962fd596d9ec30c09ace9a881a3e66ea3ec197081",
+          "remote_digest_match": true,
+          "size": 102152
+        },
+        {
+          "name": "ResearchRadar_MAS_Reliability_Assessment.pdf",
+          "sha256": "56be52b89a24f4ff75e00288b139e9b51b2594c54768bf5484e62e967350e9c7",
+          "remote_digest_match": true,
+          "size": 195768
+        }
+      ],
+      "tag_commit": "1df27003ab3210f0c3eb6bc23bbaf855ed240527",
+      "archive_checks": {},
+      "runs": [
+        {
+          "command": [
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-q"
+          ],
+          "exit_code": 0,
+          "output_tail": "10 runs; 5 scenarios; 1 paired repeats: C:\\Users\\adkor\\AppData\\Local\\Temp\\tmpme7phyu7\n\n----------------------------------------------------------------------\nRan 77 tests in 7.251s\n\nOK\n",
+          "label": "tests"
+        },
+        {
+          "command": [
+            "-m",
+            "researchradar.cli_stage4",
+            "multi agent systems",
+            "--mode",
+            "demo",
+            "--analysis",
+            "recorded",
+            "--recorded-analysis",
+            "data/lab4_v1.1_fixture_analysis.json",
+            "--output",
+            "run_output/audit_stage4.json"
+          ],
+          "exit_code": 0,
+          "output_tail": "search 4/4; checks 3; analysis usable_preliminary\nTopic (model interpretation): Multi-agent research and task allocation\nscientific exact abstract excerpt [fixture:oa:1]: Synthetic abstract on allocation policies.\nnews exact headline excerpt [fixture:news:1]: Synthetic research news\nRelation (unverified): insufficient_evidence; claim support: not_assessed; next check: find_primary_source\nModel explanation (unverified): The available abstract and headline do not establish whether the news describes or confirms the publication.\nResult and traces: run_output\\audit_stage4.json\n\n",
+          "label": "demo_stage4"
+        },
+        {
+          "command": [
+            "tools/verify_lab4_results.py",
+            "experiments/lab4/results"
+          ],
+          "exit_code": 0,
+          "output_tail": "{\n  \"verified\": true,\n  \"scenarios\": 10,\n  \"pairs\": 50,\n  \"traces\": 100,\n  \"baseline_sha256\": \"da223cc3ff29e0a0842c159270c4697ca3d5960d0359e6388119de8f56caaa2a\"\n}\n\n",
+          "label": "verify_faults"
+        },
+        {
+          "command": [
+            "tools/verify_lab4_llm_results.py",
+            "experiments/lab4/llm_results"
+          ],
+          "exit_code": 0,
+          "output_tail": "{\n  \"verified\": true,\n  \"mock_cases\": 8,\n  \"live_calls\": 1,\n  \"live_rejection\": \"ungrounded_scientific_evidence\"\n}\n\n",
+          "label": "verify_old_llm"
+        },
+        {
+          "command": [
+            "tools/verify_lab4_v1_1_llm_results.py",
+            "experiments/lab4_v1_1/results"
+          ],
+          "exit_code": 0,
+          "output_tail": "{\n  \"verified\": true,\n  \"cases\": 12,\n  \"normal_usable\": 4,\n  \"unsupported_claim_verified\": 0\n}\n\n",
+          "label": "verify_new_llm"
+        },
+        {
+          "command": [
+            "tools/verify_lab4_v1_1_live.py"
+          ],
+          "exit_code": 0,
+          "output_tail": "{\n  \"verified\": true,\n  \"calls\": 6,\n  \"first_round_rejected\": 3,\n  \"second_round_usable\": 3,\n  \"actual_usd\": 0.00172399\n}\n\n",
+          "label": "verify_live_replay"
+        }
+      ],
+      "import": {
+        "command": [
+          "-c",
+          "import researchradar; print(researchradar.__file__)"
+        ],
+        "exit_code": 0,
+        "output_tail": "C:\\Users\\adkor\\AppData\\Local\\Temp\\ResearchRadarFinalAudit-q0ymzgfp\\lab4-v1.1\\src\\researchradar\\__init__.py\n\n"
+      }
+    }
+  },
+  "workspace": "C:\\Users\\adkor\\AppData\\Local\\Temp\\ResearchRadarFinalAudit-q0ymzgfp"
+}

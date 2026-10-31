@@ -1,0 +1,38 @@
+{
+  "lab2-v1.1": {
+    "command": [
+      "tools/run_experiments.py",
+      "--repeats",
+      "1",
+      "--output",
+      "run_output/audit_smoke"
+    ],
+    "exit_code": 0,
+    "stdout_tail": "8 paired runs: run_output\\audit_smoke\\raw.csv\n",
+    "stderr_tail": ""
+  },
+  "lab3-v1.1": {
+    "command": [
+      "tools/run_negotiation_experiments.py",
+      "--repeats",
+      "1",
+      "--output",
+      "run_output/audit_smoke"
+    ],
+    "exit_code": 0,
+    "stdout_tail": "10 runs; 5 scenarios; 1 paired repeats: run_output\\audit_smoke\n",
+    "stderr_tail": ""
+  },
+  "lab4-v1.1": {
+    "command": [
+      "tools/run_lab4_experiments.py",
+      "--repeats",
+      "1",
+      "--output",
+      "run_output/audit_smoke"
+    ],
+    "exit_code": 0,
+    "stdout_tail": "20 runs, 10 pairs, 10 scenarios: run_output\\audit_smoke\n",
+    "stderr_tail": ""
+  }
+}

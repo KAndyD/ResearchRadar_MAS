@@ -1,0 +1,111 @@
+{
+  "tracked": {
+    "files": 340,
+    "credential_pattern_files": [],
+    "unwanted_names": [],
+    "absolute_user_path_files": [
+      "audit_evidence/lab3_v1.1_test_results.txt",
+      "audit_evidence/lab4_test_results.txt",
+      "audit_evidence/lab4_v1_1_test_results.txt",
+      "audit_evidence/stage3_test_results.txt"
+    ]
+  },
+  "releases": {
+    "lab1-v1.2": {
+      "asset_files": {
+        "files": 6,
+        "credential_pattern_files": [],
+        "unwanted_names": [],
+        "absolute_user_path_files": []
+      },
+      "archives": {
+        "ResearchRadar_MAS_lab1_v1.2_audit.zip": {
+          "files": 36,
+          "credential_pattern_files": [],
+          "unwanted_names": [],
+          "absolute_user_path_files": []
+        },
+        "ResearchRadar_MAS_lab1_v1.2_submission.zip": {
+          "files": 34,
+          "credential_pattern_files": [],
+          "unwanted_names": [],
+          "absolute_user_path_files": []
+        }
+      }
+    },
+    "lab2-v1.1": {
+      "asset_files": {
+        "files": 11,
+        "credential_pattern_files": [],
+        "unwanted_names": [],
+        "absolute_user_path_files": []
+      },
+      "archives": {
+        "ResearchRadar_MAS_lab2_v1.1_audit.zip": {
+          "files": 67,
+          "credential_pattern_files": [],
+          "unwanted_names": [],
+          "absolute_user_path_files": []
+        },
+        "ResearchRadar_MAS_lab2_v1.1_submission.zip": {
+          "files": 60,
+          "credential_pattern_files": [],
+          "unwanted_names": [],
+          "absolute_user_path_files": []
+        }
+      }
+    },
+    "lab3-v1.1": {
+      "asset_files": {
+        "files": 7,
+        "credential_pattern_files": [],
+        "unwanted_names": [],
+        "absolute_user_path_files": []
+      },
+      "archives": {
+        "ResearchRadar_MAS_lab3_v1.1_audit.zip": {
+          "files": 113,
+          "credential_pattern_files": [],
+          "unwanted_names": [],
+          "absolute_user_path_files": [
+            "audit_evidence/lab3_v1.1_test_results.txt",
+            "audit_evidence/stage3_test_results.txt"
+          ]
+        },
+        "ResearchRadar_MAS_lab3_v1.1_submission.zip": {
+          "files": 98,
+          "credential_pattern_files": [],
+          "unwanted_names": [],
+          "absolute_user_path_files": []
+        }
+      }
+    },
+    "lab4-v1.1": {
+      "asset_files": {
+        "files": 4,
+        "credential_pattern_files": [],
+        "unwanted_names": [],
+        "absolute_user_path_files": []
+      },
+      "archives": {
+        "ResearchRadar_MAS_lab4_v1.1_audit.zip": {
+          "files": 307,
+          "credential_pattern_files": [],
+          "unwanted_names": [],
+          "absolute_user_path_files": [
+            "audit_evidence/lab3_v1.1_test_results.txt",
+            "audit_evidence/lab4_test_results.txt",
+            "audit_evidence/lab4_v1_1_test_results.txt",
+            "audit_evidence/stage3_test_results.txt"
+          ]
+        },
+        "ResearchRadar_MAS_lab4_v1.1_submission.zip": {
+          "files": 287,
+          "credential_pattern_files": [],
+          "unwanted_names": [],
+          "absolute_user_path_files": []
+        }
+      }
+    }
+  }
+}

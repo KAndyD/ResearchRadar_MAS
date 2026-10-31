@@ -1,0 +1,185 @@
+{
+  "lab1-v1.2": {
+    "pdf": "ResearchRadar_MAS_Architecture.pdf",
+    "docx": "ResearchRadar_MAS_Architecture.docx",
+    "pages": 5,
+    "pdf_page_text_chars": [
+      137,
+      3092,
+      1697,
+      2348,
+      2342
+    ],
+    "docx_text_chars": 8998,
+    "docx_media": [
+      "word/media/image1.png",
+      "word/media/image2.svg",
+      "word/media/image3.png",
+      "word/media/image4.svg"
+    ],
+    "expected_in_pdf": {
+      "Коротаев Андрей Дмитриевич": true,
+      "Б24-507": true,
+      "2026": true
+    },
+    "expected_in_docx": {
+      "Коротаев Андрей Дмитриевич": true,
+      "Б24-507": true,
+      "2026": true
+    },
+    "forbidden_in_pdf": {
+      "лабораторная работа": false,
+      "согласно методичке": false,
+      "по требованию преподавателя": false
+    },
+    "forbidden_in_docx": {
+      "лабораторная работа": false,
+      "согласно методичке": false,
+      "по требованию преподавателя": false
+    },
+    "docx_to_pdf_vocabulary_recall": 0.999,
+    "visual_review": "all PDF pages rendered and contact sheets inspected; no evident clipping or overlap",
+    "independent_docx_render": "not_available_no_libreoffice"
+  },
+  "lab2-v1.1": {
+    "pdf": "ResearchRadar_MAS_Task_Allocation.pdf",
+    "docx": "ResearchRadar_MAS_Task_Allocation.docx",
+    "pages": 7,
+    "pdf_page_text_chars": [
+      155,
+      2389,
+      2198,
+      2158,
+      1030,
+      2647,
+      1694
+    ],
+    "docx_text_chars": 10876,
+    "docx_media": [
+      "word/media/image1.png",
+      "word/media/image2.svg",
+      "word/media/image3.png",
+      "word/media/image4.svg",
+      "word/media/image5.png",
+      "word/media/image6.svg",
+      "word/media/image7.png",
+      "word/media/image8.svg",
+      "word/media/image9.png",
+      "word/media/image10.svg"
+    ],
+    "expected_in_pdf": {
+      "Коротаев Андрей Дмитриевич": true,
+      "Б24-507": true,
+      "2026": true
+    },
+    "expected_in_docx": {
+      "Коротаев Андрей Дмитриевич": true,
+      "Б24-507": true,
+      "2026": true
+    },
+    "forbidden_in_pdf": {
+      "лабораторная работа": false,
+      "согласно методичке": false,
+      "по требованию преподавателя": false
+    },
+    "forbidden_in_docx": {
+      "лабораторная работа": false,
+      "согласно методичке": false,
+      "по требованию преподавателя": false
+    },
+    "docx_to_pdf_vocabulary_recall": 0.985,
+    "visual_review": "all PDF pages rendered and contact sheets inspected; no evident clipping or overlap",
+    "independent_docx_render": "not_available_no_libreoffice"
+  },
+  "lab3-v1.1": {
+    "pdf": "ResearchRadar_MAS_Resource_Negotiation.pdf",
+    "docx": "ResearchRadar_MAS_Resource_Negotiation.docx",
+    "pages": 7,
+    "pdf_page_text_chars": [
+      156,
+      3132,
+      2382,
+      2184,
+      1184,
+      1612,
+      2798
+    ],
+    "docx_text_chars": 11738,
+    "docx_media": [
+      "word/media/image1.png",
+      "word/media/image2.svg",
+      "word/media/image3.png",
+      "word/media/image4.svg",
+      "word/media/image5.png",
+      "word/media/image6.svg",
+      "word/media/image7.png",
+      "word/media/image8.svg",
+      "word/media/image9.png",
+      "word/media/image10.svg",
+      "word/media/image11.png",
+      "word/media/image12.svg"
+    ],
+    "expected_in_pdf": {
+      "Коротаев Андрей Дмитриевич": true,
+      "Б24-507": true,
+      "2026": true
+    },
+    "expected_in_docx": {
+      "Коротаев Андрей Дмитриевич": true,
+      "Б24-507": true,
+      "2026": true
+    },
+    "forbidden_in_pdf": {
+      "лабораторная работа": false,
+      "согласно методичке": false,
+      "по требованию преподавателя": false
+    },
+    "forbidden_in_docx": {
+      "лабораторная работа": false,
+      "согласно методичке": false,
+      "по требованию преподавателя": false
+    },
+    "docx_to_pdf_vocabulary_recall": 0.982,
+    "visual_review": "all PDF pages rendered and contact sheets inspected; no evident clipping or overlap",
+    "independent_docx_render": "not_available_no_libreoffice"
+  },
+  "lab4-v1.1": {
+    "pdf": "ResearchRadar_MAS_Reliability_Assessment.pdf",
+    "docx": "ResearchRadar_MAS_Reliability_Assessment.docx",
+    "pages": 4,
+    "pdf_page_text_chars": [
+      2604,
+      1631,
+      1580,
+      3695
+    ],
+    "docx_text_chars": 9248,
+    "docx_media": [
+      "word/media/image1.png",
+      "word/media/image2.png"
+    ],
+    "expected_in_pdf": {
+      "Коротаев Андрей Дмитриевич": true,
+      "Б24-507": true,
+      "2026": true
+    },
+    "expected_in_docx": {
+      "Коротаев Андрей Дмитриевич": true,
+      "Б24-507": true,
+      "2026": true
+    },
+    "forbidden_in_pdf": {
+      "лабораторная работа": false,
+      "согласно методичке": false,
+      "по требованию преподавателя": false
+    },
+    "forbidden_in_docx": {
+      "лабораторная работа": false,
+      "согласно методичке": false,
+      "по требованию преподавателя": false
+    },
+    "docx_to_pdf_vocabulary_recall": 1.0,
+    "visual_review": "all PDF pages rendered and contact sheets inspected; no evident clipping or overlap",
+    "independent_docx_render": "not_available_no_libreoffice"
+  }
+}

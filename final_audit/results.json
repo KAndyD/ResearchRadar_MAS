@@ -1,0 +1,660 @@
+{
+  "schema_version": 1,
+  "status_vocabulary": [
+    "PASS",
+    "PASS_WITH_LIMITATIONS",
+    "FAIL",
+    "NOT_VERIFIED",
+    "NOT_APPLICABLE"
+  ],
+  "checks": [
+    {
+      "laboratory": 1,
+      "version": "lab1-v1.2",
+      "property": "published release asset digests",
+      "method": "download and SHA-256 vs GitHub digest",
+      "source_file": "run_output/final_audit_downloads/lab1-v1.2",
+      "expected": "all match",
+      "actual": "6 assets, all match",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 1,
+      "version": "lab1-v1.2",
+      "property": "submission and audit ZIP integrity",
+      "method": "CRC and member SHA-256 manifest",
+      "source_file": "ResearchRadar_MAS_lab1_v1.2_audit.zip, ResearchRadar_MAS_lab1_v1.2_submission.zip",
+      "expected": "two valid ZIPs",
+      "actual": "valid",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 1,
+      "version": "lab1-v1.2",
+      "property": "archive contents vs release tag",
+      "method": "compare every archive member with Git blob, normalize CRLF",
+      "source_file": "lab1-v1.2 Git tag",
+      "expected": "no material difference",
+      "actual": "35 checked; 2 line-ending variants; 0 material differences",
+      "status": "PASS",
+      "evidence": "final_audit/tag_sync.json"
+    },
+    {
+      "laboratory": 1,
+      "version": "lab1-v1.2",
+      "property": "historical tests from extracted audit ZIP",
+      "method": "unittest discover with extracted src on PYTHONPATH",
+      "source_file": "lab1-v1.2/tests",
+      "expected": "21 tests OK",
+      "actual": "----------------------------------------------------------------------\nRan 21 tests in 0.919s\n\nOK",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 1,
+      "version": "lab1-v1.2",
+      "property": "representative offline DEMO",
+      "method": "execute historical CLI from extraction",
+      "source_file": "lab1-v1.2/src",
+      "expected": "all demos succeed",
+      "actual": "1 demos; exit codes [0]",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 1,
+      "version": "lab1-v1.2",
+      "property": "separate PDF and DOCX report",
+      "method": "PDF extraction, full-page render, OOXML inspection",
+      "source_file": "ResearchRadar_MAS_Architecture.pdf; ResearchRadar_MAS_Architecture.docx",
+      "expected": "author, group, year; no educational boilerplate",
+      "actual": "5 PDF pages; author/group/year=True; forbidden=False; DOCX render unavailable",
+      "status": "PASS_WITH_LIMITATIONS",
+      "evidence": "final_audit/report_inspection.json"
+    },
+    {
+      "laboratory": 1,
+      "version": "lab1-v1.2",
+      "property": "independent DOCX page layout",
+      "method": "LibreOffice renderer availability check",
+      "source_file": "ResearchRadar_MAS_Architecture.docx",
+      "expected": "render every DOCX page",
+      "actual": "LibreOffice unavailable; OOXML checked",
+      "status": "NOT_VERIFIED",
+      "evidence": "final_audit/report_inspection.json"
+    },
+    {
+      "laboratory": 1,
+      "version": "lab1-v1.2",
+      "property": "published credential and private-data scan",
+      "method": "scan names and token signatures in both ZIPs",
+      "source_file": "lab1-v1.2 Release ZIPs",
+      "expected": "no credential tokens or private databases",
+      "actual": "0 matches",
+      "status": "PASS",
+      "evidence": "final_audit/security_scan.json"
+    },
+    {
+      "laboratory": 1,
+      "version": "lab1-v1.2",
+      "property": "tag CI",
+      "method": "GitHub Actions run metadata",
+      "source_file": "https://github.com/KAndyD/ResearchRadar_MAS/actions/runs/40978707861",
+      "expected": "success on release commit",
+      "actual": "success on 345ca76b3b16c68971b5dc43e2cd7d43971ab7cf",
+      "status": "PASS",
+      "evidence": "https://github.com/KAndyD/ResearchRadar_MAS/actions/runs/40978707861"
+    },
+    {
+      "laboratory": 2,
+      "version": "lab2-v1.1",
+      "property": "published release asset digests",
+      "method": "download and SHA-256 vs GitHub digest",
+      "source_file": "run_output/final_audit_downloads/lab2-v1.1",
+      "expected": "all match",
+      "actual": "11 assets, all match",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 2,
+      "version": "lab2-v1.1",
+      "property": "submission and audit ZIP integrity",
+      "method": "CRC and member SHA-256 manifest",
+      "source_file": "ResearchRadar_MAS_lab2_v1.1_audit.zip, ResearchRadar_MAS_lab2_v1.1_submission.zip",
+      "expected": "two valid ZIPs",
+      "actual": "valid",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 2,
+      "version": "lab2-v1.1",
+      "property": "archive contents vs release tag",
+      "method": "compare every archive member with Git blob, normalize CRLF",
+      "source_file": "lab2-v1.1 Git tag",
+      "expected": "no material difference",
+      "actual": "66 checked; 21 line-ending variants; 0 material differences",
+      "status": "PASS",
+      "evidence": "final_audit/tag_sync.json"
+    },
+    {
+      "laboratory": 2,
+      "version": "lab2-v1.1",
+      "property": "historical tests from extracted audit ZIP",
+      "method": "unittest discover with extracted src on PYTHONPATH",
+      "source_file": "lab2-v1.1/tests",
+      "expected": "35 tests OK",
+      "actual": "----------------------------------------------------------------------\nRan 35 tests in 4.152s\n\nOK",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 2,
+      "version": "lab2-v1.1",
+      "property": "representative offline DEMO",
+      "method": "execute historical CLI from extraction",
+      "source_file": "lab2-v1.1/src",
+      "expected": "all demos succeed",
+      "actual": "2 demos; exit codes [0, 0]",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 2,
+      "version": "lab2-v1.1",
+      "property": "separate PDF and DOCX report",
+      "method": "PDF extraction, full-page render, OOXML inspection",
+      "source_file": "ResearchRadar_MAS_Task_Allocation.pdf; ResearchRadar_MAS_Task_Allocation.docx",
+      "expected": "author, group, year; no educational boilerplate",
+      "actual": "7 PDF pages; author/group/year=True; forbidden=False; DOCX render unavailable",
+      "status": "PASS_WITH_LIMITATIONS",
+      "evidence": "final_audit/report_inspection.json"
+    },
+    {
+      "laboratory": 2,
+      "version": "lab2-v1.1",
+      "property": "independent DOCX page layout",
+      "method": "LibreOffice renderer availability check",
+      "source_file": "ResearchRadar_MAS_Task_Allocation.docx",
+      "expected": "render every DOCX page",
+      "actual": "LibreOffice unavailable; OOXML checked",
+      "status": "NOT_VERIFIED",
+      "evidence": "final_audit/report_inspection.json"
+    },
+    {
+      "laboratory": 2,
+      "version": "lab2-v1.1",
+      "property": "published credential and private-data scan",
+      "method": "scan names and token signatures in both ZIPs",
+      "source_file": "lab2-v1.1 Release ZIPs",
+      "expected": "no credential tokens or private databases",
+      "actual": "0 matches",
+      "status": "PASS",
+      "evidence": "final_audit/security_scan.json"
+    },
+    {
+      "laboratory": 2,
+      "version": "lab2-v1.1",
+      "property": "tag CI",
+      "method": "GitHub Actions run metadata",
+      "source_file": "https://github.com/KAndyD/ResearchRadar_MAS/actions/runs/41110413116",
+      "expected": "success on release commit",
+      "actual": "success on e88d321185f40db1a19c8287810f5aca092c3476",
+      "status": "PASS",
+      "evidence": "https://github.com/KAndyD/ResearchRadar_MAS/actions/runs/41110413116"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "published release asset digests",
+      "method": "download and SHA-256 vs GitHub digest",
+      "source_file": "run_output/final_audit_downloads/lab3-v1.1",
+      "expected": "all match",
+      "actual": "7 assets, all match",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "submission and audit ZIP integrity",
+      "method": "CRC and member SHA-256 manifest",
+      "source_file": "ResearchRadar_MAS_lab3_v1.1_audit.zip, ResearchRadar_MAS_lab3_v1.1_submission.zip",
+      "expected": "two valid ZIPs",
+      "actual": "valid",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "archive contents vs release tag",
+      "method": "compare every archive member with Git blob, normalize CRLF",
+      "source_file": "lab3-v1.1 Git tag",
+      "expected": "no material difference",
+      "actual": "112 checked; 45 line-ending variants; 0 material differences",
+      "status": "PASS",
+      "evidence": "final_audit/tag_sync.json"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "historical tests from extracted audit ZIP",
+      "method": "unittest discover with extracted src on PYTHONPATH",
+      "source_file": "lab3-v1.1/tests",
+      "expected": "58 tests OK",
+      "actual": "cal\\Temp\\tmpj9kjkf5m\n\n----------------------------------------------------------------------\nRan 58 tests in 6.648s\n\nOK",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "representative offline DEMO",
+      "method": "execute historical CLI from extraction",
+      "source_file": "lab3-v1.1/src",
+      "expected": "all demos succeed",
+      "actual": "2 demos; exit codes [0, 0]",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "separate PDF and DOCX report",
+      "method": "PDF extraction, full-page render, OOXML inspection",
+      "source_file": "ResearchRadar_MAS_Resource_Negotiation.pdf; ResearchRadar_MAS_Resource_Negotiation.docx",
+      "expected": "author, group, year; no educational boilerplate",
+      "actual": "7 PDF pages; author/group/year=True; forbidden=False; DOCX render unavailable",
+      "status": "PASS_WITH_LIMITATIONS",
+      "evidence": "final_audit/report_inspection.json"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "independent DOCX page layout",
+      "method": "LibreOffice renderer availability check",
+      "source_file": "ResearchRadar_MAS_Resource_Negotiation.docx",
+      "expected": "render every DOCX page",
+      "actual": "LibreOffice unavailable; OOXML checked",
+      "status": "NOT_VERIFIED",
+      "evidence": "final_audit/report_inspection.json"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "published credential and private-data scan",
+      "method": "scan names and token signatures in both ZIPs",
+      "source_file": "lab3-v1.1 Release ZIPs",
+      "expected": "no credential tokens or private databases",
+      "actual": "0 matches",
+      "status": "PASS",
+      "evidence": "final_audit/security_scan.json"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "tag CI",
+      "method": "GitHub Actions run metadata",
+      "source_file": "https://github.com/KAndyD/ResearchRadar_MAS/actions/runs/41123364044",
+      "expected": "success on release commit",
+      "actual": "success on a50a2c4da1c3562893f94b57476fbe1af5e36091",
+      "status": "PASS",
+      "evidence": "https://github.com/KAndyD/ResearchRadar_MAS/actions/runs/41123364044"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "published release asset digests",
+      "method": "download and SHA-256 vs GitHub digest",
+      "source_file": "run_output/final_audit_downloads/lab4-v1.1",
+      "expected": "all match",
+      "actual": "4 assets, all match",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "submission and audit ZIP integrity",
+      "method": "CRC and member SHA-256 manifest",
+      "source_file": "ResearchRadar_MAS_lab4_v1.1_audit.zip, ResearchRadar_MAS_lab4_v1.1_submission.zip",
+      "expected": "two valid ZIPs",
+      "actual": "valid",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "archive contents vs release tag",
+      "method": "compare every archive member with Git blob, normalize CRLF",
+      "source_file": "lab4-v1.1 Git tag",
+      "expected": "no material difference",
+      "actual": "306 checked; 200 line-ending variants; 0 material differences",
+      "status": "PASS",
+      "evidence": "final_audit/tag_sync.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "historical tests from extracted audit ZIP",
+      "method": "unittest discover with extracted src on PYTHONPATH",
+      "source_file": "lab4-v1.1/tests",
+      "expected": "77 tests OK",
+      "actual": "cal\\Temp\\tmpme7phyu7\n\n----------------------------------------------------------------------\nRan 77 tests in 7.251s\n\nOK",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "representative offline DEMO",
+      "method": "execute historical CLI from extraction",
+      "source_file": "lab4-v1.1/src",
+      "expected": "all demos succeed",
+      "actual": "1 demos; exit codes [0]",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "separate PDF and DOCX report",
+      "method": "PDF extraction, full-page render, OOXML inspection",
+      "source_file": "ResearchRadar_MAS_Reliability_Assessment.pdf; ResearchRadar_MAS_Reliability_Assessment.docx",
+      "expected": "author, group, year; no educational boilerplate",
+      "actual": "4 PDF pages; author/group/year=True; forbidden=False; DOCX render unavailable",
+      "status": "PASS_WITH_LIMITATIONS",
+      "evidence": "final_audit/report_inspection.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "independent DOCX page layout",
+      "method": "LibreOffice renderer availability check",
+      "source_file": "ResearchRadar_MAS_Reliability_Assessment.docx",
+      "expected": "render every DOCX page",
+      "actual": "LibreOffice unavailable; OOXML checked",
+      "status": "NOT_VERIFIED",
+      "evidence": "final_audit/report_inspection.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "published credential and private-data scan",
+      "method": "scan names and token signatures in both ZIPs",
+      "source_file": "lab4-v1.1 Release ZIPs",
+      "expected": "no credential tokens or private databases",
+      "actual": "0 matches",
+      "status": "PASS",
+      "evidence": "final_audit/security_scan.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "tag CI",
+      "method": "GitHub Actions run metadata",
+      "source_file": "https://github.com/KAndyD/ResearchRadar_MAS/actions/runs/41153033282",
+      "expected": "success on release commit",
+      "actual": "success on 1df27003ab3210f0c3eb6bc23bbaf855ed240527",
+      "status": "PASS",
+      "evidence": "https://github.com/KAndyD/ResearchRadar_MAS/actions/runs/41153033282"
+    },
+    {
+      "laboratory": 1,
+      "version": "lab1-v1.2",
+      "property": "original methodology content",
+      "method": "expert code/report review plus executable checks",
+      "source_file": "project_guide/Лабораторные-МАС.pdf",
+      "expected": "task, formal agent model, role diagram, communication graph, architecture rationale",
+      "actual": "historical architecture PDF and engine/model/router implementation",
+      "status": "PASS",
+      "evidence": "final_audit/FINAL_AUDIT_REPORT.md"
+    },
+    {
+      "laboratory": 2,
+      "version": "lab2-v1.1",
+      "property": "original methodology content",
+      "method": "expert code/report review plus executable checks",
+      "source_file": "project_guide/Лабораторные-МАС.pdf",
+      "expected": "two explicit allocation mechanisms and comparative metrics",
+      "actual": "historical coordination.py, stage2 tests and 96-row paired corpus",
+      "status": "PASS",
+      "evidence": "final_audit/FINAL_AUDIT_REPORT.md"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "original methodology content",
+      "method": "expert code/report review plus executable checks",
+      "source_file": "project_guide/Лабораторные-МАС.pdf",
+      "expected": "resource conflict, negotiation protocol, before/after efficiency and fairness",
+      "actual": "historical negotiation.py/resources.py, resource regression and 120-row corpus",
+      "status": "PASS",
+      "evidence": "final_audit/FINAL_AUDIT_REPORT.md"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "original methodology content",
+      "method": "expert code/report review plus executable checks",
+      "source_file": "project_guide/Лабораторные-МАС.pdf",
+      "expected": "adverse scenarios, execution traces, failures, safeguards, reevaluation",
+      "actual": "historical baseline ZIP, lab4_probe.py, 100 traces and verifier",
+      "status": "PASS",
+      "evidence": "final_audit/FINAL_AUDIT_REPORT.md"
+    },
+    {
+      "laboratory": 2,
+      "version": "lab2-v1.1",
+      "property": "saved experiment corpus and aggregates",
+      "method": "independent CSV recomputation, seed pairing",
+      "source_file": "experiments/results/raw.csv",
+      "expected": 96,
+      "actual": "96 rows, 192 aggregates match",
+      "status": "PASS",
+      "evidence": "final_audit/experiment_recalculation.json"
+    },
+    {
+      "laboratory": 2,
+      "version": "lab2-v1.1",
+      "property": "fresh smoke experiment without changing corpus",
+      "method": "run historical script in extracted copy",
+      "source_file": "tools/run_experiments.py",
+      "expected": "exit 0 and separate run_output",
+      "actual": "8 paired runs: run_output\\audit_smoke\\raw.csv",
+      "status": "PASS",
+      "evidence": "final_audit/smoke_log.json"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "saved experiment corpus and aggregates",
+      "method": "independent CSV recomputation, seed pairing",
+      "source_file": "experiments/lab3/results/raw.csv",
+      "expected": 120,
+      "actual": "120 rows, 340 aggregates match",
+      "status": "PASS",
+      "evidence": "final_audit/experiment_recalculation.json"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "fresh smoke experiment without changing corpus",
+      "method": "run historical script in extracted copy",
+      "source_file": "tools/run_negotiation_experiments.py",
+      "expected": "exit 0 and separate run_output",
+      "actual": "10 runs; 5 scenarios; 1 paired repeats: run_output\\audit_smoke",
+      "status": "PASS",
+      "evidence": "final_audit/smoke_log.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "saved experiment corpus and aggregates",
+      "method": "independent CSV recomputation, seed pairing",
+      "source_file": "experiments/lab4/results/raw.csv",
+      "expected": 100,
+      "actual": "100 rows, 340 aggregates match",
+      "status": "PASS",
+      "evidence": "final_audit/experiment_recalculation.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "fresh smoke experiment without changing corpus",
+      "method": "run historical script in extracted copy",
+      "source_file": "tools/run_lab4_experiments.py",
+      "expected": "exit 0 and separate run_output",
+      "actual": "20 runs, 10 pairs, 10 scenarios: run_output\\audit_smoke",
+      "status": "PASS",
+      "evidence": "final_audit/smoke_log.json"
+    },
+    {
+      "laboratory": 3,
+      "version": "lab3-v1.1",
+      "property": "historical file preservation",
+      "method": "recompute current SHA-256 vs frozen original list",
+      "source_file": "audit_evidence/lab3_v1.1_preservation.json",
+      "expected": "zero mismatches",
+      "actual": "21 checked; 0 mismatches",
+      "status": "PASS",
+      "evidence": "final_audit/historical_preservation.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "historical file preservation",
+      "method": "recompute current SHA-256 vs frozen original list",
+      "source_file": "audit_evidence/lab4_v1.1_original_hashes.json",
+      "expected": "zero mismatches",
+      "actual": "118 checked; 0 mismatches",
+      "status": "PASS",
+      "evidence": "final_audit/historical_preservation.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "verify_faults",
+      "method": "replay independent verifier from extracted release",
+      "source_file": "experiments/lab4/results",
+      "expected": "exit 0",
+      "actual": "{\n  \"verified\": true,\n  \"scenarios\": 10,\n  \"pairs\": 50,\n  \"traces\": 100,\n  \"baseline_sha256\": \"da223cc3ff29e0a0842c159270c4697ca3d5960d0359e6388119de8f56caaa2a\"\n}",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "verify_old_llm",
+      "method": "replay independent verifier from extracted release",
+      "source_file": "experiments/lab4/llm_results",
+      "expected": "exit 0",
+      "actual": "{\n  \"verified\": true,\n  \"mock_cases\": 8,\n  \"live_calls\": 1,\n  \"live_rejection\": \"ungrounded_scientific_evidence\"\n}",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "verify_new_llm",
+      "method": "replay independent verifier from extracted release",
+      "source_file": "experiments/lab4_v1_1/results",
+      "expected": "exit 0",
+      "actual": "{\n  \"verified\": true,\n  \"cases\": 12,\n  \"normal_usable\": 4,\n  \"unsupported_claim_verified\": 0\n}",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "verify_live_replay",
+      "method": "replay independent verifier from extracted release",
+      "source_file": "tools/verify_lab4_v1_1_live.py",
+      "expected": "exit 0",
+      "actual": "{\n  \"verified\": true,\n  \"calls\": 6,\n  \"first_round_rejected\": 3,\n  \"second_round_usable\": 3,\n  \"actual_usd\": 0.00172399\n}",
+      "status": "PASS",
+      "evidence": "final_audit/protocol.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "fully offline installation from final audit ZIP",
+      "method": "new venv, local wheels, no-index install, full replay",
+      "source_file": "vendor/wheels; final audit ZIP",
+      "expected": "15 checks, 306 hashes, no network/Git",
+      "actual": {
+        "archive_sha256": "ae215dc050d364e0bd4b9f7981add3d1f0b1fb027ff9da94b4556070bff6537c",
+        "outside_repository": true,
+        "git_metadata_available": false,
+        "git_executable_on_path": false,
+        "network_calls": 0,
+        "import_from_extracted_copy": true,
+        "manifest_members_verified": 306,
+        "check_count": 15,
+        "test_result": "77 tests OK"
+      },
+      "status": "PASS",
+      "evidence": "final_audit/offline_lab4.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "current integrated main workflow",
+      "method": "stage4 demo, contract-net, negotiation, recorded evidence analysis",
+      "source_file": "src/researchradar/cli_stage4.py",
+      "expected": "4/4 tasks, 3 checks, preliminary unverified analysis",
+      "actual": {
+        "search_completed": 4,
+        "search_total": 4,
+        "review_completed": 3,
+        "analysis": "usable_preliminary",
+        "claim_support": "not_assessed"
+      },
+      "status": "PASS",
+      "evidence": "final_audit/integrated_main.json"
+    },
+    {
+      "laboratory": 4,
+      "version": "lab4-v1.1",
+      "property": "new LIVE Qwen expense",
+      "method": "read-only SQLite aggregate and saved response replay",
+      "source_file": "local external expense ledger; experiments/lab4_v1_1/live*/summary.json",
+      "expected": "6 calls; 0.00172399 USD",
+      "actual": {
+        "calls": 6,
+        "actual_usd": 0.00172399,
+        "missing_cost": 0
+      },
+      "status": "PASS",
+      "evidence": "final_audit/results.json"
+    }
+  ],
+  "qwen_ledger_aggregate": {
+    "alternative_scientific_query": {
+      "calls": 2,
+      "actual_usd": 0.0002941,
+      "missing_cost": 0
+    },
+    "durable ledger smoke": {
+      "calls": 1,
+      "actual_usd": 0.0001564,
+      "missing_cost": 0
+    },
+    "scientific_news_evidence_analysis": {
+      "calls": 1,
+      "actual_usd": 0.00042185,
+      "missing_cost": 0
+    },
+    "scientific_news_evidence_analysis_v2": {
+      "calls": 6,
+      "actual_usd": 0.00172399,
+      "missing_cost": 0
+    }
+  },
+  "note": "Original historical measurements were not overwritten; no network or paid model calls were made."
+}
