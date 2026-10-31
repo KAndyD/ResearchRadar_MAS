@@ -1,0 +1,83 @@
+{
+  "archive_sha256": "e460c94349f3e3eb282371fed4c6f4dd6e3a34a993267bf670468d0c94d07086",
+  "outside_repository": true,
+  "git_metadata_available": false,
+  "git_executable_on_path": false,
+  "network_calls": 0,
+  "import_from_extracted_copy": true,
+  "checks": [
+    {
+      "command": [
+        "-c",
+        "import researchradar, pathlib; print(pathlib.Path(researchradar.__file__).resolve())"
+      ],
+      "stdout_tail": "C:\\Users\\adkor\\AppData\\Local\\Temp\\ResearchRadarLab4Audit-7vjeijzq\\src\\researchradar\\__init__.py\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ],
+      "stdout_tail": "10 runs; 5 scenarios; 1 paired repeats: C:\\Users\\adkor\\AppData\\Local\\Temp\\tmpeud6cczx\n",
+      "stderr_tail": "----------------------------------------------------------------------\nRan 66 tests in 5.973s\n\nOK\n"
+    },
+    {
+      "command": [
+        "-m",
+        "researchradar.cli_stage4",
+        "multi agent systems",
+        "--mode",
+        "demo",
+        "--analysis",
+        "recorded",
+        "--recorded-analysis",
+        "data/lab4_fixture_analysis.json",
+        "--output",
+        "run_output/demo.json"
+      ],
+      "stdout_tail": "search 4/4; checks 3; analysis accepted\nResult and traces: run_output\\demo.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "tools/run_lab4_experiments.py",
+        "--repeats",
+        "1",
+        "--output",
+        "run_output/faults"
+      ],
+      "stdout_tail": "20 runs, 10 pairs, 10 scenarios: run_output\\faults\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "tools/verify_lab4_results.py",
+        "run_output/faults"
+      ],
+      "stdout_tail": "{\n  \"verified\": true,\n  \"scenarios\": 10,\n  \"pairs\": 10,\n  \"traces\": 20,\n  \"baseline_sha256\": \"da223cc3ff29e0a0842c159270c4697ca3d5960d0359e6388119de8f56caaa2a\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "tools/run_lab4_llm_experiments.py",
+        "--output",
+        "run_output/llm"
+      ],
+      "stdout_tail": "{'cases': 8, 'normal_cases': 3, 'adversarial_cases': 5, 'minimal_parser_unsafe_accepts': 4, 'validator_unsafe_accepts': 0, 'false_positives': 0, 'actual_provider_calls': 0, 'response_origin': 'authored_mock_response', 'materials_kind': 'synthetic_fixture'}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "tools/verify_lab4_llm_results.py",
+        "run_output/llm"
+      ],
+      "stdout_tail": "{\n  \"verified\": true,\n  \"mock_cases\": 8,\n  \"live_calls\": 1,\n  \"live_rejection\": \"ungrounded_scientific_evidence\"\n}\n",
+      "stderr_tail": ""
+    }
+  ]
+}
