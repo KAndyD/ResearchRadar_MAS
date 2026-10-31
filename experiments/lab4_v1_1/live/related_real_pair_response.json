@@ -1,0 +1,7 @@
+{
+  "schema_version": 2,
+  "question": "ocean microplastics",
+  "context_sha256": "0e7cb6a17f4ca53753a3f13b705471a852e9395ec6f3714d21d452649d20010d",
+  "origin": "live_qwen",
+  "response": "{\n  \"schema_version\": 2,\n  \"scientific_evidence_id\": \"s1\",\n  \"news_evidence_id\": \"n1\",\n  \"research_topic\": \"Methods for detecting and preventing ocean microplastic accumulation\",\n  \"relation\": \"topic_overlap\",\n  \"explanation\": \"The scientific abstracts discuss the detection of ocean microplastics using spaceborne radar and the current gaps in global measurement data. The news headline introduces a specific technological solution for preventing microplastics from entering the Atlantic Ocean via wastewater. While both address ocean microplastics, the scientific text focuses on remote sensing for distribution mapping, whereas the news item focuses on a prevention technology for wastewater entry. The scientific text does not contain information to verify or explain the specific wastewater prevention method mentioned in the headline.\",\n  \"next_check\": \"read_full_text\"\n}"
+}

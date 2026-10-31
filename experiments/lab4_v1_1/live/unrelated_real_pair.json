@@ -1,0 +1,99 @@
+{
+  "case": "unrelated_real_pair",
+  "at_utc": "2026-10-31T00:45:18.283307+00:00",
+  "material_origin": "controlled pairing of preserved real OpenAlex paper and current real news",
+  "model": "qwen/qwen3.5-35b-a3b",
+  "context": {
+    "schema_version": 2,
+    "question": "Compare unrelated research and news topics",
+    "materials": [
+      {
+        "kind": "scientific",
+        "source": "OpenAlex",
+        "source_id": "https://openalex.org/W1623588239",
+        "title": "Trust in multi-agent systems",
+        "text_scope": "abstract",
+        "provenance": "live_api",
+        "abstract": "Trust is a fundamental concern in large-scale open distributed systems. It lies at the core of all interactions between the entities that have to operate in such uncertain and constantly changing environments. Given this complexity, these components, and the ensuing system, are increasingly being conceptualised, designed, and built using agent-based techniques and, to this end, this paper examines the specific role of trust in multi-agent systems. In particular, we survey the state of the art and provide an account of the main directions along which research efforts are being focused. In so doing, we critically evaluate the relative strengths and weaknesses of the main models that have been proposed and show how, fundamentally, they all seek to minimise the uncertainty in interactions. Finally, we outline the areas that require further research in order to develop a comprehensive treatment of trust in complex computational settings."
+      },
+      {
+        "kind": "news",
+        "source": "Google News RSS",
+        "source_id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORmp2bjFaWTVCdGcxSl9KZHNicWx6dTkyeU53ZkhtcURvZGZYaS0yTUY2MTNtN0tCRGZTUTVHVHFxSUlXc3c2Z3BIUzNjU2dhSUJjX2FnMy1",
+        "title": "Nature-Inspired Tech Prevents Microplastics Entering Atlantic Ocean Through Wastewater - Good News Network",
+        "text_scope": "headline",
+        "provenance": "live_rss"
+      }
+    ],
+    "evidence": [
+      {
+        "evidence_id": "s1",
+        "kind": "scientific",
+        "source_id": "https://openalex.org/W1623588239",
+        "text_scope": "abstract",
+        "text": "Trust is a fundamental concern in large-scale open distributed systems."
+      },
+      {
+        "evidence_id": "s2",
+        "kind": "scientific",
+        "source_id": "https://openalex.org/W1623588239",
+        "text_scope": "abstract",
+        "text": "It lies at the core of all interactions between the entities that have to operate in such uncertain and constantly changing environments."
+      },
+      {
+        "evidence_id": "s3",
+        "kind": "scientific",
+        "source_id": "https://openalex.org/W1623588239",
+        "text_scope": "abstract",
+        "text": "Given this complexity, these components, and the ensuing system, are increasingly being conceptualised, designed, and built using agent-based techniques and, to this end, this paper examines the specific role of trust in multi-agent"
+      },
+      {
+        "evidence_id": "s4",
+        "kind": "scientific",
+        "source_id": "https://openalex.org/W1623588239",
+        "text_scope": "abstract",
+        "text": "systems."
+      },
+      {
+        "evidence_id": "s5",
+        "kind": "scientific",
+        "source_id": "https://openalex.org/W1623588239",
+        "text_scope": "abstract",
+        "text": "In particular, we survey the state of the art and provide an account of the main directions along which research efforts are being focused."
+      },
+      {
+        "evidence_id": "s6",
+        "kind": "scientific",
+        "source_id": "https://openalex.org/W1623588239",
+        "text_scope": "abstract",
+        "text": "In so doing, we critically evaluate the relative strengths and weaknesses of the main models that have been proposed and show how, fundamentally, they all seek to minimise the uncertainty in interactions."
+      },
+      {
+        "evidence_id": "n1",
+        "kind": "news",
+        "source_id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORmp2bjFaWTVCdGcxSl9KZHNicWx6dTkyeU53ZkhtcURvZGZYaS0yTUY2MTNtN0tCRGZTUTVHVHFxSUlXc3c2Z3BIUzNjU2dhSUJjX2FnMy1",
+        "text_scope": "headline",
+        "text": "Nature-Inspired Tech Prevents Microplastics Entering Atlantic Ocean Through Wastewater - Good News Network"
+      }
+    ]
+  },
+  "result": {
+    "mode": "live",
+    "status": "rejected",
+    "schema_version": 2,
+    "context_sha256": "e3fff12f9980021609e5f3e16a73da7447a756fb74e33c3fb77f676c05a3ee9f",
+    "reason": "invalid_explanation"
+  },
+  "response": {
+    "schema_version": 2,
+    "question": "Compare unrelated research and news topics",
+    "context_sha256": "e3fff12f9980021609e5f3e16a73da7447a756fb74e33c3fb77f676c05a3ee9f",
+    "origin": "live_qwen",
+    "response": "{\n  \"schema_version\": 2,\n  \"scientific_evidence_id\": null,\n  \"news_evidence_id\": null,\n  \"research_topic\": \"Trust mechanisms in multi-agent systems\",\n  \"relation\": \"topic_overlap\",\n  \"explanation\": \"The scientific abstracts discuss the theoretical concept of 'trust' within complex, distributed multi-agent systems to minimize uncertainty. The news headline describes a technological solution (nature-inspired tech) to prevent microplastics entering the ocean. While both involve 'technology' and 'systems,' the scientific text focuses on abstract agent interactions and trust models, whereas the news item focuses on environmental engineering and pollution prevention. There is no direct evidence in the provided text linking the specific scientific models of trust to the specific environmental application of microplastic prevention, but the general thematic overlap of 'system reliability' or 'technology application' allows for a potential, albeit weak, conceptual connection.\",\n  \"next_check\": \"find_primary_source\"\n}"
+  },
+  "expense_delta": {
+    "calls": 1,
+    "actual_usd": 0.00035256,
+    "uncertain_estimate_usd": 0.0
+  }
+}

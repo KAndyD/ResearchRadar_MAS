@@ -10,12 +10,13 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "deliverables"
+VERSION = "lab4-v1.1"
 BASE = (".env.example", ".github/workflows/tests.yml", "AGENTS.md", "README.md",
-        "pyproject.toml", "submission_manifest_lab4_v1.0.md",
+        "pyproject.toml", "submission_manifest_lab4_v1.1.md",
         "deliverables/ResearchRadar_MAS_Reliability_Assessment.pdf",
         "deliverables/ResearchRadar_MAS_Reliability_Assessment.docx")
 FOLDERS = ("src/researchradar", "tests", "data", "experiments", "docs", "tools",
-           "deliverables/figures")
+           "deliverables/figures", "vendor/wheels")
 EXCLUDED = {"__pycache__", ".git", "tmp", "run_output", ".venv"}
 BAD_SUFFIX = {".pyc", ".log", ".db", ".sqlite3"}
 
@@ -46,15 +47,16 @@ def selected(audit: bool) -> list[Path]:
 def build(audit: bool) -> Path:
     OUT.mkdir(exist_ok=True)
     kind = "audit" if audit else "submission"
-    target = OUT / f"ResearchRadar_MAS_lab4_v1.0_{kind}.zip"
+    target = OUT / f"ResearchRadar_MAS_lab4_v1.1_{kind}.zip"
     try:
         commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT,
                                          text=True, timeout=5).strip()
     except (OSError, subprocess.SubprocessError):
         commit = "unavailable_no_git"
     exp = json.loads((ROOT / "experiments/lab4/results/metadata.json").read_text(encoding="utf-8"))
-    header = [f"ResearchRadar MAS lab4-v1.0 {kind}",
-              f"Archive source commit: {commit}",
+    header = [f"ResearchRadar MAS {VERSION} {kind}",
+              f"Release tag: {VERSION}",
+              f"Release source commit: {commit}",
               f"Protected experiment code commit: {exp['protected_code_commit']}",
               f"Historical tag: {exp['baseline_tag']}",
               f"Historical source ZIP SHA-256: {exp['baseline_sha256']}",

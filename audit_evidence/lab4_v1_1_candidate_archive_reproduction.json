@@ -1,0 +1,173 @@
+{
+  "archive_sha256": "7cbedf0e5193e1efb2e2e23c1d4d8184fb8cfb50b0be997d48b780060bad4fdc",
+  "outside_repository": true,
+  "git_metadata_available": false,
+  "git_executable_on_path": false,
+  "network_calls": 0,
+  "import_from_extracted_copy": true,
+  "manifest_members_verified": 304,
+  "checks": [
+    {
+      "command": [
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--find-links",
+        "vendor/wheels",
+        "-e",
+        "."
+      ],
+      "stdout_tail": "sers\\adkor\\AppData\\Local\\Temp\\pip-ephem-wheel-cache-ua1choi5\\wheels\\98\\b8\\6e\\f1bafe49b2f880d8428e007106a14b7f3058dc3ebfb3324f1f\nSuccessfully built researchradar-mas\nInstalling collected packages: urllib3, idna, charset_normalizer, certifi, requests, researchradar-mas\n\nSuccessfully installed certifi-2026.10.23 charset_normalizer-3.5.2 idna-3.20 requests-2.34.2 researchradar-mas-0.4.1 urllib3-2.8.0\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "-c",
+        "import researchradar,pathlib; print(pathlib.Path(researchradar.__file__).resolve())"
+      ],
+      "stdout_tail": "C:\\Users\\adkor\\AppData\\Local\\Temp\\ResearchRadarLab4v11Audit-_es6qwej\\src\\researchradar\\__init__.py\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ],
+      "stdout_tail": "10 runs; 5 scenarios; 1 paired repeats: C:\\Users\\adkor\\AppData\\Local\\Temp\\tmp_1lp0lf9\n",
+      "stderr_tail": "----------------------------------------------------------------------\nRan 77 tests in 6.001s\n\nOK\n"
+    },
+    {
+      "command": [
+        "-m",
+        "researchradar.cli",
+        "multi agent systems",
+        "--mode",
+        "demo",
+        "--output",
+        "run_output/stage1.json"
+      ],
+      "stdout_tail": "РќР°Р№РґРµРЅРѕ РЅР°СѓС‡РЅС‹С… Р·Р°РїРёСЃРµР№: 1; РЅРѕРІРѕСЃС‚РµР№: 1. РЎРѕРґРµСЂР¶Р°С‚РµР»СЊРЅС‹Рµ РІС‹РІРѕРґС‹ Рё СЃРІСЏР·СЊ РјРµР¶РґСѓ РёСЃС‚РѕС‡РЅРёРєР°РјРё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅС‹: РґРѕСЃС‚СѓРїРЅС‹ С‚РѕР»СЊРєРѕ РјРµС‚Р°РґР°РЅРЅС‹Рµ, Р·Р°РіРѕР»РѕРІРєРё Рё РѕС‚РґРµР»СЊРЅС‹Рµ Р°РЅРЅРѕС‚Р°С†РёРё.\nResult and trace: run_output\\stage1.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "-m",
+        "researchradar.cli_stage2",
+        "multi agent systems",
+        "--mode",
+        "demo",
+        "--coordination",
+        "contract-net",
+        "--output",
+        "run_output/stage2.json"
+      ],
+      "stdout_tail": "contract-net: 5/5 tasks; 44 messages; 3 scientific, 1 news\nResult and trace: run_output\\stage2.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "-m",
+        "researchradar.cli_stage3",
+        "multi agent systems",
+        "--mode",
+        "demo",
+        "--resource-policy",
+        "negotiation",
+        "--output",
+        "run_output/stage3.json"
+      ],
+      "stdout_tail": "negotiation: 3 checks, 3/3 credits, utility 12.00, Jain 1.000, 21 review messages\nEvidence and protocol trace: run_output\\stage3.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "-m",
+        "researchradar.cli_stage4",
+        "multi agent systems",
+        "--mode",
+        "demo",
+        "--analysis",
+        "recorded",
+        "--recorded-analysis",
+        "data/lab4_v1.1_fixture_analysis.json",
+        "--output",
+        "run_output/stage4.json"
+      ],
+      "stdout_tail": "thetic abstract on allocation policies.\nnews exact headline excerpt [fixture:news:1]: Synthetic research news\nRelation (unverified): insufficient_evidence; claim support: not_assessed; next check: find_primary_source\nModel explanation (unverified): The available abstract and headline do not establish whether the news describes or confirms the publication.\nResult and traces: run_output\\stage4.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "tools/run_lab4_experiments.py",
+        "--repeats",
+        "1",
+        "--output",
+        "run_output/faults"
+      ],
+      "stdout_tail": "20 runs, 10 pairs, 10 scenarios: run_output\\faults\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "tools/verify_lab4_results.py",
+        "run_output/faults"
+      ],
+      "stdout_tail": "{\n  \"verified\": true,\n  \"scenarios\": 10,\n  \"pairs\": 10,\n  \"traces\": 20,\n  \"baseline_sha256\": \"da223cc3ff29e0a0842c159270c4697ca3d5960d0359e6388119de8f56caaa2a\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "tools/verify_lab4_results.py",
+        "experiments/lab4/results"
+      ],
+      "stdout_tail": "{\n  \"verified\": true,\n  \"scenarios\": 10,\n  \"pairs\": 50,\n  \"traces\": 100,\n  \"baseline_sha256\": \"da223cc3ff29e0a0842c159270c4697ca3d5960d0359e6388119de8f56caaa2a\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "tools/run_lab4_llm_experiments.py",
+        "--output",
+        "run_output/legacy_llm"
+      ],
+      "stdout_tail": "{'cases': 8, 'normal_cases': 3, 'adversarial_cases': 5, 'minimal_parser_unsafe_accepts': 4, 'validator_unsafe_accepts': 0, 'false_positives': 0, 'actual_provider_calls': 0, 'response_origin': 'authored_mock_response', 'materials_kind': 'synthetic_fixture'}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "tools/verify_lab4_llm_results.py",
+        "run_output/legacy_llm"
+      ],
+      "stdout_tail": "{\n  \"verified\": true,\n  \"mock_cases\": 8,\n  \"live_calls\": 1,\n  \"live_rejection\": \"ungrounded_scientific_evidence\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "tools/run_lab4_v1_1_llm_experiments.py",
+        "--output",
+        "run_output/new_llm"
+      ],
+      "stdout_tail": "{'cases': 12, 'correct': 12, 'normal': 4, 'normal_usable': 4, 'unsupported_claim_verified': 0, 'legacy_unsupported_claim_accepted': True, 'actual_provider_calls': 0, 'historical_lab4_results_rewritten': False}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "tools/verify_lab4_v1_1_llm_results.py",
+        "run_output/new_llm"
+      ],
+      "stdout_tail": "{\n  \"verified\": true,\n  \"cases\": 12,\n  \"normal_usable\": 4,\n  \"unsupported_claim_verified\": 0\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "tools/verify_lab4_v1_1_live.py"
+      ],
+      "stdout_tail": "{\n  \"verified\": true,\n  \"calls\": 6,\n  \"first_round_rejected\": 3,\n  \"second_round_usable\": 3,\n  \"actual_usd\": 0.00172399\n}\n",
+      "stderr_tail": ""
+    }
+  ]
+}

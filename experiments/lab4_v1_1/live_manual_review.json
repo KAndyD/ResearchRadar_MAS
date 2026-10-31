@@ -1,0 +1,24 @@
+{
+  "review_kind": "nonautomated_qualitative_review_by_codex",
+  "scope": "Three accepted responses in live_round2; this is a qualitative appraisal, not automated semantic proof",
+  "cases": [
+    {
+      "case": "related_real_pair",
+      "assessment": "appropriate_preliminary_topic_overlap",
+      "basis": "The OpenAlex excerpt concerns detecting ocean microplastics by radar; the Google News RSS headline concerns preventing ocean microplastics via wastewater technology. They share the specific subject, but neither text verifies the other's method or result.",
+      "remaining_uncertainty": "Article body and full scientific paper were not checked."
+    },
+    {
+      "case": "unrelated_real_pair",
+      "assessment": "appropriate_preliminary_unrelated",
+      "basis": "The OpenAlex excerpt concerns trust in distributed systems; the Google News RSS headline concerns ocean microplastic prevention. The model selected unrelated and did not claim direct support.",
+      "remaining_uncertainty": "Only selected text fragments were compared."
+    },
+    {
+      "case": "metadata_only_real_pair",
+      "assessment": "appropriate_insufficient_evidence",
+      "basis": "The scientific abstract was deliberately withheld; the model selected no scientific excerpt and marked the relation insufficient_evidence. The news claim remains unverified.",
+      "remaining_uncertainty": "The original abstract exists but was unavailable in this controlled scenario."
+    }
+  ]
+}

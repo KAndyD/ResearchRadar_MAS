@@ -1,0 +1,13 @@
+scenario,class,expected_status,actual_status,correct,verified_claims,selected_evidence,trace
+normal_extract,normal,usable_preliminary,usable_preliminary,1,0,1,traces/normal_extract.json
+unsupported_claim_real_excerpt,adversarial,usable_preliminary,usable_preliminary,1,0,1,traces/unsupported_claim_real_excerpt.json
+topic_overlap,normal,usable_preliminary,usable_preliminary,1,0,1,traces/topic_overlap.json
+metadata_only,normal,usable_preliminary,usable_preliminary,1,0,0,traces/metadata_only.json
+composite_quote_old_schema,adversarial,rejected,rejected,1,0,0,traces/composite_quote_old_schema.json
+fabricated_evidence_id,adversarial,rejected,rejected,1,0,0,traces/fabricated_evidence_id.json
+invalid_proof_category,adversarial,rejected,rejected,1,0,0,traces/invalid_proof_category.json
+abstract_action_injection,adversarial,rejected,rejected,1,0,0,traces/abstract_action_injection.json
+normal_instruction_vocabulary,normal,usable_preliminary,usable_preliminary,1,0,1,traces/normal_instruction_vocabulary.json
+empty_response,failure,rejected,rejected,1,0,0,traces/empty_response.json
+malformed_json,failure,rejected,rejected,1,0,0,traces/malformed_json.json
+provider_timeout,failure,unavailable,unavailable,1,0,0,traces/provider_timeout.json

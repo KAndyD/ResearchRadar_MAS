@@ -1,0 +1,37 @@
+{
+  "model": "qwen/qwen3.5-35b-a3b",
+  "material_kind": "real_source_with_controlled_pairing",
+  "calls_attempted": 3,
+  "calls_recorded": 3,
+  "usable_preliminary": 0,
+  "rejected": 3,
+  "unavailable": 0,
+  "actual_usd": 0.00099151,
+  "uncertain_estimate_usd": 0.0,
+  "cases": [
+    {
+      "case": "related_real_pair",
+      "status": "rejected",
+      "reason": "invalid_explanation",
+      "calls": 1,
+      "actual_usd": 0.00034375,
+      "uncertain_estimate_usd": 0.0
+    },
+    {
+      "case": "unrelated_real_pair",
+      "status": "rejected",
+      "reason": "invalid_explanation",
+      "calls": 1,
+      "actual_usd": 0.00035256,
+      "uncertain_estimate_usd": 0.0
+    },
+    {
+      "case": "metadata_only_real_pair",
+      "status": "rejected",
+      "reason": "invalid_explanation",
+      "calls": 1,
+      "actual_usd": 0.0002952,
+      "uncertain_estimate_usd": 0.0
+    }
+  ]
+}

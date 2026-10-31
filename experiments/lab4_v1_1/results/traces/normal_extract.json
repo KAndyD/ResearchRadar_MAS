@@ -1,0 +1,98 @@
+{
+  "scenario": "normal_extract",
+  "class": "normal",
+  "materials_origin": "synthetic_frozen_fixture",
+  "response_origin": "authored_mock_response",
+  "context": {
+    "schema_version": 2,
+    "question": "multi agent systems",
+    "materials": [
+      {
+        "kind": "scientific",
+        "source": "Synthetic OpenAlex",
+        "source_id": "fixture:oa:1",
+        "title": "Synthetic multi-agent coordination study",
+        "text_scope": "abstract",
+        "provenance": "synthetic_fixture",
+        "abstract": "Synthetic abstract on allocation policies."
+      },
+      {
+        "kind": "news",
+        "source": "Synthetic RSS",
+        "source_id": "fixture:news:1",
+        "title": "Synthetic research news",
+        "text_scope": "headline",
+        "provenance": "synthetic_fixture"
+      }
+    ],
+    "evidence": [
+      {
+        "evidence_id": "s1",
+        "kind": "scientific",
+        "source_id": "fixture:oa:1",
+        "text_scope": "abstract",
+        "text": "Synthetic abstract on allocation policies."
+      },
+      {
+        "evidence_id": "n1",
+        "kind": "news",
+        "source_id": "fixture:news:1",
+        "text_scope": "headline",
+        "text": "Synthetic research news"
+      }
+    ]
+  },
+  "context_sha256": "c41968254094dc388842e8e175ac81b2b8959ae6082b35fad90e357d5dfe99be",
+  "response": "{\"schema_version\": 2, \"scientific_evidence_id\": \"s1\", \"news_evidence_id\": \"n1\", \"research_topic\": \"Research on multi-agent systems\", \"relation\": \"insufficient_evidence\", \"explanation\": \"The available abstract and headline do not establish a direct claim.\", \"next_check\": \"find_primary_source\"}",
+  "simulated_error": null,
+  "response_sha256": "e47f76c3f77ee9f7351968eedec926cc10035f991beb60f4c1c76ffdab41d882",
+  "expected_status": "usable_preliminary",
+  "result": {
+    "mode": "live",
+    "status": "usable_preliminary",
+    "schema_version": 2,
+    "context_sha256": "c41968254094dc388842e8e175ac81b2b8959ae6082b35fad90e357d5dfe99be",
+    "validation": {
+      "json_schema": "valid",
+      "source_identity": "verified",
+      "extractive_evidence": "verified_if_selected",
+      "semantic_entailment": "not_assessed"
+    },
+    "analysis": {
+      "research_topic": {
+        "text": "Research on multi-agent systems",
+        "status": "model_interpretation_unverified"
+      },
+      "scientific_evidence": {
+        "evidence_id": "s1",
+        "source_id": "fixture:oa:1",
+        "text": "Synthetic abstract on allocation policies.",
+        "text_scope": "abstract",
+        "verification": "exact_source_excerpt"
+      },
+      "news_evidence": {
+        "evidence_id": "n1",
+        "source_id": "fixture:news:1",
+        "text": "Synthetic research news",
+        "text_scope": "headline",
+        "verification": "exact_source_excerpt"
+      },
+      "relation": {
+        "category": "insufficient_evidence",
+        "status": "model_inference_unverified"
+      },
+      "explanation": {
+        "text": "The available abstract and headline do not establish a direct claim.",
+        "status": "model_interpretation_unverified"
+      },
+      "claim_support": "not_assessed",
+      "news_claim_verification": "not_performed",
+      "next_check": "find_primary_source",
+      "certainty": "preliminary"
+    }
+  },
+  "legacy_unsupported_claim_accepted": null,
+  "provider_calls": 1,
+  "paid_calls": 0,
+  "program_action_executed": false
+}

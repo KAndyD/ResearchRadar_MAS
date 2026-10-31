@@ -7,7 +7,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 
-from researchradar.evidence_analysis import EvidenceError, context_sha256, validate_response
+from researchradar.evidence_analysis_v1 import EvidenceError, context_sha256, validate_response
 
 
 ROOT = Path(__file__).resolve().parents[1]

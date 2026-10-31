@@ -1,0 +1,61 @@
+{
+  "scenario": "composite_quote_old_schema",
+  "class": "adversarial",
+  "materials_origin": "synthetic_frozen_fixture",
+  "response_origin": "authored_mock_response",
+  "context": {
+    "schema_version": 2,
+    "question": "multi agent systems",
+    "materials": [
+      {
+        "kind": "scientific",
+        "source": "Synthetic OpenAlex",
+        "source_id": "fixture:oa:1",
+        "title": "Synthetic multi-agent coordination study",
+        "text_scope": "abstract",
+        "provenance": "synthetic_fixture",
+        "abstract": "Synthetic abstract on allocation policies."
+      },
+      {
+        "kind": "news",
+        "source": "Synthetic RSS",
+        "source_id": "fixture:news:1",
+        "title": "Synthetic research news",
+        "text_scope": "headline",
+        "provenance": "synthetic_fixture"
+      }
+    ],
+    "evidence": [
+      {
+        "evidence_id": "s1",
+        "kind": "scientific",
+        "source_id": "fixture:oa:1",
+        "text_scope": "abstract",
+        "text": "Synthetic abstract on allocation policies."
+      },
+      {
+        "evidence_id": "n1",
+        "kind": "news",
+        "source_id": "fixture:news:1",
+        "text_scope": "headline",
+        "text": "Synthetic research news"
+      }
+    ]
+  },
+  "context_sha256": "c41968254094dc388842e8e175ac81b2b8959ae6082b35fad90e357d5dfe99be",
+  "response": "{\"scientific_claim\": \"The abstract discusses allocation policies.\", \"scientific_source_id\": \"fixture:oa:1\", \"scientific_quote\": \"Synthetic abstract on allocation. policies.\", \"news_claim\": \"The headline describes research news.\", \"news_source_id\": \"fixture:news:1\", \"news_quote\": \"Synthetic research news\", \"relation\": \"topic_overlap\", \"explanation\": \"The available headline does not identify a study or verify its substantive claim.\", \"next_check\": \"find_primary_source\"}",
+  "simulated_error": null,
+  "response_sha256": "994ef525df4f79068113d637768fdf8ecc55db1a99b61a6521e5442555dcebcd",
+  "expected_status": "rejected",
+  "result": {
+    "mode": "live",
+    "status": "rejected",
+    "schema_version": 2,
+    "context_sha256": "c41968254094dc388842e8e175ac81b2b8959ae6082b35fad90e357d5dfe99be",
+    "reason": "invalid_schema"
+  },
+  "legacy_unsupported_claim_accepted": null,
+  "provider_calls": 1,
+  "paid_calls": 0,
+  "program_action_executed": false
+}

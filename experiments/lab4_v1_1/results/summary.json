@@ -1,0 +1,10 @@
+{
+  "cases": 12,
+  "correct": 12,
+  "normal": 4,
+  "normal_usable": 4,
+  "unsupported_claim_verified": 0,
+  "legacy_unsupported_claim_accepted": true,
+  "actual_provider_calls": 0,
+  "historical_lab4_results_rewritten": false
+}

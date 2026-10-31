@@ -26,12 +26,12 @@ FIG = ROOT / "deliverables/figures"
 pdfmetrics.registerFont(TTFont("TimesRU", "C:/Windows/Fonts/times.ttf"))
 pdfmetrics.registerFont(TTFont("TimesRUBold", "C:/Windows/Fonts/timesbd.ttf"))
 styles = {
-    "Normal": ParagraphStyle("NormalRU", fontName="TimesRU", fontSize=10.3,
-                             leading=13.1, spaceAfter=6, alignment=TA_JUSTIFY),
+    "Normal": ParagraphStyle("NormalRU", fontName="TimesRU", fontSize=9.8,
+                             leading=12.2, spaceAfter=5, alignment=TA_JUSTIFY),
     "Title": ParagraphStyle("TitleRU", fontName="TimesRUBold", fontSize=16.5,
                             leading=20, alignment=TA_CENTER, spaceAfter=18),
     "Heading 1": ParagraphStyle("HeadingRU", fontName="TimesRUBold", fontSize=13,
-                                leading=16, spaceBefore=13, spaceAfter=8,
+                                leading=16, spaceBefore=11, spaceAfter=7,
                                 keepWithNext=True),
     "Heading 2": ParagraphStyle("SubheadingRU", fontName="TimesRUBold", fontSize=11,
                                 leading=14, spaceBefore=10, spaceAfter=5,

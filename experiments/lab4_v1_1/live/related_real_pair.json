@@ -1,0 +1,99 @@
+{
+  "case": "related_real_pair",
+  "at_utc": "2026-10-31T00:45:15.520775+00:00",
+  "material_origin": "current live OpenAlex and Google News RSS search",
+  "model": "qwen/qwen3.5-35b-a3b",
+  "context": {
+    "schema_version": 2,
+    "question": "ocean microplastics",
+    "materials": [
+      {
+        "kind": "scientific",
+        "source": "OpenAlex",
+        "source_id": "https://openalex.org/W3167147114",
+        "title": "Toward the Detection and Imaging of Ocean Microplastics With a Spaceborne Radar",
+        "text_scope": "abstract",
+        "provenance": "live_api",
+        "abstract": "Ocean microplastic concentrations are known to vary significantly by location, with especially high levels in the North Atlantic and North Pacific gyres. Most direct measurements come from plankton net trawling made in these regions; concentrations in other regions have been estimated by microplastic transport models that depend on large-scale ocean circulation patterns. However, global measurements of microplastic distribution and its temporal variability are lacking. A new method is presented for detecting and imaging the global distribution of ocean microplastics from space. The method uses spaceborne bistatic radar measurements of ocean surface roughness and relies on an assumed reduction in responsiveness to wind-driven roughening caused by surfactants that act as tracers for microplastics near the surface. Annual mean microplastic distributions estimated by the radars are generally consistent with model predictions. The spaceborne observations are also able to detect temporal changes that are not resolved by the models. For example, seasonal dependencies are observed at mid-latitudes in both Northern and Southern Hemispheres, with lower concentrations noted in the winter mont"
+      },
+      {
+        "kind": "news",
+        "source": "Google News RSS",
+        "source_id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORmp2bjFaWTVCdGcxSl9KZHNicWx6dTkyeU53ZkhtcURvZGZYaS0yTUY2MTNtN0tCRGZTUTVHVHFxSUlXc3c2Z3BIUzNjU2dhSUJjX2FnMy1",
+        "title": "Nature-Inspired Tech Prevents Microplastics Entering Atlantic Ocean Through Wastewater - Good News Network",
+        "text_scope": "headline",
+        "provenance": "live_rss"
+      }
+    ],
+    "evidence": [
+      {
+        "evidence_id": "s1",
+        "kind": "scientific",
+        "source_id": "https://openalex.org/W3167147114",
+        "text_scope": "abstract",
+        "text": "Ocean microplastic concentrations are known to vary significantly by location, with especially high levels in the North Atlantic and North Pacific gyres."
+      },
+      {
+        "evidence_id": "s2",
+        "kind": "scientific",
+        "source_id": "https://openalex.org/W3167147114",
+        "text_scope": "abstract",
+        "text": "Most direct measurements come from plankton net trawling made in these regions; concentrations in other regions have been estimated by microplastic transport models that depend on large-scale ocean circulation patterns."
+      },
+      {
+        "evidence_id": "s3",
+        "kind": "scientific",
+        "source_id": "https://openalex.org/W3167147114",
+        "text_scope": "abstract",
+        "text": "However, global measurements of microplastic distribution and its temporal variability are lacking."
+      },
+      {
+        "evidence_id": "s4",
+        "kind": "scientific",
+        "source_id": "https://openalex.org/W3167147114",
+        "text_scope": "abstract",
+        "text": "A new method is presented for detecting and imaging the global distribution of ocean microplastics from space."
+      },
+      {
+        "evidence_id": "s5",
+        "kind": "scientific",
+        "source_id": "https://openalex.org/W3167147114",
+        "text_scope": "abstract",
+        "text": "The method uses spaceborne bistatic radar measurements of ocean surface roughness and relies on an assumed reduction in responsiveness to wind-driven roughening caused by surfactants that act as tracers for microplastics near the surface."
+      },
+      {
+        "evidence_id": "s6",
+        "kind": "scientific",
+        "source_id": "https://openalex.org/W3167147114",
+        "text_scope": "abstract",
+        "text": "Annual mean microplastic distributions estimated by the radars are generally consistent with model predictions."
+      },
+      {
+        "evidence_id": "n1",
+        "kind": "news",
+        "source_id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORmp2bjFaWTVCdGcxSl9KZHNicWx6dTkyeU53ZkhtcURvZGZYaS0yTUY2MTNtN0tCRGZTUTVHVHFxSUlXc3c2Z3BIUzNjU2dhSUJjX2FnMy1",
+        "text_scope": "headline",
+        "text": "Nature-Inspired Tech Prevents Microplastics Entering Atlantic Ocean Through Wastewater - Good News Network"
+      }
+    ]
+  },
+  "result": {
+    "mode": "live",
+    "status": "rejected",
+    "schema_version": 2,
+    "context_sha256": "0e7cb6a17f4ca53753a3f13b705471a852e9395ec6f3714d21d452649d20010d",
+    "reason": "invalid_explanation"
+  },
+  "response": {
+    "schema_version": 2,
+    "question": "ocean microplastics",
+    "context_sha256": "0e7cb6a17f4ca53753a3f13b705471a852e9395ec6f3714d21d452649d20010d",
+    "origin": "live_qwen",
+    "response": "{\n  \"schema_version\": 2,\n  \"scientific_evidence_id\": \"s1\",\n  \"news_evidence_id\": \"n1\",\n  \"research_topic\": \"Methods for detecting and preventing ocean microplastic accumulation\",\n  \"relation\": \"topic_overlap\",\n  \"explanation\": \"The scientific abstracts discuss the detection of ocean microplastics using spaceborne radar and the current gaps in global measurement data. The news headline introduces a specific technological solution for preventing microplastics from entering the Atlantic Ocean via wastewater. While both address ocean microplastics, the scientific text focuses on remote sensing for distribution mapping, whereas the news item focuses on a prevention technology for wastewater entry. The scientific text does not contain information to verify or explain the specific wastewater prevention method mentioned in the headline.\",\n  \"next_check\": \"read_full_text\"\n}"
+  },
+  "expense_delta": {
+    "calls": 1,
+    "actual_usd": 0.00034375,
+    "uncertain_estimate_usd": 0.0
+  }
+}

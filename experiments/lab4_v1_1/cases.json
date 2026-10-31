@@ -1,0 +1,14 @@
+[
+  {"id":"normal_extract","class":"normal","expected_status":"usable_preliminary"},
+  {"id":"unsupported_claim_real_excerpt","class":"adversarial","expected_status":"usable_preliminary"},
+  {"id":"topic_overlap","class":"normal","expected_status":"usable_preliminary"},
+  {"id":"metadata_only","class":"normal","expected_status":"usable_preliminary"},
+  {"id":"composite_quote_old_schema","class":"adversarial","expected_status":"rejected"},
+  {"id":"fabricated_evidence_id","class":"adversarial","expected_status":"rejected"},
+  {"id":"invalid_proof_category","class":"adversarial","expected_status":"rejected"},
+  {"id":"abstract_action_injection","class":"adversarial","expected_status":"rejected"},
+  {"id":"normal_instruction_vocabulary","class":"normal","expected_status":"usable_preliminary"},
+  {"id":"empty_response","class":"failure","expected_status":"rejected"},
+  {"id":"malformed_json","class":"failure","expected_status":"rejected"},
+  {"id":"provider_timeout","class":"failure","expected_status":"unavailable"}
+]

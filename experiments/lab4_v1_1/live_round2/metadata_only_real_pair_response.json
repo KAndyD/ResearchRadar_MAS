@@ -1,0 +1,7 @@
+{
+  "schema_version": 2,
+  "question": "Assess evidence when only metadata and a headline are available",
+  "context_sha256": "5ecbdd2b51866cf56acc149a972a091cf7814aacb885689c16cf6eec34e93bd0",
+  "origin": "live_qwen",
+  "response": "{\n  \"schema_version\": 2,\n  \"scientific_evidence_id\": null,\n  \"news_evidence_id\": \"n1\",\n  \"research_topic\": \"Nature-inspired tech for wastewater microplastic prevention\",\n  \"relation\": \"insufficient_evidence\",\n  \"explanation\": \"No scientific abstract or text is available to verify the news headline's specific claims.\",\n  \"next_check\": \"read_full_text\"\n}"
+}

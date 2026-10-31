@@ -1,0 +1,88 @@
+{
+  "case": "metadata_only_real_pair",
+  "at_utc": "2026-10-31T00:46:01.943141+00:00",
+  "material_origin": "controlled withholding of a real abstract; real metadata and headline",
+  "model": "qwen/qwen3.5-35b-a3b",
+  "context": {
+    "schema_version": 2,
+    "question": "Assess evidence when only metadata and a headline are available",
+    "materials": [
+      {
+        "kind": "scientific",
+        "source": "OpenAlex",
+        "source_id": "https://openalex.org/W1623588239",
+        "title": "Trust in multi-agent systems",
+        "text_scope": "metadata",
+        "provenance": "live_api",
+        "abstract": ""
+      },
+      {
+        "kind": "news",
+        "source": "Google News RSS",
+        "source_id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORmp2bjFaWTVCdGcxSl9KZHNicWx6dTkyeU53ZkhtcURvZGZYaS0yTUY2MTNtN0tCRGZTUTVHVHFxSUlXc3c2Z3BIUzNjU2dhSUJjX2FnMy1",
+        "title": "Nature-Inspired Tech Prevents Microplastics Entering Atlantic Ocean Through Wastewater - Good News Network",
+        "text_scope": "headline",
+        "provenance": "live_rss"
+      }
+    ],
+    "evidence": [
+      {
+        "evidence_id": "n1",
+        "kind": "news",
+        "source_id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORmp2bjFaWTVCdGcxSl9KZHNicWx6dTkyeU53ZkhtcURvZGZYaS0yTUY2MTNtN0tCRGZTUTVHVHFxSUlXc3c2Z3BIUzNjU2dhSUJjX2FnMy1",
+        "text_scope": "headline",
+        "text": "Nature-Inspired Tech Prevents Microplastics Entering Atlantic Ocean Through Wastewater - Good News Network"
+      }
+    ]
+  },
+  "result": {
+    "mode": "live",
+    "status": "usable_preliminary",
+    "schema_version": 2,
+    "context_sha256": "5ecbdd2b51866cf56acc149a972a091cf7814aacb885689c16cf6eec34e93bd0",
+    "validation": {
+      "json_schema": "valid",
+      "source_identity": "verified",
+      "extractive_evidence": "verified_if_selected",
+      "semantic_entailment": "not_assessed"
+    },
+    "analysis": {
+      "research_topic": {
+        "text": "Nature-inspired tech for wastewater microplastic prevention",
+        "status": "model_interpretation_unverified"
+      },
+      "scientific_evidence": null,
+      "news_evidence": {
+        "evidence_id": "n1",
+        "source_id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORmp2bjFaWTVCdGcxSl9KZHNicWx6dTkyeU53ZkhtcURvZGZYaS0yTUY2MTNtN0tCRGZTUTVHVHFxSUlXc3c2Z3BIUzNjU2dhSUJjX2FnMy1",
+        "text": "Nature-Inspired Tech Prevents Microplastics Entering Atlantic Ocean Through Wastewater - Good News Network",
+        "text_scope": "headline",
+        "verification": "exact_source_excerpt"
+      },
+      "relation": {
+        "category": "insufficient_evidence",
+        "status": "model_inference_unverified"
+      },
+      "explanation": {
+        "text": "No scientific abstract or text is available to verify the news headline's specific claims.",
+        "status": "model_interpretation_unverified"
+      },
+      "claim_support": "not_assessed",
+      "news_claim_verification": "not_performed",
+      "next_check": "read_full_text",
+      "certainty": "preliminary"
+    }
+  },
+  "response": {
+    "schema_version": 2,
+    "question": "Assess evidence when only metadata and a headline are available",
+    "context_sha256": "5ecbdd2b51866cf56acc149a972a091cf7814aacb885689c16cf6eec34e93bd0",
+    "origin": "live_qwen",
+    "response": "{\n  \"schema_version\": 2,\n  \"scientific_evidence_id\": null,\n  \"news_evidence_id\": \"n1\",\n  \"research_topic\": \"Nature-inspired tech for wastewater microplastic prevention\",\n  \"relation\": \"insufficient_evidence\",\n  \"explanation\": \"No scientific abstract or text is available to verify the news headline's specific claims.\",\n  \"next_check\": \"read_full_text\"\n}"
+  },
+  "expense_delta": {
+    "calls": 1,
+    "actual_usd": 0.00020425,
+    "uncertain_estimate_usd": 0.0
+  }
+}

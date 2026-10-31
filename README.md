@@ -1,6 +1,21 @@
 # ResearchRadar MAS
 
-## Исследование устойчивости: lab4-v1.0
+## Исправленный доказательный контур: lab4-v1.1
+
+Научное свидетельство теперь возвращается как точный фрагмент текущей аннотации, выбранный по `evidence_id`; заголовок новости обрабатывается так же. Тема, связь и объяснение Qwen помечены как предварительная интерпретация без автоматического подтверждения научного либо новостного утверждения. Старые ответы несовместимой схемы версии 1 не принимаются обычным CLI. Исторические 100 трасс диверсионного исследования сохранены без изменения.
+
+```powershell
+py -3.14 -m pip install -e .
+py -3.14 -m unittest discover -s tests -v
+py -3.14 -m researchradar.cli_stage4 "multi agent systems" --mode demo --analysis recorded --recorded-analysis data/lab4_v1.1_fixture_analysis.json --output run_output/lab4_v1_1_demo.json
+py -3.14 tools/verify_lab4_results.py experiments/lab4/results
+py -3.14 tools/verify_lab4_v1_1_llm_results.py experiments/lab4_v1_1/results
+py -3.14 tools/verify_lab4_v1_1_live.py
+```
+
+[Контракт](docs/lab4_v1_1_evidence_contract.md), [автономное воспроизведение](docs/lab4_v1_1_reproduction.md), [комплект сдачи](submission_manifest_lab4_v1.1.md). Шесть новых LIVE-вызовов сохранены полностью: первая серия 0/3, серия с уточнённой инструкцией 3/3 пригодных предварительных ответа; их суммарная стоимость $0.00172399. LIVE-вызовы не входят в обязательные тесты.
+
+## Исходное исследование устойчивости: lab4-v1.0
 
 Четвёртая версия проверяет действующий контур десятью управляемыми неблагоприятными сценариями и сравнивает его с точным снимком кода `lab3-v1.1`. В 100 офлайн-запусках устранены все 25 воспроизведённых нарушений политики; пять исторических падений на некорректном результате не повторились. Результат ограничен этим корпусом. Дополнительный контур Qwen составляет предварительное сопоставление научной аннотации и новостного заголовка; ссылки и точные цитаты проходят детерминированную проверку. Один сохранённый реальный ответ модели отклонён за неточную цитату.
 
@@ -14,7 +29,7 @@ py -3.14 tools/run_lab4_llm_experiments.py --output run_output/lab4_llm_replay
 py -3.14 tools/verify_lab4_llm_results.py run_output/lab4_llm_replay
 ```
 
-[Отчёт PDF](deliverables/ResearchRadar_MAS_Reliability_Assessment.pdf), [DOCX](deliverables/ResearchRadar_MAS_Reliability_Assessment.docx), [руководство по воспроизведению](docs/lab4_reproduction.md), [модель угроз](docs/lab4_threat_model.md), [комплект сдачи](submission_manifest_lab4_v1.0.md). Эксперименты из ZIP выполняются без Git, сети и ключа модели. LIVE-анализ включается только явно через CLI с проверенными тарифами.
+Первоначальные PDF/DOCX и архивы находятся в [неизменённом Release lab4-v1.0](https://github.com/KAndyD/ResearchRadar_MAS/releases/tag/lab4-v1.0). [Исходная инструкция по воспроизведению](docs/lab4_reproduction.md), [модель угроз](docs/lab4_threat_model.md) и [сопроводительная сверка](submission_manifest_lab4_v1.0.md) сохраняют историческое происхождение данных. Локальные PDF/DOCX на ветке `main` относятся к исправленной редакции `lab4-v1.1`.
 
 ## Исправленная версия ЛР №3: lab3-v1.1
 

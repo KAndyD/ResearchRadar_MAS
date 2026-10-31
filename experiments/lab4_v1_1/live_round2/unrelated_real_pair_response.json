@@ -1,0 +1,7 @@
+{
+  "schema_version": 2,
+  "question": "Compare unrelated research and news topics",
+  "context_sha256": "e3fff12f9980021609e5f3e16a73da7447a756fb74e33c3fb77f676c05a3ee9f",
+  "origin": "live_qwen",
+  "response": "{\n  \"schema_version\": 2,\n  \"scientific_evidence_id\": \"s1\",\n  \"news_evidence_id\": \"n1\",\n  \"research_topic\": \"Trust in multi-agent systems\",\n  \"relation\": \"unrelated\",\n  \"explanation\": \"Research focuses on abstract trust mechanisms in computing while news covers biological solutions for ocean pollution.\",\n  \"next_check\": \"none\"\n}"
+}

@@ -1,0 +1,7 @@
+{
+  "schema_version": 2,
+  "question": "ocean microplastics",
+  "context_sha256": "0e7cb6a17f4ca53753a3f13b705471a852e9395ec6f3714d21d452649d20010d",
+  "origin": "live_qwen",
+  "response": "{\n  \"schema_version\": 2,\n  \"scientific_evidence_id\": \"s4\",\n  \"news_evidence_id\": \"n1\",\n  \"research_topic\": \"Ocean microplastic detection and prevention methods\",\n  \"relation\": \"topic_overlap\",\n  \"explanation\": \"Both excerpts discuss ocean microplastics but address distinct technical approaches: spaceborne radar detection versus wastewater prevention technology.\",\n  \"next_check\": \"compare_sources\"\n}"
+}

@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 
 from researchradar.coordination import research_stage2
-from researchradar.evidence_analysis import analyze_research, context_for, context_sha256
+from researchradar.evidence_analysis_v1 import analyze_research, context_for, context_sha256
 from researchradar.frozen import load_frozen
 
 

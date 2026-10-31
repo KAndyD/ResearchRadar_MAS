@@ -80,6 +80,18 @@ def main() -> None:
     print(f"search {search['metrics']['completed_tasks']}/{search['metrics']['task_count']}; "
           f"checks {review['metrics']['completed_checks']}; "
           f"analysis {analysis['status']}")
+    if analysis["status"] == "usable_preliminary":
+        detail = analysis["analysis"]
+        print(f"Topic (model interpretation): {detail['research_topic']['text']}")
+        for kind in ("scientific", "news"):
+            item = detail[f"{kind}_evidence"]
+            if item:
+                print(f"{kind} exact {item['text_scope']} excerpt [{item['source_id']}]: "
+                      f"{item['text']}")
+        print(f"Relation (unverified): {detail['relation']['category']}; "
+              f"claim support: {detail['claim_support']}; "
+              f"next check: {detail['next_check']}")
+        print(f"Model explanation (unverified): {detail['explanation']['text']}")
     print(f"Result and traces: {args.output}")
 
 

@@ -1,0 +1,57 @@
+{
+  "case": "metadata_only_real_pair",
+  "at_utc": "2026-10-31T00:45:19.597246+00:00",
+  "material_origin": "controlled withholding of a real abstract; real metadata and headline",
+  "model": "qwen/qwen3.5-35b-a3b",
+  "context": {
+    "schema_version": 2,
+    "question": "Assess evidence when only metadata and a headline are available",
+    "materials": [
+      {
+        "kind": "scientific",
+        "source": "OpenAlex",
+        "source_id": "https://openalex.org/W1623588239",
+        "title": "Trust in multi-agent systems",
+        "text_scope": "metadata",
+        "provenance": "live_api",
+        "abstract": ""
+      },
+      {
+        "kind": "news",
+        "source": "Google News RSS",
+        "source_id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORmp2bjFaWTVCdGcxSl9KZHNicWx6dTkyeU53ZkhtcURvZGZYaS0yTUY2MTNtN0tCRGZTUTVHVHFxSUlXc3c2Z3BIUzNjU2dhSUJjX2FnMy1",
+        "title": "Nature-Inspired Tech Prevents Microplastics Entering Atlantic Ocean Through Wastewater - Good News Network",
+        "text_scope": "headline",
+        "provenance": "live_rss"
+      }
+    ],
+    "evidence": [
+      {
+        "evidence_id": "n1",
+        "kind": "news",
+        "source_id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORmp2bjFaWTVCdGcxSl9KZHNicWx6dTkyeU53ZkhtcURvZGZYaS0yTUY2MTNtN0tCRGZTUTVHVHFxSUlXc3c2Z3BIUzNjU2dhSUJjX2FnMy1",
+        "text_scope": "headline",
+        "text": "Nature-Inspired Tech Prevents Microplastics Entering Atlantic Ocean Through Wastewater - Good News Network"
+      }
+    ]
+  },
+  "result": {
+    "mode": "live",
+    "status": "rejected",
+    "schema_version": 2,
+    "context_sha256": "5ecbdd2b51866cf56acc149a972a091cf7814aacb885689c16cf6eec34e93bd0",
+    "reason": "invalid_explanation"
+  },
+  "response": {
+    "schema_version": 2,
+    "question": "Assess evidence when only metadata and a headline are available",
+    "context_sha256": "5ecbdd2b51866cf56acc149a972a091cf7814aacb885689c16cf6eec34e93bd0",
+    "origin": "live_qwen",
+    "response": "{\n  \"schema_version\": 2,\n  \"scientific_evidence_id\": null,\n  \"news_evidence_id\": \"n1\",\n  \"research_topic\": \"Nature-inspired technologies for preventing microplastic pollution in the Atlantic Ocean via wastewater treatment\",\n  \"relation\": \"topic_overlap\",\n  \"explanation\": \"The provided scientific metadata concerns 'trust in multi-agent systems,' which does not explicitly address microplastics, wastewater treatment, or the Atlantic Ocean. However, the news headline explicitly discusses a nature-inspired technology preventing microplastic entry into the Atlantic Ocean. The relationship is one of topic overlap because the news claim identifies a specific environmental solution, while the scientific material discusses a general computational concept that could theoretically underpin such a system, though the provided metadata does not confirm this connection. No verified link exists between the specific scientific paper and the news claim based solely on this metadata and headline.\",\n  \"next_check\": \"compare_sources\"\n}"
+  },
+  "expense_delta": {
+    "calls": 1,
+    "actual_usd": 0.0002952,
+    "uncertain_estimate_usd": 0.0
+  }
+}

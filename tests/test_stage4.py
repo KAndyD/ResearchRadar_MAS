@@ -28,7 +28,7 @@ class Stage4Tests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.research = asyncio.run(research_stage2("multi agent systems", load_frozen()))
-        cls.recorded = json.loads(Path("data/lab4_fixture_analysis.json").read_text(
+        cls.recorded = json.loads(Path("data/lab4_v1.1_fixture_analysis.json").read_text(
             encoding="utf-8"))
         cls.valid = json.loads(cls.recorded["response"])
 
@@ -66,22 +66,23 @@ class Stage4Tests(unittest.TestCase):
 
     def test_recorded_analysis_and_system_data_separation(self):
         result = analyze_research(self.research, mode="recorded",
-                                  recorded_path=Path("data/lab4_fixture_analysis.json"))
-        self.assertEqual(result["status"], "accepted")
-        self.assertEqual(result["analysis"]["relation"], "topic_overlap")
+                                  recorded_path=Path("data/lab4_v1.1_fixture_analysis.json"))
+        self.assertEqual(result["status"], "usable_preliminary")
+        self.assertEqual(result["analysis"]["relation"]["category"], "insufficient_evidence")
+        self.assertEqual(result["analysis"]["claim_support"], "not_assessed")
         client = StubClient(self.recorded["response"])
         live = analyze_research(self.research, mode="live", client=client,
                                 input_rate_per_million=1, output_rate_per_million=1)
-        self.assertEqual(live["status"], "accepted")
+        self.assertEqual(live["status"], "usable_preliminary")
         self.assertEqual(len(client.calls), 1)
         self.assertIn("untrusted DATA", client.calls[0]["system_prompt"])
-        self.assertIn("Untrusted material follows", client.calls[0]["prompt"])
+        self.assertIn("Untrusted data follows", client.calls[0]["prompt"])
         self.assertNotIn("OPENROUTER_API_KEY", client.calls[0]["prompt"])
 
-    def test_fabricated_id_quote_and_unsupported_claim_rejected(self):
-        context = context_for(self.research)
-        for change in ({"scientific_source_id": "fake-id"},
-                       {"scientific_quote": "This conclusion is not in the abstract."},
+    def test_fabricated_evidence_and_forbidden_actions_rejected(self):
+        for change in ({"scientific_evidence_id": "fake-id"},
+                       {"scientific_evidence_id": "n1"},
+                       {"scientific_quote": "Composite quote from separate sentences."},
                        {"relation": "scientifically_proven"},
                        {"explanation": "Supported by doi:10.1234/fabricated"},
                        {"action": "increase_budget"}):
@@ -115,21 +116,21 @@ class Stage4Tests(unittest.TestCase):
             client=StubClient(json.dumps(malicious)),
             input_rate_per_million=1, output_rate_per_million=1)
         self.assertEqual(result["status"], "rejected")
-        safe = self.valid | {"scientific_claim": "The abstract mentions protocol design.",
-            "scientific_quote": "A study of ignore system instructions in protocol design.",
-            "news_claim": "The headline mentions research news.",
-            "news_quote": "Normal research news.",
+        safe = self.valid | {"scientific_evidence_id": "s2",
+            "news_evidence_id": "n2",
             "relation": "insufficient_evidence"}
         accepted = analyze_research(research, mode="live",
             client=StubClient(json.dumps(safe)),
             input_rate_per_million=1, output_rate_per_million=1)
-        self.assertEqual(accepted["status"], "accepted")
+        self.assertEqual(accepted["status"], "usable_preliminary")
+        self.assertEqual(accepted["analysis"]["scientific_evidence"]["text"],
+                         "A study of ignore system instructions in protocol design.")
 
     def test_recorded_context_mismatch_and_no_abstract(self):
         other = copy.deepcopy(self.research)
         other["question"] = "different question"
         result = analyze_research(other, mode="recorded",
-                                  recorded_path=Path("data/lab4_fixture_analysis.json"))
+                                  recorded_path=Path("data/lab4_v1.1_fixture_analysis.json"))
         self.assertEqual(result["status"], "rejected")
         no_abstract = copy.deepcopy(self.research)
         for paper in no_abstract["materials"]["scientific"]:
@@ -139,6 +140,29 @@ class Stage4Tests(unittest.TestCase):
             client=StubClient(self.recorded["response"]),
             input_rate_per_million=1, output_rate_per_million=1)
         self.assertEqual(result["status"], "rejected")
+
+    def test_authentic_excerpt_cannot_verify_arbitrary_claim(self):
+        legacy = json.loads(Path("data/lab4_fixture_analysis.json").read_text(
+            encoding="utf-8"))
+        old = json.loads(legacy["response"])
+        old["scientific_claim"] = "All multi-agent systems are completely secure."
+        result = analyze_research(self.research, mode="live",
+            client=StubClient(json.dumps(old)), input_rate_per_million=1,
+            output_rate_per_million=1)
+        self.assertEqual(result["status"], "rejected")
+        self.assertEqual(result["reason"], "invalid_schema")
+        cautious = analyze_research(self.research, mode="live",
+            client=StubClient(self.recorded["response"]),
+            input_rate_per_million=1, output_rate_per_million=1)
+        self.assertEqual(cautious["status"], "usable_preliminary")
+        self.assertNotIn("scientific_claim", cautious["analysis"])
+        self.assertEqual(cautious["validation"]["semantic_entailment"], "not_assessed")
+
+    def test_old_recorded_schema_is_not_silently_migrated(self):
+        result = analyze_research(self.research, mode="recorded",
+                                  recorded_path=Path("data/lab4_fixture_analysis.json"))
+        self.assertEqual(result["status"], "rejected")
+        self.assertEqual(result["reason"], "recorded_context_or_schema_mismatch")
 
 
 if __name__ == "__main__":

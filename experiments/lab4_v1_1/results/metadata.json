@@ -1,0 +1,7 @@
+{
+  "schema_version": 2,
+  "cases_sha256": "ceb008da46cd85d13e9b053b98a28ca8bf8de180baa7b1a9d930eefe10b9d831",
+  "expected_results_source": "manually specified in cases.json before run",
+  "historical_baseline": "evidence_analysis_v1, structural-only comparator",
+  "network_and_paid_calls": 0
+}

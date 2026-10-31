@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "researchradar-mas"
-version = "0.3.1"
+version = "0.4.1"
 description = "ResearchRadar MAS task allocation and resource negotiation"
 requires-python = ">=3.14"
 dependencies = ["requests>=2.32,<3"]
@@ -13,6 +13,7 @@ dependencies = ["requests>=2.32,<3"]
 researchradar = "researchradar.cli:main"
 researchradar-stage2 = "researchradar.cli_stage2:main"
 researchradar-stage3 = "researchradar.cli_stage3:main"
+researchradar-stage4 = "researchradar.cli_stage4:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
