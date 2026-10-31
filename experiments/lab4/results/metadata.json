@@ -1,0 +1,14 @@
+{
+  "version": "lab4-v1.0",
+  "baseline_tag": "lab3-v1.1",
+  "baseline_sha256": "da223cc3ff29e0a0842c159270c4697ca3d5960d0359e6388119de8f56caaa2a",
+  "protected_code_commit": "eee29c55cab61d789c3c7f3e2d9d1dff7d24d584",
+  "protected_code_commit_source": "git_clean_experiment_inputs",
+  "scenarios_sha256": "b84ecf67f300e62e33a73002816ee182dbe39d746967b9e0b647d01ce5f7a2b7",
+  "repeats": 5,
+  "scenario_count": 10,
+  "runs": 100,
+  "python": "3.14.7",
+  "network_and_paid_llm_calls": 0,
+  "timing_note": "wall_ms includes process startup and OS scheduling; paired order is fixed baseline then protected"
+}

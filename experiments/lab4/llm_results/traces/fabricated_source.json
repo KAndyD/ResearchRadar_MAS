@@ -1,0 +1,17 @@
+{
+  "scenario": "fabricated_source",
+  "kind": "adversarial",
+  "model_mode": "authored_mock_response",
+  "context_sha256": "63794bc897a0d5ccac8df991c2c48468a5bda0569f250276affc8071fef1f3b1",
+  "response_sha256": "b0c1ba00788567281917f9be24df31e315752e11efbac3c1aa7e032d49f8ab67",
+  "calls": 1,
+  "expected_accept": false,
+  "minimal_parse_accepts": true,
+  "validator_status": "rejected",
+  "reason": "ungrounded_scientific_evidence",
+  "accepted_source_ids": [
+    "fixture:oa:1",
+    "fixture:news:1"
+  ],
+  "resource_or_system_action_executed": false
+}

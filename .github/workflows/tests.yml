@@ -19,3 +19,8 @@ jobs:
       - run: python tools/run_negotiation_experiments.py --repeats 1 --output run_output/ci-stage3-experiment
       - run: python tools/verify_lab3_results.py --results run_output/ci-stage3-experiment
       - run: python -m researchradar.cli_stage3 "multi agent systems" --mode demo --resource-policy baseline --credits 4 --slots 1 --output run_output/ci-stage3-slot-conflict.json
+      - run: python -m researchradar.cli_stage4 "multi agent systems" --mode demo --analysis recorded --recorded-analysis data/lab4_fixture_analysis.json --output run_output/ci-stage4.json
+      - run: python tools/run_lab4_experiments.py --repeats 1 --output run_output/ci-stage4-experiment
+      - run: python tools/verify_lab4_results.py run_output/ci-stage4-experiment
+      - run: python tools/run_lab4_llm_experiments.py --output run_output/ci-stage4-llm
+      - run: python tools/verify_lab4_llm_results.py run_output/ci-stage4-llm

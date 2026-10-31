@@ -1,0 +1,17 @@
+{
+  "scenario": "insufficient_abstract",
+  "kind": "normal",
+  "model_mode": "authored_mock_response",
+  "context_sha256": "4df293f990ea3be443c6fabd4dc50355a03aa399b6cc0173f9caf87702779bb1",
+  "response_sha256": "827a4f05b93d0b4f1c725e333f2fd150093d781321ef4be6a8f727ddd52045c4",
+  "calls": 1,
+  "expected_accept": true,
+  "minimal_parse_accepts": true,
+  "validator_status": "accepted",
+  "reason": null,
+  "accepted_source_ids": [
+    "fixture:oa:1",
+    "fixture:news:1"
+  ],
+  "resource_or_system_action_executed": false
+}

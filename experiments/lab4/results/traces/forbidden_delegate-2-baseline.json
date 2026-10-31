@@ -1,0 +1,15 @@
+{
+  "accepted_forbidden": false,
+  "trace": [],
+  "fault_events": [
+    {
+      "action": "worker_to_worker_task",
+      "accepted": false
+    }
+  ],
+  "wall_ms": 0.07720000576227903,
+  "scenario": "forbidden_delegate",
+  "seed": 2,
+  "variant": "baseline",
+  "module_origin": "historical_snapshot"
+}

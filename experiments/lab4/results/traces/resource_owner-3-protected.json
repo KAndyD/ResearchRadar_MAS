@@ -1,0 +1,33 @@
+{
+  "accepted_forbidden": false,
+  "own_finish": true,
+  "resource": {
+    "credits": 2,
+    "spent": 2,
+    "held": 0,
+    "active": 0,
+    "concurrent_slots": 1,
+    "peak_active": 1,
+    "reservations": {
+      "agreement": {
+        "agreement_id": "agreement",
+        "request_id": "request",
+        "owner": "science",
+        "units": 2,
+        "phase": "finished"
+      }
+    }
+  },
+  "trace": [],
+  "fault_events": [
+    {
+      "action": "foreign_finish",
+      "accepted": false
+    }
+  ],
+  "wall_ms": 0.052100003813393414,
+  "scenario": "resource_owner",
+  "seed": 3,
+  "variant": "protected",
+  "module_origin": "current_src"
+}

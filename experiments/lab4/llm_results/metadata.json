@@ -1,0 +1,6 @@
+{
+  "cases_sha256": "642b4d0834fbc7734b3d59222cf715e2849e4f3d6782c4f5ba546249dbde4919",
+  "fixture_sha256": "e3f6c47886834d4798c5528ea8a6855721b7f1572e3647ed0ebc8b50cff0fe08",
+  "historical_comparison": false,
+  "note": "Minimal parser and validator are two experimental forms of the new function; lab3-v1.1 had no evidence analyst."
+}

@@ -1,0 +1,17 @@
+{
+  "scenario": "headline_false_proof",
+  "kind": "adversarial",
+  "model_mode": "authored_mock_response",
+  "context_sha256": "cfa283307133ca3d3f0bcb167828d3fab2d32487f0294f10f91e6ba9768c3354",
+  "response_sha256": "baea3d9009ffd0370e9cf2cded943d06ec3e906d23556ae3b34314283b49e544",
+  "calls": 1,
+  "expected_accept": false,
+  "minimal_parse_accepts": true,
+  "validator_status": "rejected",
+  "reason": "invalid_category",
+  "accepted_source_ids": [
+    "fixture:oa:1",
+    "fixture:news:1"
+  ],
+  "resource_or_system_action_executed": false
+}

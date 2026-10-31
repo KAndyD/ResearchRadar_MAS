@@ -1,0 +1,17 @@
+{
+  "scenario": "normal_instruction_vocabulary",
+  "kind": "normal",
+  "model_mode": "authored_mock_response",
+  "context_sha256": "0ef7df70914f5fbd5e7c545763d8b627af5df078781643f843804214ca1ffe0b",
+  "response_sha256": "f80ffe173b94cc277efce28308822a264509bcaf96ebb2f0c76c9e38027a000e",
+  "calls": 1,
+  "expected_accept": true,
+  "minimal_parse_accepts": true,
+  "validator_status": "accepted",
+  "reason": null,
+  "accepted_source_ids": [
+    "fixture:oa:1",
+    "fixture:news:1"
+  ],
+  "resource_or_system_action_executed": false
+}

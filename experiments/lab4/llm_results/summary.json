@@ -1,0 +1,11 @@
+{
+  "cases": 8,
+  "normal_cases": 3,
+  "adversarial_cases": 5,
+  "minimal_parser_unsafe_accepts": 4,
+  "validator_unsafe_accepts": 0,
+  "false_positives": 0,
+  "actual_provider_calls": 0,
+  "response_origin": "authored_mock_response",
+  "materials_kind": "synthetic_fixture"
+}

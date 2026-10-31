@@ -1,0 +1,194 @@
+{
+  "crash": null,
+  "completed_tasks": 4,
+  "task_count": 4,
+  "errors": {},
+  "assignments": {
+    "oa-primary": [
+      "scholar_a"
+    ],
+    "cr-bibliography": [
+      "scholar_b"
+    ],
+    "ax-preprints": [
+      "preprint_a"
+    ],
+    "news-primary": [
+      "news_a"
+    ]
+  },
+  "reassignments": 0,
+  "invalid_messages": 1,
+  "messages": 9,
+  "accepted_fault_material": false,
+  "scientific_count": 3,
+  "news_count": 1,
+  "agents_stopped": true,
+  "fault_events": [
+    {
+      "action": "wrong_correlation",
+      "sender": "scholar_a",
+      "request_id": "7b4cff63-6a52-48ee-8d7c-fd5871eaf844",
+      "correlation_id": "wrong-correlation",
+      "task_id": "oa-primary",
+      "blocked": false
+    }
+  ],
+  "trace": [
+    {
+      "elapsed_ms": 0.2645,
+      "at": "2026-10-31T00:11:25.561937+00:00",
+      "id": "90d8938e-f8d3-4ea8-a758-44206805494a",
+      "sender": "coordinator",
+      "recipient": "scholar_a",
+      "kind": "task",
+      "task_id": "oa-primary",
+      "correlation_id": null
+    },
+    {
+      "elapsed_ms": 0.3263,
+      "at": "2026-10-31T00:11:25.561989+00:00",
+      "id": "fe31533a-3fdc-42e3-81fc-e754967d80d4",
+      "sender": "scholar_a",
+      "recipient": "coordinator",
+      "kind": "result",
+      "task_id": "oa-primary",
+      "correlation_id": "wrong-correlation"
+    },
+    {
+      "elapsed_ms": 0.3854,
+      "at": "2026-10-31T00:11:25.562046+00:00",
+      "id": "39bb5dae-40f2-4657-855c-2d0dbad408a1",
+      "sender": "coordinator",
+      "recipient": "scholar_b",
+      "kind": "task",
+      "task_id": "cr-bibliography",
+      "correlation_id": null
+    },
+    {
+      "elapsed_ms": 0.4188,
+      "at": "2026-10-31T00:11:25.562079+00:00",
+      "id": "b0282334-758f-4c77-8b7d-c332a0245716",
+      "sender": "coordinator",
+      "recipient": "preprint_a",
+      "kind": "task",
+      "task_id": "ax-preprints",
+      "correlation_id": null
+    },
+    {
+      "elapsed_ms": 0.4427,
+      "at": "2026-10-31T00:11:25.562103+00:00",
+      "id": "ddb3e705-44f2-491a-b1dc-f2ee08511ad3",
+      "sender": "coordinator",
+      "recipient": "news_a",
+      "kind": "task",
+      "task_id": "news-primary",
+      "correlation_id": null
+    },
+    {
+      "elapsed_ms": 34.0665,
+      "at": "2026-10-31T00:11:25.595738+00:00",
+      "id": "46ce744d-8905-4138-8ea0-1c2ed2f6a46a",
+      "sender": "scholar_a",
+      "recipient": "coordinator",
+      "kind": "result",
+      "task_id": "oa-primary",
+      "correlation_id": "90d8938e-f8d3-4ea8-a758-44206805494a"
+    },
+    {
+      "elapsed_ms": 34.5434,
+      "at": "2026-10-31T00:11:25.596210+00:00",
+      "id": "0b597824-b7ec-4586-8815-eb589f6f6493",
+      "sender": "scholar_b",
+      "recipient": "coordinator",
+      "kind": "result",
+      "task_id": "cr-bibliography",
+      "correlation_id": "39bb5dae-40f2-4657-855c-2d0dbad408a1"
+    },
+    {
+      "elapsed_ms": 34.8958,
+      "at": "2026-10-31T00:11:25.596562+00:00",
+      "id": "83ad4b80-c3c3-40ac-8b12-b9022fcec1ca",
+      "sender": "news_a",
+      "recipient": "coordinator",
+      "kind": "result",
+      "task_id": "news-primary",
+      "correlation_id": "ddb3e705-44f2-491a-b1dc-f2ee08511ad3"
+    },
+    {
+      "elapsed_ms": 35.0217,
+      "at": "2026-10-31T00:11:25.596683+00:00",
+      "id": "30285909-13a7-42b5-b243-899aeb4d1bd8",
+      "sender": "preprint_a",
+      "recipient": "coordinator",
+      "kind": "result",
+      "task_id": "ax-preprints",
+      "correlation_id": "b0282334-758f-4c77-8b7d-c332a0245716"
+    },
+    {
+      "elapsed_ms": 35.2311,
+      "at": "2026-10-31T00:11:25.596895+00:00",
+      "id": "f06bf606-0ff8-4ade-94e7-befcb10ee4be",
+      "sender": "coordinator",
+      "recipient": "scholar_a",
+      "kind": "shutdown",
+      "task_id": null,
+      "correlation_id": null
+    },
+    {
+      "elapsed_ms": 35.2534,
+      "at": "2026-10-31T00:11:25.596914+00:00",
+      "id": "7453231f-f0a4-492c-a324-3455d0594fe1",
+      "sender": "coordinator",
+      "recipient": "scholar_b",
+      "kind": "shutdown",
+      "task_id": null,
+      "correlation_id": null
+    },
+    {
+      "elapsed_ms": 35.263,
+      "at": "2026-10-31T00:11:25.596924+00:00",
+      "id": "1f6f411e-9c0a-417c-b9e2-e1418bebb118",
+      "sender": "coordinator",
+      "recipient": "preprint_a",
+      "kind": "shutdown",
+      "task_id": null,
+      "correlation_id": null
+    },
+    {
+      "elapsed_ms": 35.2713,
+      "at": "2026-10-31T00:11:25.596932+00:00",
+      "id": "abbd5495-f0da-4433-8787-a2de3b26a97f",
+      "sender": "coordinator",
+      "recipient": "preprint_b",
+      "kind": "shutdown",
+      "task_id": null,
+      "correlation_id": null
+    },
+    {
+      "elapsed_ms": 35.2789,
+      "at": "2026-10-31T00:11:25.596939+00:00",
+      "id": "17940998-9e6e-4a0a-b5a6-42b589ff9dc2",
+      "sender": "coordinator",
+      "recipient": "news_a",
+      "kind": "shutdown",
+      "task_id": null,
+      "correlation_id": null
+    },
+    {
+      "elapsed_ms": 35.2858,
+      "at": "2026-10-31T00:11:25.596946+00:00",
+      "id": "70db1392-a996-4050-a2a2-c06d78c0ed24",
+      "sender": "coordinator",
+      "recipient": "news_b",
+      "kind": "shutdown",
+      "task_id": null,
+      "correlation_id": null
+    }
+  ],
+  "wall_ms": 36.0993999929633,
+  "scenario": "wrong_correlation",
+  "seed": 3,
+  "variant": "baseline",
+  "module_origin": "historical_snapshot"
+}

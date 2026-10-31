@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460">
+<rect width="1200" height="460" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#172033}.box{fill:#f0f7f7;stroke:#0f766e;stroke-width:2}.bad{fill:#fff7ed;stroke:#d97706;stroke-width:2}.line{stroke:#334155;stroke-width:2;marker-end:url(#arrow)}</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker></defs>
+<text x="40" y="45" font-size="26" font-weight="bold">Границы доверия и точки проверки</text>
+<rect class="bad" x="40" y="110" width="250" height="85" rx="10"/><text x="59" y="145" font-size="18">Внешние источники</text><text x="59" y="172" font-size="15">аннотация и заголовок</text>
+<rect class="box" x="395" y="110" width="260" height="85" rx="10"/><text x="415" y="145" font-size="18">Контекст с ID и scope</text><text x="415" y="172" font-size="15">данные отделены от правил</text>
+<rect class="box" x="760" y="110" width="385" height="85" rx="10"/><text x="780" y="145" font-size="18">Qwen и проверка ответа</text><text x="780" y="172" font-size="15">JSON, ID, точные цитаты, категории</text>
+<line class="line" x1="290" y1="152" x2="393" y2="152"/><line class="line" x1="655" y1="152" x2="758" y2="152"/>
+<rect class="bad" x="40" y="295" width="250" height="85" rx="10"/><text x="59" y="330" font-size="18">Недостоверное сообщение</text><text x="59" y="357" font-size="15">run, task, correlation, bid</text>
+<rect class="box" x="395" y="295" width="260" height="85" rx="10"/><text x="415" y="330" font-size="18">Шина и координатор</text><text x="415" y="357" font-size="15">допуск, валидация, повтор</text>
+<rect class="box" x="760" y="295" width="385" height="85" rx="10"/><text x="780" y="330" font-size="18">Поиск и проверка ресурса</text><text x="780" y="357" font-size="15">частичный ответ при отказе источника</text>
+<line class="line" x1="290" y1="337" x2="393" y2="337"/><line class="line" x1="655" y1="337" x2="758" y2="337"/>
+</svg>

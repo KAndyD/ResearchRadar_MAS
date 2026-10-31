@@ -42,7 +42,8 @@ def verify(folder: Path) -> dict:
         assert int(row["correct_outcome"]) == int(correct(scenario, trace))
         assert int(row["crashed"]) == int(trace.get("crash") is not None)
         for field in ("completed_tasks", "reassignments", "invalid_messages", "messages"):
-            assert int(row[field]) == trace[field]
+            expected = trace.get(field, len(trace.get("trace", [])) if field == "messages" else 0)
+            assert int(row[field]) == expected
         assert float(row["wall_ms"]) == round(trace["wall_ms"], 5)
         traces[scenario, seed, variant] = trace
     summary = json.loads((folder / "summary.json").read_text(encoding="utf-8"))

@@ -1,0 +1,402 @@
+[
+  {
+    "scenario": "normal",
+    "seed": 0,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 3.0578,
+    "message_delta": 0
+  },
+  {
+    "scenario": "normal",
+    "seed": 1,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 2.3947,
+    "message_delta": 0
+  },
+  {
+    "scenario": "normal",
+    "seed": 2,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 2.0132,
+    "message_delta": 0
+  },
+  {
+    "scenario": "normal",
+    "seed": 3,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": -3.7991,
+    "message_delta": 0
+  },
+  {
+    "scenario": "normal",
+    "seed": 4,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 0.6455,
+    "message_delta": 0
+  },
+  {
+    "scenario": "wrong_run_result",
+    "seed": 0,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -9.2721,
+    "message_delta": -1
+  },
+  {
+    "scenario": "wrong_run_result",
+    "seed": 1,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -9.1892,
+    "message_delta": -1
+  },
+  {
+    "scenario": "wrong_run_result",
+    "seed": 2,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": 3.6292,
+    "message_delta": -1
+  },
+  {
+    "scenario": "wrong_run_result",
+    "seed": 3,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -5.7225,
+    "message_delta": -1
+  },
+  {
+    "scenario": "wrong_run_result",
+    "seed": 4,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": 2.5679,
+    "message_delta": -1
+  },
+  {
+    "scenario": "malformed_result",
+    "seed": 0,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": 41.5346,
+    "message_delta": -4
+  },
+  {
+    "scenario": "malformed_result",
+    "seed": 1,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": 47.384,
+    "message_delta": -4
+  },
+  {
+    "scenario": "malformed_result",
+    "seed": 2,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": 41.3961,
+    "message_delta": -4
+  },
+  {
+    "scenario": "malformed_result",
+    "seed": 3,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": 35.5875,
+    "message_delta": -4
+  },
+  {
+    "scenario": "malformed_result",
+    "seed": 4,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": 35.8192,
+    "message_delta": -4
+  },
+  {
+    "scenario": "source_mismatch",
+    "seed": 0,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": 39.4024,
+    "message_delta": 2
+  },
+  {
+    "scenario": "source_mismatch",
+    "seed": 1,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": 26.4083,
+    "message_delta": 2
+  },
+  {
+    "scenario": "source_mismatch",
+    "seed": 2,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": 46.4712,
+    "message_delta": 2
+  },
+  {
+    "scenario": "source_mismatch",
+    "seed": 3,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": 41.3182,
+    "message_delta": 2
+  },
+  {
+    "scenario": "source_mismatch",
+    "seed": 4,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": 39.0595,
+    "message_delta": 2
+  },
+  {
+    "scenario": "forged_shutdown",
+    "seed": 0,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -141.1564,
+    "message_delta": -2
+  },
+  {
+    "scenario": "forged_shutdown",
+    "seed": 1,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -132.0286,
+    "message_delta": -2
+  },
+  {
+    "scenario": "forged_shutdown",
+    "seed": 2,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -122.0976,
+    "message_delta": -2
+  },
+  {
+    "scenario": "forged_shutdown",
+    "seed": 3,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -135.6203,
+    "message_delta": -2
+  },
+  {
+    "scenario": "forged_shutdown",
+    "seed": 4,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -136.1902,
+    "message_delta": -2
+  },
+  {
+    "scenario": "malicious_bid",
+    "seed": 0,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -33.3651,
+    "message_delta": -1
+  },
+  {
+    "scenario": "malicious_bid",
+    "seed": 1,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -28.5778,
+    "message_delta": -1
+  },
+  {
+    "scenario": "malicious_bid",
+    "seed": 2,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -33.4219,
+    "message_delta": -1
+  },
+  {
+    "scenario": "malicious_bid",
+    "seed": 3,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -38.6062,
+    "message_delta": -1
+  },
+  {
+    "scenario": "malicious_bid",
+    "seed": 4,
+    "violation_reduction": 1,
+    "correct_outcome_gain": 1,
+    "wall_delta_ms": -43.3709,
+    "message_delta": -1
+  },
+  {
+    "scenario": "source_429",
+    "seed": 0,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": -4.5774,
+    "message_delta": 0
+  },
+  {
+    "scenario": "source_429",
+    "seed": 1,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 8.2166,
+    "message_delta": 0
+  },
+  {
+    "scenario": "source_429",
+    "seed": 2,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 4.5148,
+    "message_delta": 0
+  },
+  {
+    "scenario": "source_429",
+    "seed": 3,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 3.0047,
+    "message_delta": 0
+  },
+  {
+    "scenario": "source_429",
+    "seed": 4,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 4.0913,
+    "message_delta": 0
+  },
+  {
+    "scenario": "wrong_correlation",
+    "seed": 0,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 1.6725,
+    "message_delta": 0
+  },
+  {
+    "scenario": "wrong_correlation",
+    "seed": 1,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 1.7314,
+    "message_delta": 0
+  },
+  {
+    "scenario": "wrong_correlation",
+    "seed": 2,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 3.2023,
+    "message_delta": 0
+  },
+  {
+    "scenario": "wrong_correlation",
+    "seed": 3,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": -3.8899,
+    "message_delta": 0
+  },
+  {
+    "scenario": "wrong_correlation",
+    "seed": 4,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 8.7455,
+    "message_delta": 0
+  },
+  {
+    "scenario": "forbidden_delegate",
+    "seed": 0,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 0.0089,
+    "message_delta": 0
+  },
+  {
+    "scenario": "forbidden_delegate",
+    "seed": 1,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 0.0109,
+    "message_delta": 0
+  },
+  {
+    "scenario": "forbidden_delegate",
+    "seed": 2,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 0.0244,
+    "message_delta": 0
+  },
+  {
+    "scenario": "forbidden_delegate",
+    "seed": 3,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 0.0195,
+    "message_delta": 0
+  },
+  {
+    "scenario": "forbidden_delegate",
+    "seed": 4,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 0.0251,
+    "message_delta": 0
+  },
+  {
+    "scenario": "resource_owner",
+    "seed": 0,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": 0.0198,
+    "message_delta": 0
+  },
+  {
+    "scenario": "resource_owner",
+    "seed": 1,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": -0.003,
+    "message_delta": 0
+  },
+  {
+    "scenario": "resource_owner",
+    "seed": 2,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": -0.0224,
+    "message_delta": 0
+  },
+  {
+    "scenario": "resource_owner",
+    "seed": 3,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": -0.0182,
+    "message_delta": 0
+  },
+  {
+    "scenario": "resource_owner",
+    "seed": 4,
+    "violation_reduction": 0,
+    "correct_outcome_gain": 0,
+    "wall_delta_ms": -0.0168,
+    "message_delta": 0
+  }
+]

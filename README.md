@@ -1,5 +1,21 @@
 # ResearchRadar MAS
 
+## Исследование устойчивости: lab4-v1.0
+
+Четвёртая версия проверяет действующий контур десятью управляемыми неблагоприятными сценариями и сравнивает его с точным снимком кода `lab3-v1.1`. В 100 офлайн-запусках устранены все 25 воспроизведённых нарушений политики; пять исторических падений на некорректном результате не повторились. Результат ограничен этим корпусом. Дополнительный контур Qwen составляет предварительное сопоставление научной аннотации и новостного заголовка; ссылки и точные цитаты проходят детерминированную проверку. Один сохранённый реальный ответ модели отклонён за неточную цитату.
+
+```powershell
+py -3.14 -m pip install -e .
+py -3.14 -m unittest discover -s tests -v
+py -3.14 -m researchradar.cli_stage4 "multi agent systems" --mode demo --analysis recorded --recorded-analysis data/lab4_fixture_analysis.json --output run_output/lab4_demo.json
+py -3.14 tools/run_lab4_experiments.py --repeats 5 --output run_output/lab4_replay
+py -3.14 tools/verify_lab4_results.py run_output/lab4_replay
+py -3.14 tools/run_lab4_llm_experiments.py --output run_output/lab4_llm_replay
+py -3.14 tools/verify_lab4_llm_results.py run_output/lab4_llm_replay
+```
+
+[Отчёт PDF](deliverables/ResearchRadar_MAS_Reliability_Assessment.pdf), [DOCX](deliverables/ResearchRadar_MAS_Reliability_Assessment.docx), [руководство по воспроизведению](docs/lab4_reproduction.md), [модель угроз](docs/lab4_threat_model.md), [комплект сдачи](submission_manifest_lab4_v1.0.md). Эксперименты из ZIP выполняются без Git, сети и ключа модели. LIVE-анализ включается только явно через CLI с проверенными тарифами.
+
 ## Исправленная версия ЛР №3: lab3-v1.1
 
 Кредиты проверки и одновременные исполнительные слоты учитываются независимо. Одна двухкредитная проверка занимает один слот; отказ запуска освобождает ещё не начатое резервирование. Переговорная политика, исходные 120 измерений, графики и основной PDF/DOCX сохранены. Изменения жизненного цикла и пограничные условия описаны в [техническом контракте](docs/resource_lifecycle_lab3_v1.1.md) и [сверке версии 1.1](submission_manifest_lab3_v1.1.md).
